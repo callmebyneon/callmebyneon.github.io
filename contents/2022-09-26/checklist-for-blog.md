@@ -1,5 +1,5 @@
 ---
-date: '2022-08-31'
+date: '2022-09-26'
 title: 'Checklist for blog'
 categories: ['React']
 summary: ''

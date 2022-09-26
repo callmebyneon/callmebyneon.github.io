@@ -1,5 +1,5 @@
 ---
-date: '2022-08-31'
+date: '2022-09-23'
 title: 'Typescript: 1'
 categories: ['Typescript']
 summary: 'About Typescript'

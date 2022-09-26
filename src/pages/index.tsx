@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import GlobalStyle from 'components/Common/GlobalStyle'
 import Introduction from 'components/Main/Introduction'
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
-import Footer from 'components/Common/Footer'
+import Template from 'components/Common/Template'
 import PostList from 'components/Main/PostList'
 import { PostListItemType } from 'types/PostItem.types'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
@@ -40,7 +40,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
   data: {
     allMarkdownRemark: { edges },
     file: {
-      childImageSharp: { gatsbyImageDate },
+      childImageSharp: { gatsbyImageData },
     },
   },
 }) {
@@ -76,16 +76,14 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
   )
 
   return (
-    <Container>
-      <GlobalStyle />
-      <Introduction profileImage={gatsbyImageDate} />
+    <Template>
+      <Introduction profileImage={gatsbyImageData} />
       <CategoryList
         selectedCategory={selectedCategory}
         categoryList={categoryList}
       />
       <PostList selectedCategory={selectedCategory} posts={edges} />
-      <Footer />
-    </Container>
+    </Template>
   )
 }
 
@@ -99,6 +97,9 @@ export const getPostList = graphql`
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             summary

@@ -60,7 +60,16 @@ function FnAdd(args: number[]): number {
 ```
 
 ```ts
+// type
+type ComponentProps = {
+  className?: string
+  children?: ReactNode
+}
 
+// interface
+interface ContentProps {
+  html: string
+}
 ```
 
 

@@ -21,18 +21,14 @@ const NotFoundText = styled.div`
 `
 
 const NotFoundDescription = styled.div`
-  font-size: 25px;
+  font-size: 1.5rem;
   text-align: center;
   line-height: 1.3;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
 `
 
 const GoToMainButton = styled(Link)`
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-decoration: underline;
 
   &:hover {

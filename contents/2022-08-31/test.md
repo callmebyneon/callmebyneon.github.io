@@ -7,5 +7,4 @@ thumbnail: './default.png'
 ---
 
 ## Gatsby Blog (...more)
-- [utterances](https://utteranc.es/)
-- update Introduction & Navigator
+- update whole layout

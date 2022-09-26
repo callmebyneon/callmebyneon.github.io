@@ -65,13 +65,14 @@ const PostData = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
+  line-height: 1.4;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
   }
 `

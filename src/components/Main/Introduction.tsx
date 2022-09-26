@@ -30,22 +30,14 @@ const Wrapper = styled.div`
 `
 
 const SubTitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
-
-  @media (max-width: 768px) {
-    font-size: 15px;
-  }
 `
 
 const Title = styled.div`
   margin-top: 5px;
-  font-size: 35px;
+  font-size: 2rem;
   font-weight: 700;
-
-  @media (max-width: 768px) {
-    font-size: 25px;
-  }
 `
 
 const Introduction: FunctionComponent<IntroductionProps> = function ({

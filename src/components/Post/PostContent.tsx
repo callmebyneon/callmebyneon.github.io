@@ -16,7 +16,7 @@ const MarkdownRenderer = styled.div`
 
   // Markdown Style
   line-height: 1.8;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
 
   // Apply Padding Attribute to All Elements
@@ -29,13 +29,13 @@ const MarkdownRenderer = styled.div`
   h2,
   h3 {
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 1em;
   }
 
   * + h1,
   * + h2,
   * + h3 {
-    margin-top: 80px;
+    margin-top: 2em;
   }
 
   hr + h1,
@@ -45,15 +45,15 @@ const MarkdownRenderer = styled.div`
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 1.5rem;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   // Adjust Quotation Element Style
@@ -86,14 +86,19 @@ const MarkdownRenderer = styled.div`
   // Adjust Code Style
   pre[class*='language-'] {
     margin: 30px 0;
-    padding: 15px;
-    font-size: 13px;
+    padding: 15px 20px;
+    font-size: 0.875rem;
+    border-radius: 12px;
     overflow: auto;
 
     ::-webkit-scrollbar-thumb {
       background: rgba(255, 255, 255, 0.5);
       border-radius: 3px;
     }
+  }
+
+  code[class*='language-'] {
+    border-radius: 4px;
   }
 
   code[class*='language-'],
@@ -107,7 +112,6 @@ const MarkdownRenderer = styled.div`
     width: 100%;
     padding: 80px 20px;
     line-height: 1.6;
-    font-size: 14px;
 
     h1 {
       font-size: 23px;
@@ -126,7 +130,7 @@ const MarkdownRenderer = styled.div`
     }
 
     hr {
-      margin: 50px 0;
+      margin: 3.5714rem 0;
     }
   }
 `

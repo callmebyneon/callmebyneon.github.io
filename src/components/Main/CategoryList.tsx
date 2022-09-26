@@ -35,18 +35,30 @@ const CategoryListWrapper = styled.div`
 const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   <Link {...props} />
 ))`
-  margin-right: 20px;
-  padding: 5px 0;
-  font-size: 18px;
-  font-weight: ${({ active }) => (active ? '900' : '400')};
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 3px 6px;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  font-weight: ${({ active }) => (active ? '700' : '400')};
+  color: ${({ active }) => (active ? '#fff' : '#eee')};
+  background: ${({ active }) => (active ? '#000' : '#555')};
+  border-radius: 4px;
   cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
 
   &:last-of-type {
     margin-right: 0;
   }
 
   @media (max-width: 768px) {
-    font-size: 15px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    font-size: 1rem;
   }
 `
 

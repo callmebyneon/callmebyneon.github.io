@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Neon's Dev Note`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Dev Log of Neon`,
+    description: `Dev Log and Archiving Note of Neon(@callmebyneon)`,
     author: `@callmebyneon`,
+    siteUrl: `https://callmebyneon.github.io`,
   },
   plugins: [
     {
@@ -78,5 +79,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'http://callmebyneon.github.io',
+        stripQueryString: true,
+      }
+    },
+    'gatsby-plugin-sitemap',
   ],
 };

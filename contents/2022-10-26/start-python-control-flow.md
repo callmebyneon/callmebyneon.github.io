@@ -13,6 +13,9 @@ thumbnail: './default.png'
 # if (condition=True):
 if age < 18:
 	print('Lower then 18')
+
+if not age < 18:
+	print('Higher then 18 or equal')
 ```
 
 - **Else, Elif**
@@ -62,4 +65,4 @@ for day in ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']:
 # Sat
 # Sun
 ```
-- That `list`, in above, not just like `list()`, also data format in the form of a list: _dict, tuple_
+- That `list`, in above, not just like `list()`, means a set of statements: _list, tuple, set..._

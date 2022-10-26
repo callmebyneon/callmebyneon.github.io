@@ -12,6 +12,7 @@ thumbnail: './default.png'
 - `[]`
 - [`list()`](https://docs.python.org/3/library/functions.html#func-list)
 ```python
+# [ value1, ... ]
 days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 ```
 
@@ -20,17 +21,21 @@ days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 - can't modify data in tuple using like list method
 ```python
 # list (mutable)
-days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+days_list = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
 # tuple (immutable)
-days = ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
+days_tuple = ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
 ```
 
 ### Dicts
 - `{}`
 - [`dict()`](https://docs.python.org/3/library/functions.html#func-dict)
 ```python
-# if (condition=True):
-if age < 18:
-	print('Lower then 18')
+# { (key): (value), ... }
+user = {
+	'id': 354
+	'alive': True,
+	'live_in': 'seoul',
+	'fav_food': ["🍟", "🍞"]
+}
 ```

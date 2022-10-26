@@ -2,7 +2,7 @@
 date: '2022-06-21'
 title: 'NOT unique key'
 categories: ['React', 'Issue']
-summary: '처음 이 에러를 마주했을 때, List라는 단어에 넘어가 아래와 같은 코드에는 key를 주지 않았다. 당연히 에러가 발생했고 무시도 해봤지만 콘솔창에 자리만 차지하는 이 에러를 더이상 두고 볼 수가 없었다.'
+summary: ''
 thumbnail: './default.png'
 ---
 

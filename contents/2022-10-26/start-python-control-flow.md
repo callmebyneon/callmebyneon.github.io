@@ -48,7 +48,18 @@ while True:
 	run(codes)
 ```
 
-- **For**
+- **For** loop
 ```python
+# for (keyword of each item) in (list)
+for day in ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']:
+	print(day)
 
+# Mon
+# Tue
+# Wed
+# Thu
+# Fri
+# Sat
+# Sun
 ```
+- That `list`, in above, not just like `list()`, also data format in the form of a list: _dict, tuple_

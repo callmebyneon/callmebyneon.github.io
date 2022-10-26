@@ -12,10 +12,19 @@ thumbnail: './default.png'
 - `[]`
 - [`list()`](https://docs.python.org/3/library/functions.html#func-list)
 ```python
-week = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 ```
 
 ### Tuple
+- almost like list, but immutable
+- can't modify data in tuple using like list method
+```python
+# list (mutable)
+days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+
+# tuple (immutable)
+days = ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
+```
 
 ### Dicts
 - `{}`

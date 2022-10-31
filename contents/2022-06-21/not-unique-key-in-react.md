@@ -1,7 +1,8 @@
 ---
 date: '2022-06-21'
 title: 'NOT unique key'
-categories: ['React', 'Issue']
+category: 'React'
+tags: ['react', 'issue']
 summary: ''
 thumbnail: './default.png'
 ---

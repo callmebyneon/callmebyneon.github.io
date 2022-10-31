@@ -1,7 +1,8 @@
 ---
 date: '2022-06-24'
 title: '[bookmark] css contain'
-categories: ['CSS']
+category: 'CSS'
+tags: ['css property']
 summary: ''
 thumbnail: './default.png'
 ---

@@ -1,7 +1,8 @@
 ---
 date: '2022-10-26'
 title: 'Start Python - using python module'
-categories: ['Python']
+category: 'Python'
+tags: ['python', 'study']
 summary: ''
 thumbnail: './default.png'
 ---

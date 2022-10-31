@@ -1,7 +1,8 @@
 ---
 date: '2022-09-26'
 title: 'Checklist for blog'
-categories: ['React']
+category: 'React'
+tags: ['react', 'gatsby', 'blog']
 summary: ''
 thumbnail: './default.png'
 ---

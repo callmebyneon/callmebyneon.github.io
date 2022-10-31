@@ -1,7 +1,8 @@
 ---
 date: '2022-10-25'
 title: 'Start Python - variables and functions'
-categories: ['Python']
+category: 'Python'
+tags: ['python', 'study']
 summary: ''
 thumbnail: './default.png'
 ---

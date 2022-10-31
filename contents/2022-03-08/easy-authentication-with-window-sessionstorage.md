@@ -1,7 +1,7 @@
 ---
 date: '2022-03-08'
 title: 'Easy authentication with window.sessionStorage'
-category: 'react'
+category: 'React'
 tags: ['react', 'web', 'auth']
 summary: 'How to make easy authentication with `window.sessionStorage` with react-router'
 thumbnail: './default.png'

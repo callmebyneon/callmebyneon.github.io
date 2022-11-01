@@ -1,5 +1,5 @@
 ---
-date: '2022-10-25'
+date: '2022-10-25 00:00:00'
 title: 'Start Python - variables and functions'
 category: 'Python'
 tags: ['python', 'study']

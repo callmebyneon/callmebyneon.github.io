@@ -1,5 +1,5 @@
 ---
-date: '2022-06-24'
+date: '2022-06-24 00:00:01'
 title: '[bookmark] aspect-ratio'
 category: 'CSS'
 tags: ['css property']

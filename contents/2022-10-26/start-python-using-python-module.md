@@ -1,5 +1,5 @@
 ---
-date: '2022-10-26'
+date: '2022-10-26 14:02:25'
 title: 'Start Python - using python module'
 category: 'Python'
 tags: ['python', 'study']

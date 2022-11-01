@@ -1,5 +1,5 @@
 ---
-date: '2022-10-26'
+date: '2022-10-26 13:23:54'
 title: 'Start Python - control flow'
 category: 'Python'
 tags: ['python', 'study']

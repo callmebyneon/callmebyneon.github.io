@@ -87,5 +87,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-sitemap',
+    `gatsby-remark-autolink-headers`,
   ],
 };

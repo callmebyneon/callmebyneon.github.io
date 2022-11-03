@@ -18,6 +18,7 @@ thumbnail: './default.png'
 - https://itchallenger.tistory.com/266
 - https://wishket.tistory.com/12 | https://cocobi.tistory.com/120
 - https://velog.io/@operqudgns/%EC%8B%A4%ED%99%94-%EA%B0%99%EC%9D%80-%EC%83%81%ED%99%A9%EC%9C%BC%EB%A1%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EB%8A%94-Compound-Component
+- https://medium.com/unibuddy-technology-blog/compound-components-in-react-b04772f9eb58
 
 
 ## Let's create compound component! 👉

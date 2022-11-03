@@ -2,8 +2,8 @@ import React, { FunctionComponent } from 'react'
 import { Global, css } from '@emotion/react'
 
 const defaultStyle = css`
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
-  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css');
+  // @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400&display=swap');
+  // @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css');
 
   * {
     padding: 0;

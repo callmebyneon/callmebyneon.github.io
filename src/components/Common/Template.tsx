@@ -48,6 +48,23 @@ const Template: FunctionComponent<TemplateProps> = function ({
 
         <html lang="ko" />
         <title>{title}</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          as="style"
+          crossOrigin="true"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css"
+        />
       </Helmet>
 
       <GlobalStyle />

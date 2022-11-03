@@ -7,7 +7,7 @@ summary: 'How to make easy authentication with `window.sessionStorage` with reac
 thumbnail: './default.png'
 ---
 
-# Temporary authentication with window.sessionStorage
+## Temporary authentication with window.sessionStorage
 
 > The code below is based on the code of ['Auth Example (react-router/examples/auth/)'](https://github.com/remix-run/react-router/tree/main/examples/auth)
 ```js

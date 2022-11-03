@@ -1,6 +1,6 @@
 ---
 date: '2022-06-21 00:00:00'
-title: 'NOT unique key'
+title: '⚠ NOT unique key'
 category: 'React'
 tags: ['react', 'issue']
 summary: ''

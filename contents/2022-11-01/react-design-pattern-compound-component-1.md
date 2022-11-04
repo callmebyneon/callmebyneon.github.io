@@ -170,10 +170,10 @@ const TableViewer = () => {
 이외에도, [Ant Design의 Layout 컴포넌트](https://ant.design/components/layout/) 같이 UI 라이브러리들에서도 합성 컴포넌트 구조를 확인할 수 있습니다.
 
 
-# Outro, There is no silver bullet
+# Outro, This is no silver bullet too
 
-바로 위에서도 언급했지만 너무 유연한 프로그램은 예상치 못한 문제를 뱉어 냅니다. 그리고 현재 우리 주변의 모든 애플리메이션과 서비스들은 점점 더 복잡해지고 사용자에게 유연해질 것을 요구하고 있습니다. 이러한 복잡성을 한 번에 해소할 은탄환(silver bullet)은 존재하지 않는다고 1986년에 이야기했다고 합니다.(Fred Brooks, "Silver Bullet-Essence and Accidents of Software Engineering") 그럴수록 적(?)을 알기 위해서는 보다 더 복합적이고 유연한 방법이 필요하지 않나라는 생각이 들기도 합니다.
+물론 합성 컴포넌트 패턴 하나만으로 당연히 너무 많은 문제를 해결할 수는 없습니다. 바로 위에서도 언급했지만 너무 유연한 프로그램은 예상치 못한 문제를 뱉어 냅니다. 그리고 현재 우리 주변의 모든 애플리 메이션과 서비스들은 점점 더 복잡해지고 사용자에게 맞출 것을 요구하고 있습니다. 이러한 복잡성을 한 번에 해소할 은탄환(silver bullet)은 존재하지 않는다고 1986년에 이야기했다고 합니다.(Fred Brooks, "Silver Bullet-Essence and Accidents of Software Engineering") 그럴수록 적(?)을 알기 위해서는 보다 더 복합적이고 유연한 방법이 필요하지 않나라는 생각이 들기도 합니다.
 
 합성 컴포넌트도 마찬가지로 한 가지 방법이기 때문에 이쯤에서 다음으로 넘어가, 합성 컴포넌트를 만들고 실제 사용할 때는 어떠할지 살펴보도록 하겠습니다.
 
-<p align="centet">⏭️</p>
+<p align="center">⏭️</p>

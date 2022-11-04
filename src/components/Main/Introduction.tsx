@@ -1,17 +1,17 @@
-import React, { FunctionComponent } from 'react'
-import styled from '@emotion/styled'
-import ProfileImage from 'components/Main/ProfileImage'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
+import React, { FunctionComponent } from 'react';
+import styled from '@emotion/styled';
+import ProfileImage from 'components/Main/ProfileImage';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 type IntroductionProps = {
-  profileImage: IGatsbyImageData
-}
+  profileImage: IGatsbyImageData;
+};
 
 const Background = styled.div`
   width: 100%;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   color: #ffffff;
-`
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -27,20 +27,21 @@ const Wrapper = styled.div`
     height: 300px;
     padding: 0 20px;
   }
-`
+`;
 
 const SubTitle = styled.div`
   font-size: 1.25rem;
   font-weight: 400;
-`
+`;
 
 const Title = styled.div`
   margin-top: 5px;
   font-size: 2rem;
   font-weight: 700;
-`
+`;
 
 const Introduction: FunctionComponent<IntroductionProps> = function ({
+  // TODO: alter logo image
   profileImage,
 }) {
   return (
@@ -49,12 +50,12 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
         <ProfileImage profileImage={profileImage} />
 
         <div>
-          <SubTitle>Hello, world!</SubTitle>
-          <Title>I'm Junior Frontend Developer 나연.</Title>
+          <Title>Dev Log</Title>
+          <SubTitle><a href="https://github.com/callmebyneon">@call</a></SubTitle>
         </div>
       </Wrapper>
     </Background>
-  )
-}
+  );
+};
 
-export default Introduction
+export default Introduction;

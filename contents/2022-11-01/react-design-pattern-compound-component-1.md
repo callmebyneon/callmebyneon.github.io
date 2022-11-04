@@ -7,7 +7,7 @@ summary: 'What is Compound Component'
 thumbnail: './default.png'
 ---
 
-_last modified: 2022-11-03_
+<small><em>last modified: 2022-11-03</em></small>
 
 # Intro
 

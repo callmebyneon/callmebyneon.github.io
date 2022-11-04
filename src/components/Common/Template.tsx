@@ -45,6 +45,7 @@ const Template: FunctionComponent<TemplateProps> = function ({
         <meta name="twitter:image" content={image} />
         <meta name="twitter:site" content="@callmebyneon" />
         <meta name="twitter:creator" content="@callmebyneon" />
+        <meta name="theme-color" content="#f6f6f6" />
 
         <html lang="ko" />
         <title>{title}</title>

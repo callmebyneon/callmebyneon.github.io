@@ -10,7 +10,7 @@ thumbnail: './default.png'
 ## Python Standard Library
 - link: https://docs.python.org/3/library/
 ```python
-# use library like below
+# get method from library like below
 from random import randint
 
 # make random integer using randint

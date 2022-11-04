@@ -7,6 +7,8 @@ summary: ''
 thumbnail: './default.png'
 ---
 
+<small><em>last modified: 2022-11-04</em></small>
+
 ## Data Structure
 
 ### Lists
@@ -18,6 +20,8 @@ days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 ```
 
 ### Tuple
+- `()`
+- [`tuple()`](https://docs.python.org/3/library/functions.html#func-tuple)
 - almost like list, but immutable
 - can't modify data in tuple using like list method
 ```python

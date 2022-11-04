@@ -20,6 +20,7 @@ const defaultStyle = css`
   #___gatsby {
     height: 100%;
     font-size: 16px;
+    background-color: #f6f6f6;
 
     @media (max-width: 768px) {
       font-size: 14px;
@@ -38,6 +39,17 @@ const defaultStyle = css`
   code[class*='language-'] *,
   pre[class*='language-'] * {
     font-family: 'Noto Sans Mono', monospace;
+  }
+
+  small {
+    font-size: 0.875rem; // 14px ~ 12.25px
+  }
+
+  img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 `
 

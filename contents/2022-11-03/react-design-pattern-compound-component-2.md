@@ -8,7 +8,7 @@ thumbnail: './default.png'
 ---
 
 <small><em>last modified: 2022-11-04</em></small>
-## Intro
+ Intro
 
 처음 합성 컴포넌트를 프로젝트에 적용하려고 할 때 가장 먼저 막막했던 점은 그래서 어떻게 만들어야 같은 실수를 반복하지 않을 수 있는가 였습니다. 그래서 먼저 데이터의 변경이 있을 때 요소를 변경해야 할지를 생각하며 합성 컴포넌트 패턴을 눈으로 보고 익혔습니다.
 
@@ -22,13 +22,13 @@ thumbnail: './default.png'
 - https://medium.com/unibuddy-technology-blog/compound-components-in-react-b04772f9eb58
 
 
-## Let's create compound component! 👉
+# Let's create compound component! 👉
 
 이제 합성 컴포넌트 패턴이 눈에 익었다면 이번에는 Table 컴포넌트를 직접 만들어 보겠습니다.
 
 순서는 [참고 글](https://itchallenger.tistory.com/266)에서 설명하는 구현 단계를 따랐습니다.
 
-### 1. Create context and context provider to share inner state
+## 1. Create context and context provider to share inner state
 
 ```js
 const TableContext = React.createContext()
@@ -45,7 +45,7 @@ function TableRoot(props) {
 }
 ```
 
-### 2. Create useContext hook and make must be used within the component
+## 2. Create useContext hook and make must be used within the component
 
 ```js
 function useTable() {
@@ -57,7 +57,7 @@ function useTable() {
 }
 ```
 
-### 3. Create APIs of substantial components to provide
+## 3. Create APIs of substantial components to provide
 
 ```js
 import styled from '@emotion.styled'
@@ -81,7 +81,7 @@ const Table = Object.assign(TableRoot, {
 export { Table, useTable }
 ```
 
-### 4. Use the compound component
+## 4. Use the compound component
 
 ```js
 function TableViewer() {
@@ -134,7 +134,7 @@ function DataTable({ value }) {
 
 
 
-## REALLY? Let's try again
+# REALLY? Let's try again
 
 이걸로 정말 우리가 합성 컴포넌트를 만들어 낸 것일까요? 어딘가 찜찜한 기분이 드니까 이전 글에서 했던 질문으로 한 번 돌아가 보겠습니다.
 

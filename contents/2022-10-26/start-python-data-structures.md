@@ -1,7 +1,7 @@
 ---
 date: '2022-10-26 13:23:53'
 title: 'Start Python - data structures'
-category: 'Python'
+category: 'Study'
 tags: ['python', 'study']
 summary: ''
 thumbnail: './default.png'
@@ -9,9 +9,9 @@ thumbnail: './default.png'
 
 <small><em>last modified: 2022-11-04</em></small>
 
-## Data Structure
+# Data Structure
 
-### Lists
+## Lists
 - `[]`
 - [`list()`](https://docs.python.org/3/library/functions.html#func-list)
 ```python
@@ -19,7 +19,7 @@ thumbnail: './default.png'
 days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 ```
 
-### Tuple
+## Tuple
 - `()`
 - [`tuple()`](https://docs.python.org/3/library/functions.html#func-tuple)
 - almost like list, but immutable
@@ -32,7 +32,7 @@ days_list = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 days_tuple = ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
 ```
 
-### Dicts
+## Dicts
 - `{}`
 - [`dict()`](https://docs.python.org/3/library/functions.html#func-dict)
 ```python

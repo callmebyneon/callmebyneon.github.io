@@ -1,7 +1,7 @@
 ---
 date: '2022-10-26 13:23:54'
 title: 'Start Python - control flow'
-category: 'Python'
+category: 'Study'
 tags: ['python', 'study']
 summary: ''
 thumbnail: './default.png'
@@ -9,16 +9,16 @@ thumbnail: './default.png'
 
 <small><em>last modified: 2022-11-04</em></small>
 
-## Control the flow
+# Control the flow
 
-## Comparison operator
+# Comparison operator
 - `a == b`: a equals b
 - `a != b`: a not equals b
 - `a > b`: a bigger than b
 - `a <= b`: a equals b or smaller than b
 
 
-## If
+# If
 ```python
 # if (condition=True):
 if age < 18:
@@ -28,7 +28,7 @@ if not age < 18:
 	print('Higher then 18 or equal')
 ```
 
-### Else, Elif
+## Else, Elif
 ```python
 if age < 18:
 	print('Lower then 18')
@@ -38,7 +38,7 @@ else:
 	print('Higher then 40')
 ```
 
-### And, Or
+## And, Or
 ```python
 # (condition) and (condition)
 print(True and True) # True
@@ -53,16 +53,16 @@ print(False or True) # True
 print(False or False) # False
 ```
 
-## Iterator
+# Iterator
 
-### While
+## While
 ```python
 # while (condition=True):
 while True:
 	run(codes)
 ```
 
-### **For** loop
+## **For** loop
 ```python
 # for (keyword of each item) in (list)
 for day in ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']:

@@ -1,11 +1,11 @@
-import React, { FunctionComponent } from 'react';
-import styled from '@emotion/styled';
-import ProfileImage from 'components/Main/ProfileImage';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import React, { FunctionComponent } from 'react'
+import styled from '@emotion/styled'
+import ProfileImage from 'components/Main/ProfileImage'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 type IntroductionProps = {
-  profileImage: IGatsbyImageData;
-};
+  profileImage: IGatsbyImageData
+}
 
 const Background = styled.div`
   width: 100%;
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
     height: 200px;
     padding: 0 20px;
   }
-`;
+`
 
 const SubTitle = styled.div`
   font-size: 1.25rem;
@@ -51,11 +51,13 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
         <ProfileImage profileImage={profileImage} />
         <div>
           <Title>Dev Log</Title>
-          <SubTitle><a href="https://github.com/callmebyneon">@call</a></SubTitle>
+          <SubTitle>
+            <a href="https://github.com/callmebyneon">@call</a>
+          </SubTitle>
         </div>
       </Wrapper>
     </Background>
-  );
-};
+  )
+}
 
-export default Introduction;
+export default Introduction

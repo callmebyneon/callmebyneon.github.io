@@ -1,21 +1,21 @@
-import React, { FunctionComponent } from 'react'
-import { graphql } from 'gatsby'
-import { PostPageItemType } from 'types/PostItem.types'
-import Template from 'components/Common/Template'
-import PostHead from '../components/Post/PostHead'
-import PostContent from '../components/Post/PostContent'
-import CommentWidget from 'components/Post/CommentWidget'
+import React, { FunctionComponent } from 'react';
+import { graphql } from 'gatsby';
+import { PostPageItemType } from 'types/PostItem.types';
+import Template from 'components/Common/Template';
+import PostHead from '../components/Post/PostHead';
+import PostContent from '../components/Post/PostContent';
+import CommentWidget from 'components/Post/CommentWidget';
 
 type PostTemplateProps = {
   data: {
     allMarkdownRemark: {
-      edges: PostPageItemType[]
-    }
-  }
+      edges: PostPageItemType[];
+    };
+  };
   location: {
-    href: string
-  }
-}
+    href: string;
+  };
+};
 
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   data: {
@@ -32,13 +32,14 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
         date,
         category,
         tags,
+        // TODO: alter emoji image (ex. test 'gatsby-remark-emojis' in remark transformer plugin or else)
         thumbnail: {
           childImageSharp: { gatsbyImageData },
           publicURL,
         },
       },
     },
-  } = edges[0]
+  } = edges[0];
 
   return (
     <Template title={title} description={summary} url={href} image={publicURL}>
@@ -52,10 +53,10 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
       <PostContent html={html} />
       <CommentWidget />
     </Template>
-  )
-}
+  );
+};
 
-export default PostTemplate
+export default PostTemplate;
 
 export const queryMarkdownDataBySlug = graphql`
   query queryMarkdownDataBySlug($slug: String) {
@@ -80,4 +81,4 @@ export const queryMarkdownDataBySlug = graphql`
       }
     }
   }
-`
+`;

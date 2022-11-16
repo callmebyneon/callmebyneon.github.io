@@ -1,5 +1,5 @@
 ---
-date: '2022-03-08'
+date: '2022-03-08 00:00:00'
 title: 'Easy authentication with window.sessionStorage'
 category: 'React'
 tags: ['react', 'web', 'auth']
@@ -45,6 +45,6 @@ export function AuthProvider({ children }) {
 ...
 ```
 ---
-### Referred to
+## Referred to
 - [https://developer.mozilla.org/ko/docs/Web/API/Window/sessionStorage](https://developer.mozilla.org/ko/docs/Web/API/Window/sessionStorage)
 - [https://seungyooon.tistory.com/23](https://seungyooon.tistory.com/23)

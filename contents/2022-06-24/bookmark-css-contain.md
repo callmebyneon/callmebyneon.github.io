@@ -1,6 +1,6 @@
 ---
-date: '2022-06-24'
-title: '[bookmark] css contain'
+date: '2022-06-24 00:00:00'
+title: '📑 css/contain'
 category: 'CSS'
 tags: ['css property']
 summary: ''

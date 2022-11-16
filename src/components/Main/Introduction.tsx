@@ -9,36 +9,37 @@ type IntroductionProps = {
 
 const Background = styled.div`
   width: 100%;
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  color: #ffffff;
-`;
+`
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   width: 768px;
-  height: 400px;
+  height: 160px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    height: 300px;
+    height: 200px;
     padding: 0 20px;
   }
 `;
 
 const SubTitle = styled.div`
   font-size: 1.25rem;
-  font-weight: 400;
-`;
+  font-weight: 700;
+`
 
 const Title = styled.div`
   margin-top: 5px;
-  font-size: 2rem;
-  font-weight: 700;
-`;
+  font-size: 1.25rem;
+  font-weight: 500;
+`
 
 const Introduction: FunctionComponent<IntroductionProps> = function ({
   // TODO: alter logo image
@@ -48,7 +49,6 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
     <Background>
       <Wrapper>
         <ProfileImage profileImage={profileImage} />
-
         <div>
           <Title>Dev Log</Title>
           <SubTitle><a href="https://github.com/callmebyneon">@call</a></SubTitle>

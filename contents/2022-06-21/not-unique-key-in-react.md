@@ -1,6 +1,6 @@
 ---
-date: '2022-06-21'
-title: 'NOT unique key'
+date: '2022-06-21 00:00:00'
+title: '⚠ NOT unique key'
 category: 'React'
 tags: ['react', 'issue']
 summary: ''
@@ -9,7 +9,7 @@ thumbnail: './default.png'
 
 # What is _NOT unique_ key prop in React
 
-### 👉 introduction
+## 👉 introduction
 처음 이 에러를 마주했을 때, List라는 단어에 넘어가 아래와 같은 코드에는 key를 주지 않았다.
 ```js
 const colorChips = colors.map((color) => (
@@ -22,7 +22,7 @@ const colorChips = colors.map((color) => (
 여기저기 key 값을 추가해보기도 하고 구글에도 검색해보면서 key 값을 추가할 때 무엇을 생각해야하는지 적어놓기로 했다.
 
 
-### 👉 key가 필요한 경우
+## 👉 key가 필요한 경우
 React 공식 문서에서는 key를 다음과 같이 설명한다.
 
 > (ENG) A “key” is a special string attribute you need to include when creating lists of elements.   
@@ -49,9 +49,9 @@ return (
 )
 ```
 
-### 👉 not unique key
+## 👉 not unique key
 아래에 실제로 작성했던 코드를 바탕으로 한 에러 코드와 안티 패턴들을 추가한다.
-#### 1. no key prop
+### 1. no key prop
 ```js
 // ❌ Error
 const colorChips = colors.map((color) => (
@@ -68,7 +68,7 @@ const colorChips = colors.map((color, index) => (
 ));
 ```
 
-#### 2. same key in the siblings
+### 2. same key in the siblings
 ```js
 // ❌ Error
 return (
@@ -93,7 +93,7 @@ return (
 )
 ```
 
-#### 3. use index
+### 3. use index
 ```js
 // 🔺
 const navItems = items.map((item, index) =>
@@ -110,7 +110,7 @@ const navItems = items.map((item) =>
 );
 ```
 
-#### 4. use rendering time
+### 4. use rendering time
 ```js
 // 🔺
 const todoItems = todos.map((todo) =>

@@ -16,7 +16,7 @@ type PostHeadProps = PostHeadInfoProps & {
 const PostHeadWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 300px;
 
   @media (max-width: 768px) {
     height: 300px;
@@ -46,7 +46,7 @@ const PostHead: FunctionComponent<PostHeadProps> = function ({
 }) {
   return (
     <PostHeadWrapper>
-      <BackgroundImage image={thumbnail} alt="thumbnail" />
+      {/* <BackgroundImage image={thumbnail} alt="thumbnail" /> */}
       <PostHeadInfo title={title} date={date} category={category} tags={tags} />
     </PostHeadWrapper>
   )

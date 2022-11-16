@@ -52,6 +52,13 @@ module.exports = {
             },
           },
           {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              isIconAfterHeader: true,
+              elements: [`h1`, `h2`, `h3`]
+            }
+          },
+          {
             resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-',

@@ -16,8 +16,8 @@ const PostHeadInfoWrapper = styled.div`
   width: 768px;
   height: 100%;
   margin: 0 auto;
-  padding: 60px 0;
-  color: #ffffff;
+  padding: 20px 0;
+  color: #000;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -31,11 +31,9 @@ const PrevPageIcon = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #ffffff;
   color: #000000;
   font-size: 22px;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
     width: 30px;

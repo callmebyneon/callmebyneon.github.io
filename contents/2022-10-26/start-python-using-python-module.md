@@ -1,21 +1,23 @@
 ---
-date: '2022-10-26'
+date: '2022-10-26 14:02:25'
 title: 'Start Python - using python module'
-category: 'Python'
+category: 'Study'
 tags: ['python', 'study']
 summary: ''
 thumbnail: './default.png'
 ---
 
-## Python Standard Library
+<small><em>last modified: 2022-11-16</em></small>
+
+# Python Standard Library
 - link: https://docs.python.org/3/library/
 ```python
-# use library like below
+# get method from library like below
 from random import randint
 
 # make random integer using randint
 random_int = randInt(1, 100)
 ```
 
-## PyPI (The Python Package Index)
+# PyPI (The Python Package Index)
 - link: https://pypi.org/

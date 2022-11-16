@@ -68,7 +68,7 @@ const MarkdownRenderer = styled.div`
   ol,
   ul {
     margin-left: 20px;
-    padding: 30px 0;
+    padding: 20px 0;
   }
 
   // Adjust Horizontal Rule style
@@ -105,6 +105,7 @@ const MarkdownRenderer = styled.div`
   pre[class*='language-'] {
     tab-size: 2;
     background-color: #eee;
+    font-family: 'Noto Sans Mono', monospace;
   }
 
   // Markdown Responsive Design

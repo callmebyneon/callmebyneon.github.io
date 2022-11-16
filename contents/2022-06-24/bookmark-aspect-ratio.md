@@ -1,6 +1,6 @@
 ---
-date: '2022-06-24'
-title: '[bookmark] aspect-ratio'
+date: '2022-06-24 00:00:01'
+title: '📑 css/aspect-ratio'
 category: 'CSS'
 tags: ['css property']
 summary: ''

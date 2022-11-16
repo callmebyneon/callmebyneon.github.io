@@ -12,15 +12,13 @@ type PostListProps = {
 }
 
 const PostListWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  display: flex;
+  flex-direction: column;
   width: 768px;
   margin: 0 auto;
   padding: 50px 0 100px;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
     width: 100%;
     padding: 50px 20px;
   }
@@ -37,19 +35,41 @@ const PostList: FunctionComponent<PostListProps> = function ({
 
   return (
     <PostListWrapper ref={containerRef}>
-      {postList.map(
-        ({
-          node: {
-            id,
-            fields: { slug },
-            frontmatter,
-          },
-        }: PostListItemType) => (
-          <PostItem {...frontmatter} link={slug} key={id} />
-        ),
+      {postList.length <= 0 ? (
+        <NoPostBox />
+      ) : (
+        postList.map(
+          ({
+            node: {
+              id,
+              fields: { slug },
+              frontmatter,
+            },
+          }: PostListItemType) => (
+            <PostItem {...frontmatter} link={slug} key={id} />
+          ),
+        )
       )}
     </PostListWrapper>
   )
 }
 
 export default PostList
+
+function NoPostBox() {
+  const NotFoundDescription = styled.div`
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+    color: #707070;
+  `
+
+  return (
+    <NotFoundDescription>
+      Sorry, this category is not exist.
+      <br />
+      Find another one.
+    </NotFoundDescription>
+  )
+}

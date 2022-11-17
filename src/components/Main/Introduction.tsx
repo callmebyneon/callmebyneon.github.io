@@ -16,17 +16,20 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 768px;
+  width: 1200px;
   height: 160px;
   margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    padding: 0 20px;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 100%;
     height: 200px;
-    padding: 0 20px;
   }
 `
 

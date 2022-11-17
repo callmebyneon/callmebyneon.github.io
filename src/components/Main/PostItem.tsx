@@ -95,6 +95,10 @@ const Title = styled.div`
   -webkit-box-orient: vertical;
   font-size: 20px;
   font-weight: 700;
+
+  @media (min-width: 768px) {
+    white-space: nowrap;
+  }
 `
 
 const Summary = styled.div`

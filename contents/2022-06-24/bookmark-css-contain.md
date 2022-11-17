@@ -4,6 +4,7 @@ title: '📑 css/contain'
 category: 'CSS'
 tags: ['css property']
 summary: ''
+emoji: '🧵'
 thumbnail: './default.png'
 ---
 

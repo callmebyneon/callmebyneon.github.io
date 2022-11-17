@@ -1,9 +1,10 @@
 ---
 date: '2022-10-26 14:02:25'
 title: 'Start Python - using python module'
-category: 'Study'
+category: 'Basic'
 tags: ['python', 'study']
 summary: ''
+emoji: '✍'
 thumbnail: './default.png'
 ---
 

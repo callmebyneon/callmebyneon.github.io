@@ -122,11 +122,6 @@ export const getPostList = graphql`
             category
             tags
             emoji
-            thumbnail {
-              childImageSharp {
-                gatsbyImageData(width: 768, height: 400)
-              }
-            }
           }
         }
       }

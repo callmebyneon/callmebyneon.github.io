@@ -4,6 +4,7 @@ title: '⚠ NOT unique key'
 category: 'React'
 tags: ['react', 'issue']
 summary: ''
+emoji: '🧩'
 thumbnail: './default.png'
 ---
 

@@ -1,9 +1,10 @@
 ---
 date: '2022-10-25 00:00:00'
 title: 'Start Python - variables and functions'
-category: 'Study'
+category: 'Basic'
 tags: ['python', 'study']
 summary: ''
+emoji: '✍'
 thumbnail: './default.png'
 ---
 

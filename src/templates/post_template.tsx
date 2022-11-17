@@ -76,12 +76,6 @@ export const queryMarkdownDataBySlug = graphql`
             category
             tags
             emoji
-            thumbnail {
-              childImageSharp {
-                gatsbyImageData
-              }
-              publicURL
-            }
           }
         }
       }

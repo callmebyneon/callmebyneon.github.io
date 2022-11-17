@@ -171,9 +171,6 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
   tags,
   summary,
   emoji,
-  thumbnail: {
-    childImageSharp: { gatsbyImageData },
-  },
   link,
 }) {
   const arrayFromDate: string[] = date.split('.')

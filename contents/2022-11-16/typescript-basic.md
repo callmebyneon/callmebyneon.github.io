@@ -1,36 +1,58 @@
 ---
-date: '2022-11-16 17:27:27'
-title: 'Let\'s start typescript'
-category: 'Study'
+date: '2022-11-16 17:27:55'
+title: 'TypeScript Basic'
+category: 'Basic'
 tags: ['typescript', 'basic']
-summary: ''
+summary: "Let's start typescript"
+emoji: '✍'
 thumbnail: './default.png'
 ---
-
 # Let's start typescript
 
 TypeScript Playground
 - https://www.typescriptlang.org/play
 
-## Types of TS
-### basic types - optional + string, number, array, object, and tuple type
+# Types in TS
+## 1. Type Basic
+
+### Strings, Numbers, and Booleans [JS, TS]
+
 ```ts
-const type = { name: 'TYPE' }
-
-type.name = 'false'
-
-console.log(JSON.stringify(type, null, 2)) // print json
-
-type T = string | number
+type TheType = string | number
 
 let a = 'hello'
 let b = false
+
+a = 123       // ERROR: Type 'number' is not assignable to type 'string'.
+a: TheType = 123    // ERROR: 'TheType' only refers to a type, but is being used as a value here.
+```
+
+### Array [JS, TS]
+```ts
 let c = [1, 2, 3]
 
-a = 123       // ERROR: 'number' 형식은 'string' 형식에 할당할 수 없습니다.
-a: T = 123    // ERROR: 'T'는(는) 형식만 참조하지만, 여기서는 값으로 사용되고 있습니다.
+c.push("4")   // ERROR: Argument of type 'string' is not assignable to parameter of type 'number'.
+```
 
-c.push("4")   // ERROR: 'string' 형식의 인수는 'number' 형식의 매개 변수에 할당될 수 없습니다.
+### Object [JS, TS]
+```ts
+type Words = {
+	[key: string]: string
+}
+
+let dict: Words = {
+	"food": "potato"
+}
+```
+
+
+### Optional [TS only]
+```ts
+type NewPlayer = {
+  age?: string | number // === string | number | undefined
+}
+
+const numeric = null // const numeric: null
 ```
 
 ```ts
@@ -41,63 +63,48 @@ const player: {
   name: 'Type'
 }
 
-if (player.age && player.age < 10) {
-// if (player.age < 10) { // 개체가 'undefined'인 것 같습니다.
-
+if (player.age < 10) { // ERROR: Object is possibly 'undefined'.
+	// ....
 }
+```
 
+
+### Read-Only [TS only]
+The `readonly` keyword work only in typescript and no exist in JS.
+```ts
+// TS
+const numbers: readonly number[] = [1, 2]
+numbers.push(3) // ERROR: Property 'push' does not exist on type 'readonly number[]'.
+```
+So, before compiling, `numbers.push(3)` is error code, after compiling, seems like normal JS code.
+```js
+// JS
+const numbers = [1, 2]
+```
+
+```ts
 type PlayerName = string
 type PlayerAge = number
 type Player = {
   readonly name: PlayerName,
   age?: PlayerAge
 }
-```
-
-```ts
-function divide(a: number, b: number) {
-  return a / b
-}
 
 const playerMaker = (name: string): Player => ({ name })
 
 const newb = playerMaker('newb')
-// newb.name = 'newbie' // ERROR: 읽기 전용 속성이므로 'name'에 할당할 수 없습니다.
-
-const numbers: readonly number[] = [1, 2]
-// numbers.push(3) // ERROR: 'readonly number[]' 형식에 'push' 속성이 없습니다.
-// Q. Does the readonly from Typescript compile to JavaScript?
-// => A. No
-// (JS) after compile => const numbers =  [1, 2]; numbers.push(3); => numbers = [1, 2, 3]
-// `readonly` only work in TS code and vanishing after compiling (no exit in JS)
+newb.name = 'newbie' // ERROR: Cannot assign to 'name' because it is a read-only property.
 ```
 
-- Tuple
+### Tuple [TS only]
 ```ts
 const user: [string, number, boolean] = ['name', 0, false]
-// user[0] = 1 // ERROR: 'number' 형식은 'string' 형식에 할당할 수 없습니다.
+user[0] = 1 // ERROR: Type 'number' is not assignable to type 'string'.
 ```
 
-- Optional
-```ts
-type NewPlayer = {
-  age?: string | number // === string | number | undefined
-}
 
-const numeric = null // const numeric: null
-
-
-type Words = {
-	[key: string]: string
-}
-
-let dict: Words = {
-	"food": "potato"
-}
-```
-
-### basic types - any, unknown, void, never
-- `any` : escape the TS world
+### Type any
+Type `any` means escaping the TS world
 ```ts
 const x: any[] = [1, 2, 3, 4]
 const y: any = true
@@ -105,7 +112,7 @@ const y: any = true
 console.log(x + y) // No Problem because of `any`!
 ```
 
-- `unknown`
+### Type unknown
 ```ts
 let z: unknown
 // let z_ = z + 1	 // ERROR: 개체가 '알 수 없는' 형식입니다.
@@ -119,20 +126,16 @@ if (typeof z === 'string') {
 }
 ```
 
-- `void` : empty, no return value in function
+### Type void
+Type `void` means empty: no return value in function
 ```ts
 function hello() { // function hello(): void
   console.log(z)
 }
 ```
 
-- `never` : when a function never return
-```ts
-function helloAgain(): never {  // ERROR: 'never'를 반환하는 함수에는 연결 가능한 끝점이 있을 수 없습니다.
-  return 'hello' // ERROR: 'string' 형식은 'never' 형식에 할당할 수 없습니다.
-}
-```
-
+### Type never
+When a function never return, using like below.
 ```ts
 function neverHello(): never {
   throw new Error('never function')
@@ -150,39 +153,49 @@ function GoodHello(name: string | number) {
 }
 ```
 
-### Function in Typescript
+```ts
+function helloAgain(): never {  // ERROR: 'never'를 반환하는 함수에는 연결 가능한 끝점이 있을 수 없습니다.
+  return 'hello' // ERROR: 'string' 형식은 'never' 형식에 할당할 수 없습니다.
+}
+```
 
-- call signature
-  - 참고: https://stackoverflow.com/questions/32043487/difference-between-call-signature-and-function-type
+
+## 2. Function in Typescript
+
+### Call Signatures
+> 참고: https://stackoverflow.com/questions/32043487/difference-between-call-signature-and-function-type
 ```ts
 type AddType = (a: number, b: number) => number;
 const add: AddType = (a, b) => a + b;
 ```
 
-- overloading : happens when a function has multiple and different call signatures
+### Overloading
+Overloading happens when a function has multiple and different call signatures.
+
 ```ts
 type SumType = {
   (a: number, b: number): number
   (a: number, b: string): number
 }
-// const sum: Sum = (a, b) => a + b; // return string | number
+
 const sum: SumType = (a, b) => {
   if (typeof b === "string") return a
   return a + b
 }
 ```
 
+For example, in Next.js, using Route like below
 ```ts
-// in Next.js, using Route like below
 Router.push("/home")
 // OR
 Router.push({
   path: "/home",
   ...options
 }) 
+```
 
-
-// look like =>  
+And that `Router` might be like this,
+```ts  
 type ConfigType = {
   path: string,
   state: object
@@ -219,12 +232,14 @@ const additional: AdditionalType = (a, b, c?: number) => {
 ```
 
 
-- generic : using type placeholder and this generating call signature on demand
+### Generics
+Generics using type placeholder and this generating call signature on demand.
+
 
 > "polymorphism" : ploy-(several, multi) + morpho-(form, structure) 다형성
 
+- example1
 ```ts
-// example1
 // First, NOT GOOD usage concrete type
 type SuperPrintType = {
   (arr: number[]): void
@@ -255,8 +270,8 @@ const C = superPrintWithGeneric(["1", "2", "3"])        // NO ERROR // const C: 
 const D = superPrintWithGeneric(["1", 2, false, true])  // NO ERROR // const D: string | number | boolean
 ```
 
+- example2
 ```ts
-// example2
 type PlayUser<T> = {
   name: string
   extraInfo: T
@@ -280,17 +295,17 @@ const lynn: PlayUser<null> = {
 }
 ```
 
+- example3
 ```ts
-// example3
 type arrNumbers = Array<number> // === number[], using interface Array<T>
 ```
 
 
 
-### Classes and Interface
+## 3. Classes and Interface
 
-- class
-  - after compile to JS, abstract class is just a class
+### Classes
+After compile to JS, abstract class is just a class
 ```ts
 abstract class User {
 	constructor(										// private vs. protected vs. public
@@ -325,7 +340,7 @@ nico.nickname
 ```
 
 
-- interface
+### Interfaces
 1. type declaration
 ```ts
 // > with type,
@@ -461,7 +476,7 @@ class NewPlayer implements User, Human {
 }
 ```
 
-- generic in class/interface
+### Generics in Classes or Interfaces
 ```ts
 interface SStorage<T> {
 	[key: string]: T
@@ -491,12 +506,3 @@ const booleansStorage = new LocalStorage<boolean()
 // booleansStorage.set(key: string, value: boolean)
 // booleansStorage.get(key: string): boolean
 ```
-
-
-<!-- 
-/// Set TS configuration
-// > Lib configuration
-
-
-// > Declaration files
- -->

@@ -1,9 +1,10 @@
 ---
 date: '2022-10-26 13:23:53'
 title: 'Start Python - data structures'
-category: 'Study'
+category: 'Basic'
 tags: ['python', 'study']
 summary: ''
+emoji: '✍'
 thumbnail: './default.png'
 ---
 

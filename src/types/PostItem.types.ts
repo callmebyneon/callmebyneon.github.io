@@ -6,6 +6,7 @@ export type PostFrontmatterType = {
   category: string
   tags: string[]
   summary: string
+  emoji: string
   thumbnail: {
     childImageSharp: {
       gatsbyImageData: IGatsbyImageData
@@ -27,6 +28,7 @@ export type PostListItemType = {
 export type PostPageItemType = {
   node: {
     html: string
+    tableOfContents: string
     frontmatter: PostFrontmatterType
   }
 }

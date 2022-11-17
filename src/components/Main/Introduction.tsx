@@ -30,15 +30,15 @@ const Wrapper = styled.div`
   }
 `
 
-const SubTitle = styled.div`
+const Title = styled.div`
+  margin-top: 5px;
   font-size: 1.25rem;
   font-weight: 700;
 `
 
-const Title = styled.div`
-  margin-top: 5px;
-  font-size: 1.25rem;
-  font-weight: 500;
+const SubTitle = styled.div`
+  font-size: 1rem;
+  font-weight: 400;
 `
 
 const Introduction: FunctionComponent<IntroductionProps> = function ({
@@ -52,7 +52,7 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
         <div>
           <Title>Dev Log</Title>
           <SubTitle>
-            <a href="https://github.com/callmebyneon">@call</a>
+            <a href="https://github.com/callmebyneon">@callmebyneon</a>
           </SubTitle>
         </div>
       </Wrapper>

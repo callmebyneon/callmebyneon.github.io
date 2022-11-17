@@ -1,0 +1,62 @@
+import React, { FunctionComponent } from 'react'
+import styled from '@emotion/styled'
+
+interface PostContentProps {
+  html: string
+}
+
+const TOCRenderer = styled.div`
+  // Renderer Style
+
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  max-height: calc(100vh - 80px);
+  margin: 0;
+  padding-right: 1.5rem;
+  position: sticky;
+  left: calc(50vw - (768px / 2) - 260px);
+  top: 40px;
+  word-break: keep-all;
+  overflow-y: scroll;
+
+  li {
+    list-style: none;
+    display: block;
+    width: 100%;
+    color: #aaa;
+    line-height: 2;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &:hover {
+      font-weight: 700;
+      color: rgb(64, 107, 159);
+      border-width: 2px;
+    }
+
+    // h2 heading
+    & > ul > li {
+      text-indent: 1em;
+
+      // h3 heading
+      & > ul > li {
+        text-indent: 2em;
+        border-left: 1px solid;
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    display: none;
+  }
+`
+
+const PostContent: FunctionComponent<PostContentProps> = function ({ html }) {
+  return <TOCRenderer dangerouslySetInnerHTML={{ __html: html }} />
+}
+
+export default PostContent

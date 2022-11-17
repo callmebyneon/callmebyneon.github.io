@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import { PostFrontmatterType } from 'types/PostItem.types'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
+import twemoji from 'twemoji'
 
 type PostItemProps = PostFrontmatterType & {
   link: string
@@ -52,10 +53,20 @@ const ThumbnailImageWrapper = styled.div`
   transition: 200ms all ease-out;
 `
 
-const ThumbnailImage = styled(GatsbyImage)`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+// const ThumbnailImage = styled(GatsbyImage)`
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// `
+
+const ThumbnailImage = styled.div`
+  padding: 2rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 `
 
 const PostItemContent = styled.div`
@@ -151,6 +162,7 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
   category,
   tags,
   summary,
+  emoji,
   thumbnail: {
     childImageSharp: { gatsbyImageData },
   },
@@ -163,10 +175,18 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
       <ThumbnailWrapper>
         <ThumbnailImageWrapper className="thumbnail-image__wrapper">
           <ThumbnailImage
+            dangerouslySetInnerHTML={{
+              __html: twemoji.parse(emoji || '🎃', {
+                folder: 'svg',
+                ext: '.svg',
+              }),
+            }}
+          />
+          {/* <ThumbnailImage
             image={gatsbyImageData}
             alt={`Post Item Image: ${title}`}
             loading="lazy"
-          />
+          /> */}
         </ThumbnailImageWrapper>
         <DateWrapper>
           <Date>

@@ -121,6 +121,7 @@ export const getPostList = graphql`
             date(formatString: "YYYY.MM.DD.")
             category
             tags
+            emoji
             thumbnail {
               childImageSharp {
                 gatsbyImageData(width: 768, height: 400)

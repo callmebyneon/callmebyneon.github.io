@@ -1,21 +1,30 @@
-import React, { FunctionComponent } from 'react';
-import { graphql } from 'gatsby';
-import { PostPageItemType } from 'types/PostItem.types';
-import Template from 'components/Common/Template';
-import PostHead from '../components/Post/PostHead';
-import PostContent from '../components/Post/PostContent';
-import CommentWidget from 'components/Post/CommentWidget';
+import React, { FunctionComponent } from 'react'
+import { graphql } from 'gatsby'
+import { PostPageItemType } from 'types/PostItem.types'
+import Template from 'components/Common/Template'
+import PostHead from '../components/Post/PostHead'
+import PostTOC from '../components/Post/PostTOC'
+import PostContent from '../components/Post/PostContent'
+import CommentWidget from 'components/Post/CommentWidget'
+import styled from '@emotion/styled'
 
 type PostTemplateProps = {
   data: {
     allMarkdownRemark: {
-      edges: PostPageItemType[];
-    };
-  };
+      edges: PostPageItemType[]
+    }
+  }
   location: {
-    href: string;
-  };
-};
+    href: string
+  }
+}
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 100px 0;
+`
 
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   data: {
@@ -26,37 +35,30 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   const {
     node: {
       html,
-      frontmatter: {
-        title,
-        summary,
-        date,
-        category,
-        tags,
-        // TODO: alter emoji image (ex. test 'gatsby-remark-emojis' in remark transformer plugin or else)
-        thumbnail: {
-          childImageSharp: { gatsbyImageData },
-          publicURL,
-        },
-      },
+      tableOfContents,
+      frontmatter: { title, summary, date, category, tags, emoji },
     },
-  } = edges[0];
+  } = edges[0]
 
   return (
-    <Template title={title} description={summary} url={href} image={publicURL}>
+    <Template title={title} description={summary} url={href} image={emoji}>
       <PostHead
         title={title}
         date={date}
         category={category}
         tags={tags}
-        thumbnail={gatsbyImageData}
+        emoji={emoji}
       />
-      <PostContent html={html} />
+      <ContentWrapper>
+        <PostTOC html={tableOfContents} />
+        <PostContent html={html} />
+      </ContentWrapper>
       <CommentWidget />
     </Template>
-  );
-};
+  )
+}
 
-export default PostTemplate;
+export default PostTemplate
 
 export const queryMarkdownDataBySlug = graphql`
   query queryMarkdownDataBySlug($slug: String) {
@@ -64,12 +66,14 @@ export const queryMarkdownDataBySlug = graphql`
       edges {
         node {
           html
+          tableOfContents(maxDepth: 3)
           frontmatter {
             title
             summary
             date(formatString: "YYYY.MM.DD.")
             category
             tags
+            emoji
             thumbnail {
               childImageSharp {
                 gatsbyImageData
@@ -81,4 +85,4 @@ export const queryMarkdownDataBySlug = graphql`
       }
     }
   }
-`;
+`

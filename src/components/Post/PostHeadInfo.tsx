@@ -8,6 +8,7 @@ export type PostHeadInfoProps = {
   date: string
   category: string
   tags: string[]
+  emoji: string
 }
 
 const PostHeadInfoWrapper = styled.div`
@@ -87,6 +88,7 @@ const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
   date,
   category,
   tags,
+  emoji,
 }) {
   const goBackPage = () => window.history.back()
 
@@ -95,7 +97,9 @@ const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
       <PrevPageIcon onClick={goBackPage}>
         <FontAwesomeIcon icon={faArrowLeft} />
       </PrevPageIcon>
-      <Title>{title}</Title>
+      <Title>
+        {emoji} {title}
+      </Title>
       <PostData>
         <div>
           <b className="category">{category}</b>

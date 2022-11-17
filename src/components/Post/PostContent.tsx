@@ -10,8 +10,8 @@ const MarkdownRenderer = styled.div`
   display: flex;
   flex-direction: column;
   width: 768px;
-  margin: 0 auto;
-  padding: 100px 0;
+  margin: 0;
+  padding: 0;
   word-break: break-all;
 
   // Markdown Style
@@ -35,13 +35,13 @@ const MarkdownRenderer = styled.div`
   * + h1,
   * + h2,
   * + h3 {
-    margin-top: 2em;
+    padding-top: 2em;
   }
 
   hr + h1,
   hr + h2,
   hr + h3 {
-    margin-top: 0;
+    padding-top: 0;
   }
 
   h1 {

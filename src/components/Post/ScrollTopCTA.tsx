@@ -10,9 +10,11 @@ const TopButton = styled.button`
   bottom: 50%;
   right: 1em;
   font-size: 1.25rem;
+  transition: 200ms all;
 
   &:hover {
     color: rgb(64, 107, 159);
+    // transform: translateY(-10%);
   }
 `
 

@@ -5,15 +5,20 @@ interface PostContentProps {
   html: string
 }
 
-const TOCRenderer = styled.div`
+const TocWrapper = styled.div`
+  margin-right: 92px;
+  margin-bottom: 30px;
+`
+
+const TocRenderer = styled.div`
   // Renderer Style
 
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 360px;
   max-height: calc(100vh - 80px);
   margin: 0;
-  padding-right: 1.5rem;
+  padding: 0;
   position: sticky;
   left: calc(50vw - (768px / 2) - 260px);
   top: 40px;
@@ -56,7 +61,11 @@ const TOCRenderer = styled.div`
 `
 
 const PostContent: FunctionComponent<PostContentProps> = function ({ html }) {
-  return <TOCRenderer dangerouslySetInnerHTML={{ __html: html }} />
+  return (
+    <TocWrapper>
+      <TocRenderer dangerouslySetInnerHTML={{ __html: html }} />
+    </TocWrapper>
+  )
 }
 
 export default PostContent

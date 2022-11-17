@@ -5,11 +5,16 @@ interface PostContentProps {
   html: string
 }
 
+const ContentWrapper = styled.div`
+  width: 768px;
+  margin: 0;
+`
+
 const MarkdownRenderer = styled.div`
   // Renderer Style
   display: flex;
   flex-direction: column;
-  width: 768px;
+  width: 100%;
   margin: 0;
   padding: 0;
   word-break: break-all;
@@ -137,7 +142,11 @@ const MarkdownRenderer = styled.div`
 `
 
 const PostContent: FunctionComponent<PostContentProps> = function ({ html }) {
-  return <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
+  return (
+    <ContentWrapper>
+      <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
+    </ContentWrapper>
+  )
 }
 
 export default PostContent

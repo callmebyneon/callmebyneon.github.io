@@ -5,10 +5,7 @@ interface PostContentProps {
   html: string
 }
 
-const TocWrapper = styled.div`
-  margin-right: 92px;
-  margin-bottom: 30px;
-`
+const TocWrapper = styled.div``
 
 const TocRenderer = styled.div`
   // Renderer Style
@@ -17,7 +14,8 @@ const TocRenderer = styled.div`
   flex-direction: column;
   width: 360px;
   max-height: calc(100vh - 80px);
-  margin: 0;
+  margin-right: 92px;
+  margin-bottom: 30px;
   padding: 0;
   position: sticky;
   left: calc(50vw - (768px / 2) - 260px);

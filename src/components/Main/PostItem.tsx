@@ -22,9 +22,17 @@ const PostItemWrapper = styled(Link)`
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.02);
 
+  & .wrapper {
+    transition: 300ms all;
+  }
+
   &:hover {
     filter: brightness(95%);
     background: rgba(0, 0, 0, 0.05);
+
+    & .date__wrapper {
+      opacity: 0;
+    }
 
     & .thumbnail-image__wrapper {
       margin-top: -100%;
@@ -173,7 +181,16 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
   return (
     <PostItemWrapper to={link}>
       <ThumbnailWrapper>
-        <ThumbnailImageWrapper className="thumbnail-image__wrapper">
+        <DateWrapper className="date__wrapper wrapper">
+          <Date>
+            <span className="yyyy">{arrayFromDate[0]}</span>
+            <br />
+            <span className="mm-dd">
+              {arrayFromDate[1]}.{arrayFromDate[2]}
+            </span>
+          </Date>
+        </DateWrapper>
+        <ThumbnailImageWrapper className="thumbnail-image__wrapper wrapper">
           <ThumbnailImage
             dangerouslySetInnerHTML={{
               __html: twemoji.parse(emoji || '🎃', {
@@ -188,15 +205,6 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
             loading="lazy"
           /> */}
         </ThumbnailImageWrapper>
-        <DateWrapper>
-          <Date>
-            <span className="yyyy">{arrayFromDate[0]}</span>
-            <br />
-            <span className="mm-dd">
-              {arrayFromDate[1]}.{arrayFromDate[2]}
-            </span>
-          </Date>
-        </DateWrapper>
       </ThumbnailWrapper>
 
       <PostItemContent>

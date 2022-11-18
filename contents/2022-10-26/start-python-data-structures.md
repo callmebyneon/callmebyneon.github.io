@@ -2,8 +2,8 @@
 date: '2022-10-26 13:23:53'
 title: 'Start Python - data structures'
 category: 'Basic'
-tags: ['python', 'study']
-summary: ''
+tags: ['python', 'study', 'structure']
+summary: 'Array and Dictionary type Data'
 emoji: '🏢' 
 ---
 

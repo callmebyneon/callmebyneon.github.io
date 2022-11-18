@@ -2,17 +2,19 @@
 date: '2022-11-16 17:27:55'
 title: 'TypeScript Basic'
 category: 'Basic'
-tags: ['typescript', 'basic']
+tags: ['typescript', 'basic', 'type', 'generics', 'class', 'interface']
 summary: "Let's start typescript"
 emoji: '🚧'
 ---
-# Let's start typescript
+# Let's start TypeScript
 
-TypeScript Playground
-- https://www.typescriptlang.org/play
+> _I write in the hope that I can find the answer to the confusing situation while writing the TypeScript code._ 
+
+- TypeScript Playground:
+	- https://www.typescriptlang.org/play
 
 # Types in TS
-## 1. Type Basic
+## 1. Basic Concrete Type
 
 ### Strings, Numbers, and Booleans [JS, TS]
 
@@ -304,7 +306,35 @@ type arrNumbers = Array<number> // === number[], using interface Array<T>
 ## 3. Classes and Interface
 
 ### Classes
-After compile to JS, abstract class is just a class
+
+- constructor in class
+In variable in constructor parameter, It is initialize with declare class.
+```ts
+class NoInitialize {
+	private x: string
+}
+
+class WithInitialize {
+	constructor (
+		private x: string
+	) {}
+}
+```
+So, we get the code below after compiling `NoInitialize` and `WithInitialize` to JS
+```js
+"use strict";
+class NoInitialize {
+}
+class WithInitialize {
+    constructor(x) {
+        this.x = x;
+    }
+}
+```
+
+
+- abstract class (추상 클래스)
+After compile to JS, abstract class is just a class. Then we can create on instance of 'User' after compiled.
 ```ts
 abstract class User {
 	constructor(										// private vs. protected vs. public
@@ -322,20 +352,25 @@ abstract class User {
 	}
 }
 
-// const nico = new User("nico", "las", "니꼬")	// w/ abstract class, ERROR: Cannot create on instance of an abstract class.
+
+// const nico = new User("nico", "las", "니꼬")	// ERROR: Cannot create on instance of an abstract class.
 
 // > private keyword only protect in ts code
 // nico.firstName // ERROR: Property 'firstName' is private and only accessible within class 'User'
 
+nico.nickname
+
 class Player extends User {
 	getPoint() {
+		// `private` property even unaccessible within subclass of 'User'
+		console.log(this.firstName) // ERROR: Property 'firstName' is private and only accessible within class 'User'.
+		// `protected` property won't access from out of class neither, but it will be access in subclass. 
 		console.log(this.point)
 	}
 }
 
 const nico = new Player("nico", "las", "니꼬")
 
-nico.nickname
 ```
 
 

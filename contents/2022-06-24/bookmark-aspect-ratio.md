@@ -2,8 +2,8 @@
 date: '2022-06-24 00:00:01'
 title: '📑 css/aspect-ratio'
 category: 'CSS'
-tags: ['css property']
-summary: ''
+tags: ['bookmark', 'css property']
+summary: 'The aspect-ratio CSS property sets a preferred aspect ratio for the box, which will be used in the calculation of auto sizes and some other layout functions.'
 emoji: '🔖'
 ---
 

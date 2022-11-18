@@ -2,7 +2,7 @@
 date: '2022-11-03 09:45:55'
 title: 'React Design Pattern - Compound Component (2)'
 category: 'React'
-tags: ['react', 'design pattern']
+tags: ['react', 'design pattern', 'compound component']
 summary: "Let's create Compound Component"
 emoji: '🚧' 
 ---

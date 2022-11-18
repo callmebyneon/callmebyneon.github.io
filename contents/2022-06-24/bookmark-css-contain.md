@@ -2,8 +2,8 @@
 date: '2022-06-24 00:00:00'
 title: '📑 css/contain'
 category: 'CSS'
-tags: ['css property']
-summary: ''
+tags: ['bookmark', 'css property']
+summary: 'The contain CSS property allows an author to indicate that an element and its contents are, as much as possible, independent of the rest of the document tree.'
 emoji: '🔖'
 ---
 

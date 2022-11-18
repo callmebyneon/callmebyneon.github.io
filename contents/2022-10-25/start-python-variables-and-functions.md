@@ -3,7 +3,7 @@ date: '2022-10-25 00:00:00'
 title: 'Start Python - variables and functions'
 category: 'Basic'
 tags: ['python', 'study']
-summary: ''
+summary: 'How to use Variables and Functions in Python'
 emoji: '📝' 
 ---
 

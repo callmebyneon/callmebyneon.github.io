@@ -2,8 +2,8 @@
 date: '2022-10-26 13:23:54'
 title: 'Start Python - control flow'
 category: 'Basic'
-tags: ['python', 'study']
-summary: ''
+tags: ['python', 'study', 'operator', 'if', 'loop']
+summary: 'Using Comparison operator and Iterator in Python'
 emoji: '♻'
 ---
 

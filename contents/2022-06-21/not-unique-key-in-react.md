@@ -2,15 +2,19 @@
 date: '2022-06-21 00:00:00'
 title: '⚠ NOT unique key'
 category: 'React'
-tags: ['react', 'issue']
-summary: ''
+tags: ['react', 'issue', 'list', 'unique key']
+summary: 'Warning: Each child in a list should have a unique "key" prop.'
 emoji: '⚛'
 ---
 
 # What is _NOT unique_ key prop in React
 
+![not unique key error message](./not-unique-key-in-react-1.jpg)
+
 ## 👉 introduction
+
 처음 이 에러를 마주했을 때, List라는 단어에 넘어가 아래와 같은 코드에는 key를 주지 않았다.
+
 ```js
 const colorChips = colors.map((color) => (
   <div>
@@ -18,6 +22,7 @@ const colorChips = colors.map((color) => (
   </div>
 ));
 ```
+
 당연히 에러가 발생했고 무시도 해봤지만 콘솔창에 자리만 차지하는 이 에러를 더이상 두고 볼 수가 없었다.
 여기저기 key 값을 추가해보기도 하고 구글에도 검색해보면서 key 값을 추가할 때 무엇을 생각해야하는지 적어놓기로 했다.
 

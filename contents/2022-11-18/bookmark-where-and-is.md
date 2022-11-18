@@ -2,7 +2,7 @@
 date: '2022-11-18 15:39:05'
 title: '📑 css/:where() & :is()'
 category: 'CSS'
-tags: ['css property']
+tags: ['bookmark', 'css pseudo-class', 'where', 'is']
 summary: 'Use css compact with :where and :is'
 emoji: '🔖'
 ---

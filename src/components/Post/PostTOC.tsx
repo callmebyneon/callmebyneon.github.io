@@ -43,11 +43,14 @@ const TocRenderer = styled.div`
 
     // h2 heading
     & > ul > li {
-      text-indent: 1em;
+      margin-left: 0.5em;
+      padding-left: 1em;
+      border-left: 1px solid;
 
       // h3 heading
       & > ul > li {
-        text-indent: 2em;
+        margin-left: 0.5em;
+        padding-left: 1em;
         border-left: 1px solid;
       }
     }

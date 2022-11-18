@@ -17,7 +17,8 @@ const MarkdownRenderer = styled.div`
   width: 100%;
   margin: 0;
   padding: 0;
-  word-break: break-all;
+  word-break: keep-all;
+  white-space: break-space;
 
   // Markdown Style
   line-height: 1.8;
@@ -26,7 +27,7 @@ const MarkdownRenderer = styled.div`
 
   // Apply Padding Attribute to All Elements
   p {
-    padding: 3px 0;
+    padding: 0.8em 0;
   }
 
   // Adjust Heading Element Style
@@ -92,7 +93,6 @@ const MarkdownRenderer = styled.div`
   pre[class*='language-'] {
     margin: 30px 0;
     padding: 15px 20px;
-    font-size: 0.875rem;
     border-radius: 12px;
     overflow: auto;
 
@@ -104,12 +104,14 @@ const MarkdownRenderer = styled.div`
 
   code[class*='language-'] {
     border-radius: 4px;
+    padding: 2px 6px;
   }
 
   code[class*='language-'],
   pre[class*='language-'] {
     tab-size: 2;
-    background-color: #eee;
+    background-color: #e3e1e1;
+    font-size: 0.875rem;
     font-family: 'Noto Sans Mono', monospace;
   }
 

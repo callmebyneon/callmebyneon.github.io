@@ -48,7 +48,7 @@ const ThumbnailWrapper = styled.div`
   display: block;
   width: 120px;
   height: 120px;
-  background: #fff;
+  background: #e8e8e8;
   overflow: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   transition: 200ms all ease-out;
@@ -210,9 +210,7 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
 
       <PostItemContent>
         <Category>
-          {tags.map(tag => (
-            <TagItem key={tag}>#{tag}</TagItem>
-          ))}
+          <TagItem>{tags.join(' / ')}</TagItem>
           <CategoryItem>{category}</CategoryItem>
         </Category>
         <Title>{title}</Title>

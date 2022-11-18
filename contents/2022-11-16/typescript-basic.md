@@ -4,8 +4,7 @@ title: 'TypeScript Basic'
 category: 'Basic'
 tags: ['typescript', 'basic']
 summary: "Let's start typescript"
-emoji: '✍'
-thumbnail: './default.png'
+emoji: '🚧'
 ---
 # Let's start typescript
 

@@ -4,8 +4,7 @@ title: 'React Design Pattern - Compound Component (1)'
 category: 'React'
 tags: ['react', 'design pattern']
 summary: 'What is Compound Component'
-emoji: '🧩'
-thumbnail: './default.png'
+emoji: '🧙‍♂️' 
 ---
 
 <small><em>last modified: 2022-11-03</em></small>

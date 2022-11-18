@@ -4,8 +4,7 @@ title: 'Easy authentication with window.sessionStorage'
 category: 'React'
 tags: ['react', 'web', 'auth']
 summary: 'How to make easy authentication with `window.sessionStorage` with react-router'
-emoji: '🧩'
-thumbnail: './default.png'
+emoji: '🎫'
 ---
 
 # Temporary authentication with window.sessionStorage

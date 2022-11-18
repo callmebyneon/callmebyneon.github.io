@@ -4,8 +4,7 @@ title: 'Start Python - using python module'
 category: 'Basic'
 tags: ['python', 'study']
 summary: ''
-emoji: '✍'
-thumbnail: './default.png'
+emoji: '📝' 
 ---
 
 <small><em>last modified: 2022-11-16</em></small>

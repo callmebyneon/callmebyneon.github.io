@@ -4,8 +4,7 @@ title: '📑 css/aspect-ratio'
 category: 'CSS'
 tags: ['css property']
 summary: ''
-emoji: '🧵'
-thumbnail: './default.png'
+emoji: '🔖'
 ---
 
 CSS aspect-ratio 속성은 자동 크기 조절 및 일부 다른 레이아웃 함수 계산에 사용될 box에 대한 우선 사용될 가로 세로 비율을 설정합니다.

@@ -4,8 +4,7 @@ title: 'Start Python - data structures'
 category: 'Basic'
 tags: ['python', 'study']
 summary: ''
-emoji: '✍'
-thumbnail: './default.png'
+emoji: '🏢' 
 ---
 
 <small><em>last modified: 2022-11-04</em></small>

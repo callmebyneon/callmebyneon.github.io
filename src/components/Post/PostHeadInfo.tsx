@@ -47,11 +47,14 @@ const PrevPageIcon = styled.div`
   }
 `
 
+const Date = styled.div`
+  margin-top: auto;
+`
+
 const Title = styled.div`
   display: -webkit-box;
   overflow: hidden;
   overflow-wrap: break-word;
-  margin-top: auto;
   text-overflow: ellipsis;
   white-space: normal;
   -webkit-line-clamp: 2;
@@ -66,8 +69,8 @@ const Title = styled.div`
 
 const PostData = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: baseline;
   margin-top: 10px;
   font-size: 1.125rem;
   font-weight: 300;
@@ -75,7 +78,7 @@ const PostData = styled.div`
 
   & .tags {
     font-size: 0.875rem;
-    margin-bottom: 1em;
+    margin-left: 1em;
     text-transform: lowercase;
   }
 
@@ -101,15 +104,11 @@ const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
       <PrevPageIcon onClick={goBackPage}>
         <FontAwesomeIcon icon={faArrowLeft} />
       </PrevPageIcon>
-      <Title>
-        {emoji} {title}
-      </Title>
+      <Date>{date}</Date>
+      <Title>{title}</Title>
       <PostData>
-        <div>
-          <b className="category">{category}</b>
-          <p className="tags">{tags.join(' / ')}</p>
-        </div>
-        <div>{date}</div>
+        <b className="category">{category}</b>
+        <p className="tags">{tags.join(' / ')}</p>
       </PostData>
     </PostHeadInfoWrapper>
   )

@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactNode } from 'react'
 import styled from '@emotion/styled'
 import GlobalStyle from 'components/Common/GlobalStyle'
+import Navigator from 'components/Common/Navigator'
 import Footer from 'components/Common/Footer'
 import { Helmet } from 'react-helmet'
 
@@ -69,6 +70,7 @@ const Template: FunctionComponent<TemplateProps> = function ({
       </Helmet>
 
       <GlobalStyle />
+      <Navigator />
       {children}
       <Footer />
     </Container>

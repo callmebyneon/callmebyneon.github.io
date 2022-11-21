@@ -7,7 +7,7 @@ import PostTOC from '../components/Post/PostTOC'
 import PostContent from '../components/Post/PostContent'
 import CommentWidget from 'components/Post/CommentWidget'
 import styled from '@emotion/styled'
-import ScrollTopCTA from 'components/Post/ScrollTopCTA'
+import ScrollTopCTA from 'components/Common/ScrollTopCTA'
 
 type PostTemplateProps = {
   data: {

@@ -7,6 +7,7 @@ import { PostListItemType } from 'types/PostItem.types'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import { graphql } from 'gatsby'
 import queryString, { ParsedQuery } from 'query-string'
+import ScrollTopCTA from 'components/Common/ScrollTopCTA'
 
 type IndexPageProps = {
   location: {
@@ -91,6 +92,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
         categoryList={categoryList}
       />
       <PostList selectedCategory={selectedCategory} posts={edges} />
+      <ScrollTopCTA />
     </Template>
   )
 }

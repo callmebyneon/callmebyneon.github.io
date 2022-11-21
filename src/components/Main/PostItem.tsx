@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { PostFrontmatterType } from 'types/PostItem.types'
-import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import twemoji from 'twemoji'
 
@@ -15,32 +14,38 @@ const PostItemWrapper = styled(Link)`
   transition: 300ms all;
   position: relative;
   height: 120px;
-  margin: 4px 0;
+  margin: 8px 0;
   cursor: pointer;
   overflow: hidden;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.02);
 
+  &:first-of-type {
+    margin-top: 0;
+  }
+
   & .wrapper {
     transition: 300ms all;
   }
 
-  &:hover {
-    filter: brightness(95%);
-    background: rgba(0, 0, 0, 0.05);
-
-    & .date__wrapper {
-      opacity: 0;
-    }
-
-    & .thumbnail-image__wrapper {
-      margin-top: -100%;
-    }
+  @media (max-width: 768px) {
+    height: fit-content;
   }
 
-  &:first-of-type {
-    margin-top: 0;
+  @media (hover: hover) {
+    &:hover {
+      filter: brightness(95%);
+      background: rgba(0, 0, 0, 0.05);
+
+      & .date__wrapper {
+        opacity: 0;
+      }
+
+      & .thumbnail-image__wrapper {
+        margin-top: -100%;
+      }
+    }
   }
 `
 
@@ -52,6 +57,10 @@ const ThumbnailWrapper = styled.div`
   overflow: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   transition: 200ms all ease-out;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const ThumbnailImageWrapper = styled.div`
@@ -60,12 +69,6 @@ const ThumbnailImageWrapper = styled.div`
   margin-top: 0;
   transition: 200ms all ease-out;
 `
-
-// const ThumbnailImage = styled(GatsbyImage)`
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// `
 
 const ThumbnailImage = styled.div`
   padding: 2rem;
@@ -143,6 +146,10 @@ const Category = styled.div`
   flex-wrap: wrap;
   align-items: baseline;
   margin-bottom: 0.7em;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `
 
 const CategoryItem = styled.div`
@@ -155,8 +162,9 @@ const CategoryItem = styled.div`
   font-weight: 500;
   color: white;
 
-  &:first-of-type {
+  @media (max-width: 768px) {
     margin-left: 0;
+    margin-bottom: 10px;
   }
 `
 
@@ -166,6 +174,10 @@ const TagItem = styled.div`
   font-size: 14px;
   font-weight: 500;
   color: rgb(64, 107, 159);
+
+  &:first-of-type {
+    margin-left: 0;
+  }
 `
 
 const PostItem: FunctionComponent<PostItemProps> = function ({

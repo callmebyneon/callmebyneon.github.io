@@ -29,19 +29,27 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 200px;
+    height: 100px;
   }
 `
 
 const Title = styled.div`
-  margin-top: 5px;
-  font-size: 1.25rem;
-  font-weight: 700;
+  margin-bottom: 0.125em;
+  font-size: 2.5rem;
+  font-weight: 900;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `
 
 const SubTitle = styled.div`
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `
 
 const Introduction: FunctionComponent<IntroductionProps> = function ({

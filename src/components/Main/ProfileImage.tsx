@@ -12,8 +12,7 @@ const ProfileImageWrapper = styled(GatsbyImage)`
   border-radius: 50%;
 
   @media (max-width: 768px) {
-    width: 80px;
-    height: 80px;
+    display: none;
   }
 `
 

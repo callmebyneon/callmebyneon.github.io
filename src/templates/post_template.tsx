@@ -24,7 +24,19 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 100px 0;
+`
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 768px;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
@@ -43,16 +55,18 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
 
   return (
     <Template title={title} description={summary} url={href} image={emoji}>
-      <PostHead
-        title={title}
-        date={date}
-        category={category}
-        tags={tags}
-        emoji={emoji}
-      />
       <ContentWrapper>
         <PostTOC html={tableOfContents} />
-        <PostContent html={html} />
+        <Content>
+          <PostHead
+            title={title}
+            date={date}
+            category={category}
+            tags={tags}
+            emoji={emoji}
+          />
+          <PostContent html={html} />
+        </Content>
       </ContentWrapper>
       <CommentWidget />
       <ScrollTopCTA />

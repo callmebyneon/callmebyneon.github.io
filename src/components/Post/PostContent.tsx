@@ -5,8 +5,8 @@ interface PostContentProps {
   html: string
 }
 
-const ContentWrapper = styled.div`
-  width: 768px;
+const MarkdownWrapper = styled.div`
+  width: 100%;
   margin: 0;
 `
 
@@ -145,9 +145,9 @@ const MarkdownRenderer = styled.div`
 
 const PostContent: FunctionComponent<PostContentProps> = function ({ html }) {
   return (
-    <ContentWrapper>
+    <MarkdownWrapper>
       <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
-    </ContentWrapper>
+    </MarkdownWrapper>
   )
 }
 

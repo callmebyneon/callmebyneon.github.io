@@ -33,8 +33,22 @@ const CategoryListWrapper = styled.div`
     margin-top: 30px;
     padding: 20px;
     background: var(--background-color);
-    box-shadow: 0 16px 16px var(--background-color);
     z-index: var(--z-sticky);
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -48px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(
+        to bottom,
+        var(--background-color),
+        rgba(255, 255, 255, 0)
+      );
+    }
   }
 `
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

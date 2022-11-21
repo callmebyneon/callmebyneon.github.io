@@ -7,8 +7,13 @@ type IntroductionProps = {
   profileImage: IGatsbyImageData
 }
 
-const Background = styled.div`
+const HeaderBackground = styled.div`
   width: 100%;
+
+  @media (max-width: 768px) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
 `
 
 const Wrapper = styled.div`
@@ -57,7 +62,7 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
   profileImage,
 }) {
   return (
-    <Background>
+    <HeaderBackground>
       <Wrapper>
         <ProfileImage profileImage={profileImage} />
         <div>
@@ -67,7 +72,7 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
           </SubTitle>
         </div>
       </Wrapper>
-    </Background>
+    </HeaderBackground>
   )
 }
 

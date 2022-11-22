@@ -46,6 +46,7 @@ const Navigator: FunctionComponent = function () {
   return (
     <NavigatorWrapper>
       <NavLinks>
+        <Link to="/">Blog</Link>
         <Link to="/portfolio">Portfolio</Link>
         <a
           rel="noopener"

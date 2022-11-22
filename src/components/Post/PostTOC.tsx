@@ -12,9 +12,9 @@ const TocRenderer = styled.div`
 
   display: flex;
   flex-direction: column;
-  width: 360px;
+  width: 260px;
   max-height: calc(100vh - 80px);
-  margin: 0 92px 30px 0;
+  margin: 0 80px 30px 0;
   padding: 0;
   position: sticky;
   left: calc(50vw - (768px / 2) - 260px);
@@ -25,14 +25,18 @@ const TocRenderer = styled.div`
   li {
     list-style: none;
     display: block;
-    width: 100%;
+    width: 96%;
     color: #aaa;
     line-height: 2;
     font-size: 14px;
     font-weight: 400;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+
+    & > a {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
 
     @media (hover: hover) {
       &:hover {

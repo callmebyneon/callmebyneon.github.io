@@ -1,16 +1,21 @@
 ---
 date: '2022-10-26 13:23:53'
+date: '2022-10-26 13:23:53'
 title: 'Start Python - data structures'
-category: 'Study'
-tags: ['python', 'study']
-summary: ''
-thumbnail: './default.png'
+category: 'Basic'
+tags: ['python', 'study', 'structure']
+summary: 'Array and Dictionary type Data'
+emoji: '🏢' 
 ---
 
 <small><em>last modified: 2022-11-04</em></small>
 
 # Data Structure
+<small><em>last modified: 2022-11-04</em></small>
 
+# Data Structure
+
+## Lists
 ## Lists
 - `[]`
 - [`list()`](https://docs.python.org/3/library/functions.html#func-list)
@@ -19,6 +24,9 @@ thumbnail: './default.png'
 days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 ```
 
+## Tuple
+- `()`
+- [`tuple()`](https://docs.python.org/3/library/functions.html#func-tuple)
 ## Tuple
 - `()`
 - [`tuple()`](https://docs.python.org/3/library/functions.html#func-tuple)
@@ -32,6 +40,7 @@ days_list = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 days_tuple = ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
 ```
 
+## Dicts
 ## Dicts
 - `{}`
 - [`dict()`](https://docs.python.org/3/library/functions.html#func-dict)

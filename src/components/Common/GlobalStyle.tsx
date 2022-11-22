@@ -5,6 +5,14 @@ const defaultStyle = css`
   // @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400&display=swap');
   // @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css');
 
+  :root {
+    // colors
+    --background-color: #f6f6f6;
+
+    // z-index
+    --z-sticky: 10;
+  }
+
   * {
     padding: 0;
     margin: 0;
@@ -20,7 +28,7 @@ const defaultStyle = css`
   #___gatsby {
     height: 100%;
     font-size: 16px;
-    background-color: #f6f6f6;
+    background-color: var(--background-color);
 
     @media (max-width: 768px) {
       font-size: 14px;

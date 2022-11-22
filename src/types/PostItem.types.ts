@@ -1,4 +1,4 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image'
+// import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 export type PostFrontmatterType = {
   title: string
@@ -6,12 +6,7 @@ export type PostFrontmatterType = {
   category: string
   tags: string[]
   summary: string
-  thumbnail: {
-    childImageSharp: {
-      gatsbyImageData: IGatsbyImageData
-    }
-    publicURL: string
-  }
+  emoji: string
 }
 
 export type PostListItemType = {
@@ -27,6 +22,7 @@ export type PostListItemType = {
 export type PostPageItemType = {
   node: {
     html: string
+    tableOfContents: string
     frontmatter: PostFrontmatterType
   }
 }

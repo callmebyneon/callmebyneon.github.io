@@ -28,8 +28,27 @@ const CategoryListWrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    margin-top: 50px;
-    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    margin-top: 30px;
+    padding: 20px;
+    background: var(--background-color);
+    z-index: var(--z-sticky);
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -48px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(
+        to bottom,
+        var(--background-color),
+        rgba(255, 255, 255, 0)
+      );
+    }
   }
 `
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -47,19 +66,26 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   color: #fff;
   cursor: pointer;
 
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-
   &:last-of-type {
     margin-right: 0;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: #fff;
+      background-color: #000;
+    }
   }
 
   @media (max-width: 768px) {
     margin-right: 4px;
     margin-bottom: 4px;
-    font-size: 1rem;
+    font-size: 1.15rem;
+
+    &:hover {
+      color: #fff;
+      background: inherit;
+    }
   }
 `
 

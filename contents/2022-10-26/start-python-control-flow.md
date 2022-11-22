@@ -1,10 +1,10 @@
 ---
 date: '2022-10-26 13:23:54'
 title: 'Start Python - control flow'
-category: 'Study'
-tags: ['python', 'study']
-summary: ''
-thumbnail: './default.png'
+category: 'Basic'
+tags: ['python', 'study', 'operator', 'if', 'loop']
+summary: 'Using Comparison operator and Iterator in Python'
+emoji: '♻'
 ---
 
 <small><em>last modified: 2022-11-04</em></small>

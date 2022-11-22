@@ -6,6 +6,24 @@ import useInfiniteScroll, {
   useInfiniteScrollType,
 } from 'hooks/useInfiniteScroll'
 
+function NoPostBox() {
+  const NotFoundDescription = styled.div`
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+    color: #707070;
+  `
+
+  return (
+    <NotFoundDescription>
+      Sorry, this category is not exist.
+      <br />
+      Find another one.
+    </NotFoundDescription>
+  )
+}
+
 type PostListProps = {
   selectedCategory: string
   posts: PostListItemType[]
@@ -14,11 +32,11 @@ type PostListProps = {
 const PostListWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 768px;
+  width: 1200px;
   margin: 0 auto;
   padding: 50px 0 100px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     width: 100%;
     padding: 50px 20px;
   }
@@ -55,21 +73,3 @@ const PostList: FunctionComponent<PostListProps> = function ({
 }
 
 export default PostList
-
-function NoPostBox() {
-  const NotFoundDescription = styled.div`
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
-    line-height: 1.3;
-    color: #707070;
-  `
-
-  return (
-    <NotFoundDescription>
-      Sorry, this category is not exist.
-      <br />
-      Find another one.
-    </NotFoundDescription>
-  )
-}

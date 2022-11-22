@@ -1,21 +1,43 @@
-import React, { FunctionComponent } from 'react';
-import { graphql } from 'gatsby';
-import { PostPageItemType } from 'types/PostItem.types';
-import Template from 'components/Common/Template';
-import PostHead from '../components/Post/PostHead';
-import PostContent from '../components/Post/PostContent';
-import CommentWidget from 'components/Post/CommentWidget';
+import React, { FunctionComponent } from 'react'
+import { graphql } from 'gatsby'
+import { PostPageItemType } from 'types/PostItem.types'
+import Template from 'components/Common/Template'
+import PostHead from '../components/Post/PostHead'
+import PostTOC from '../components/Post/PostTOC'
+import PostContent from '../components/Post/PostContent'
+import CommentWidget from 'components/Post/CommentWidget'
+import styled from '@emotion/styled'
+import ScrollTopCTA from 'components/Common/ScrollTopCTA'
 
 type PostTemplateProps = {
   data: {
     allMarkdownRemark: {
-      edges: PostPageItemType[];
-    };
-  };
+      edges: PostPageItemType[]
+    }
+  }
   location: {
-    href: string;
-  };
-};
+    href: string
+  }
+}
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 768px;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`
 
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   data: {
@@ -26,37 +48,33 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   const {
     node: {
       html,
-      frontmatter: {
-        title,
-        summary,
-        date,
-        category,
-        tags,
-        // TODO: alter emoji image (ex. test 'gatsby-remark-emojis' in remark transformer plugin or else)
-        thumbnail: {
-          childImageSharp: { gatsbyImageData },
-          publicURL,
-        },
-      },
+      tableOfContents,
+      frontmatter: { title, summary, date, category, tags, emoji },
     },
-  } = edges[0];
+  } = edges[0]
 
   return (
-    <Template title={title} description={summary} url={href} image={publicURL}>
-      <PostHead
-        title={title}
-        date={date}
-        category={category}
-        tags={tags}
-        thumbnail={gatsbyImageData}
-      />
-      <PostContent html={html} />
+    <Template title={title} description={summary} url={href} image={emoji}>
+      <ContentWrapper>
+        <PostTOC html={tableOfContents} />
+        <Content>
+          <PostHead
+            title={title}
+            date={date}
+            category={category}
+            tags={tags}
+            emoji={emoji}
+          />
+          <PostContent html={html} />
+        </Content>
+      </ContentWrapper>
       <CommentWidget />
+      <ScrollTopCTA />
     </Template>
-  );
-};
+  )
+}
 
-export default PostTemplate;
+export default PostTemplate
 
 export const queryMarkdownDataBySlug = graphql`
   query queryMarkdownDataBySlug($slug: String) {
@@ -64,21 +82,17 @@ export const queryMarkdownDataBySlug = graphql`
       edges {
         node {
           html
+          tableOfContents(maxDepth: 3)
           frontmatter {
             title
             summary
             date(formatString: "YYYY.MM.DD.")
             category
             tags
-            thumbnail {
-              childImageSharp {
-                gatsbyImageData
-              }
-              publicURL
-            }
+            emoji
           }
         }
       }
     }
   }
-`;
+`

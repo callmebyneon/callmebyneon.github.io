@@ -29,10 +29,14 @@ const NavLinks = styled.div`
     }
   }
 
+  @media (max-width: 1200px) {
+    width: 100%;
+    padding: 2rem;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     height: 80px;
-    padding: 2rem;
     justify-content: flex-start;
 
     & > a {

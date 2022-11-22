@@ -95,7 +95,7 @@ export const getPageInfo = graphql`
         siteUrl
       }
     }
-    file(name: { eq: "profile-image" }) {
+    file(name: { eq: "logo" }) {
       publicURL
     }
   }

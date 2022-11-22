@@ -66,6 +66,7 @@ const MarkdownRenderer = styled.div`
   blockquote {
     margin: 30px 0;
     padding: 5px 15px;
+    background: rgba(0, 0, 0, 0.03);
     border-left: 2px solid #000000;
     font-weight: 700;
   }

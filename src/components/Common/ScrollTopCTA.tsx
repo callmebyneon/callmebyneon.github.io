@@ -3,13 +3,18 @@ import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
-const TopButton = styled.button`
+const FixedButton = styled.button`
   all: unset;
-  display: block;
-  position: fixed;
-  bottom: 50%;
-  right: 1em;
-  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: inherit;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: rgba(246, 246, 246, 0.8);
   transition: 200ms all;
 
   @media (hover: hover) {
@@ -26,9 +31,9 @@ const ScrollTopCTA = () => {
   }
 
   return (
-    <TopButton title="go to top of this page" onClick={onScrollToTop}>
+    <FixedButton title="go to top of this page" onClick={onScrollToTop}>
       <FontAwesomeIcon icon={faArrowUp} />
-    </TopButton>
+    </FixedButton>
   )
 }
 

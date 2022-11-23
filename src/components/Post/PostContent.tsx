@@ -78,6 +78,10 @@ const MarkdownRenderer = styled.div`
     padding: 20px 0;
   }
 
+  li {
+    width: 100%;
+  }
+
   // Adjust Horizontal Rule style
   hr {
     border: 1px solid #000000;
@@ -86,8 +90,16 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Link Element Style
   a {
+    display: inline;
+    width: 100%;
     color: #4263eb;
     text-decoration: underline;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+
+    &.anchor.after {
+      display: inline;
+    }
   }
 
   // Adjust Code Style
@@ -105,7 +117,10 @@ const MarkdownRenderer = styled.div`
 
   code[class*='language-'] {
     border-radius: 4px;
-    padding: 2px 6px;
+  }
+
+  & :not(pre) > code[class*='language-'] {
+    padding: 1px 6px;
   }
 
   code[class*='language-'],

@@ -12,7 +12,7 @@ export type PostHeadInfoProps = {
 const PostHeadInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 1200px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   padding: 20px 0;
@@ -34,13 +34,13 @@ const Date = styled.div`
 `
 
 const Title = styled.div`
-  display: -webkit-box;
-  overflow: hidden;
+  // display: -webkit-box;
+  // overflow: hidden;
   overflow-wrap: break-word;
-  text-overflow: ellipsis;
-  white-space: normal;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  // text-overflow: ellipsis;
+  // white-space: normal;
+  // -webkit-line-clamp: 2;
+  // -webkit-box-orient: vertical;
   margin-bottom: 1rem;
   font-size: 45px;
   font-weight: 900;

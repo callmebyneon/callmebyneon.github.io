@@ -17,6 +17,10 @@ const PostHeadWrapper = styled.div`
   position: relative;
   width: 100%;
   margin: 40px 0 100px;
+
+  @media (max-width: 768px) {
+    margin: 40px 0 20px;
+  }
 `
 
 const PostHead: FunctionComponent<PostHeadProps> = function ({

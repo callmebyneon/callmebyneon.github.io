@@ -11,6 +11,7 @@ const HeaderBackground = styled.div`
   width: 100%;
 
   @media (max-width: 768px) {
+    margin-top: 80px;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }

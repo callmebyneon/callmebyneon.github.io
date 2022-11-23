@@ -5,7 +5,14 @@ import { Link, graphql } from 'gatsby'
 import GlobalStyle from 'components/Common/GlobalStyle'
 import twemoji from 'twemoji'
 
-type PortfolioPageProps = {
+interface FileInfoType {
+  base: string
+  name: string
+  ext: string
+  publicURL: string
+}
+
+interface PortfolioPageProps {
   data: {
     site: {
       siteMetadata: {
@@ -16,6 +23,9 @@ type PortfolioPageProps = {
     }
     file: {
       publicURL: string
+    }
+    allFile: {
+      nodes: FileInfoType[]
     }
   }
 }
@@ -49,14 +59,31 @@ const GoToMainButton = styled(Link)`
   }
 `
 
+const generateImageObject = (nodes: FileInfoType[]) => {
+  const imageObj = {}
+
+  nodes.forEach(node => {
+    Object.defineProperty(imageObj, node.name, {
+      value: node,
+      writable: false,
+    })
+  })
+
+  return imageObj
+}
+
 const PortfolioPage: FunctionComponent<PortfolioPageProps> = ({
   data: {
     site: {
       siteMetadata: { title, description, siteUrl },
     },
     file: { publicURL },
+    allFile: { nodes },
   },
 }) => {
+  const source = generateImageObject(nodes)
+  console.log(source)
+
   return (
     <Template
       title={title}
@@ -97,6 +124,14 @@ export const getPageInfo = graphql`
     }
     file(name: { eq: "logo" }) {
       publicURL
+    }
+    allFile(filter: { absolutePath: { regex: "/portfolio/" }, publicURL: {} }) {
+      nodes {
+        base
+        name
+        ext
+        publicURL
+      }
     }
   }
 `

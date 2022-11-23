@@ -11,6 +11,7 @@ const defaultStyle = css`
 
     // z-index
     --z-sticky: 10;
+    --z-fixed: 20;
   }
 
   * {

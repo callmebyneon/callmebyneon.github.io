@@ -4,10 +4,10 @@ title: 'React Design Pattern - Compound Component (2)'
 category: 'React'
 tags: ['react', 'design pattern', 'compound component']
 summary: "Let's create Compound Component"
-emoji: '🚧' 
+emoji: '🧙‍♂️' 
 ---
 
-<small><em>last modified: 2022-11-04</em></small>
+<small><em>last modified: 2022-11-24</em></small>
  
 
 # Intro
@@ -137,27 +137,12 @@ function DataTable({ value }) {
 
 # Outro
 
-글은 이쯤에서 마치려고 하지만 사실 위 컴포넌트로도 예측불가능한 요구사항들을 모두 반영하기엔 아직 모자라보입니다.
+위 컴포넌트를 실제 프로젝트에 사용하기에는 더 많은 코드가 추가로 필요하겠지만 이 글에서는 이쯤에서 일단 끝내려고 합니다.
 
-하지만 모든 상황에 답이 되는 god-like한 답을 만들기란 어려울 것입니다.
+처음 글을 시작할때는 몇가지 오구사항을 충족하는 Table 컴포넌트를 설명하려고 했지만, 컴포넌트를 계속 수정해보며 좀 더 공부가 필요하다는 것을 느꼈습니다.
 
+물론 모든 상황에 답이 되는, 예측불가능한 요구사항들을 모두 수용할 수 있는 god-like한 답을 만들기란 어려울 것입니다.
 
+하지만 몇가지 요구사항을 만족하는 컴포넌트를 위해 다른 글에서 이어가도록 하겠습니다.
 
-<!--
-# 5. Let's upgrade component
-
-이걸로 정말 우리가 합성 컴포넌트를 만들어 낸 것일까요? 어딘가 찜찜한 기분이 드니까 이전 글에서 했던 질문으로 한 번 돌아가 보겠습니다.
-
-_이 `Table` 컴포넌트에 테이블 footer나 pagination을 추가하려면 어떻게 해야할까요?_ 
-
-이 상황을 위한 테이블을 위에서 작성한 컴포넌트로는 부족해보입니다.
- 
-우선 위 질문에 필요한 사항을 정리하고 presentational/business logic을 한 번 분리해보겠습니다.
-
-1. 사용자가 계산하고자 하는 값을 선택한다. → 계산하고자하는 타겟 위치를 특정하여 가져온다.
-2. 사용자가 타겟 값을 이용하여 계산할 수식을 입력하고 저장한다. → 타겟 값을 이용하여 저장된 수식에 대입하여 계산된 값을 추출한다.
-3. 계산된 값들을 새로운 열 
--->
-
-
-🚧
+<p align="center">⏸</p>

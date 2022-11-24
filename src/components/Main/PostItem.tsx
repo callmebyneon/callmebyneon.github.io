@@ -206,7 +206,7 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
         <ThumbnailImageWrapper className="thumbnail-image__wrapper wrapper">
           <ThumbnailImage
             dangerouslySetInnerHTML={{
-              __html: twemoji.parse(emoji || '🎃', {
+              __html: twemoji.parse(emoji || '🚧', {
                 folder: 'svg',
                 ext: '.svg',
               }),

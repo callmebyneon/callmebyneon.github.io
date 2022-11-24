@@ -1,19 +1,23 @@
 ---
 date: '2022-11-16 17:27:55'
-title: 'TypeScript Basic'
+title: 'TypeScript Note'
 category: 'Basic'
 tags: ['typescript', 'basic', 'type', 'generics', 'class', 'interface']
 summary: "Let's start typescript"
-emoji: '🚧'
+emoji: '🗂'
 ---
+
+<small><em>last modified: 2022-11-24</em></small>
+ 
+
 # Let's start TypeScript
 
-> _I write in the hope that I can find the answer to the confusing situation while writing the TypeScript code._ 
+> _I wrote in the hope that I can find the answer to the confusing situation while writing the TypeScript code._ 
 
 - TypeScript Playground:
 	- https://www.typescriptlang.org/play
 
-# Types in TS
+# Types Declaration
 ## 1. Basic Concrete Type
 
 ### Strings, Numbers, and Booleans [JS, TS]
@@ -104,7 +108,7 @@ user[0] = 1 // ERROR: Type 'number' is not assignable to type 'string'.
 ```
 
 
-### Type any
+### Type 'any'
 Type `any` means escaping the TS world
 ```ts
 const x: any[] = [1, 2, 3, 4]
@@ -113,7 +117,7 @@ const y: any = true
 console.log(x + y) // No Problem because of `any`!
 ```
 
-### Type unknown
+### Type 'unknown'
 ```ts
 let z: unknown
 // let z_ = z + 1	 // ERROR: 개체가 '알 수 없는' 형식입니다.
@@ -127,7 +131,7 @@ if (typeof z === 'string') {
 }
 ```
 
-### Type void
+### Type 'void'
 Type `void` means empty: no return value in function
 ```ts
 function hello() { // function hello(): void
@@ -135,7 +139,7 @@ function hello() { // function hello(): void
 }
 ```
 
-### Type never
+### Type 'never'
 When a function never return, using like below.
 ```ts
 function neverHello(): never {
@@ -303,7 +307,7 @@ type arrNumbers = Array<number> // === number[], using interface Array<T>
 
 
 
-## 3. Classes and Interface
+## 3. Type Checking with Classes and Interface
 
 ### Classes
 
@@ -540,3 +544,10 @@ const booleansStorage = new LocalStorage<boolean()
 // booleansStorage.set(key: string, value: boolean)
 // booleansStorage.get(key: string): boolean
 ```
+
+# Ref
+
+- [https://www.typescriptlang.org/docs/handbook/2/basic-types.html](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
+- TypeScript Documentation
+	- ENG : [https://www.typescriptlang.org/docs/handbook/2/basic-types.html](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
+	- KOR: [https://www.typescriptlang.org/ko/docs/handbook/2/basic-types.html](https://www.typescriptlang.org/ko/docs/handbook/2/basic-types.html)

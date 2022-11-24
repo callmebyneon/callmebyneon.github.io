@@ -1,13 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import PostHeadInfo, { PostHeadInfoProps } from './PostHeadInfo'
-
-type GatsbyImgProps = {
-  image: IGatsbyImageData
-  alt: string
-  className?: string
-}
 
 type PostHeadProps = PostHeadInfoProps & {
   emoji: string

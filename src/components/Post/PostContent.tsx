@@ -105,13 +105,18 @@ const MarkdownRenderer = styled.div`
   // Adjust Code Style
   pre[class*='language-'] {
     margin: 30px 0;
-    padding: 15px 20px;
+    // padding: 15px 20px;
     border-radius: 12px;
     overflow: auto;
 
     ::-webkit-scrollbar-thumb {
       background: rgba(255, 255, 255, 0.5);
       border-radius: 3px;
+    }
+
+    .line-numbers-rows {
+      padding: 1em 0;
+      padding-left: 8px;
     }
   }
 

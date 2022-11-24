@@ -12,7 +12,7 @@ emoji: '🗂'
 
 # Let's start TypeScript
 
-> _I wrote in the hope that I can find the answer to the confusing situation while writing the TypeScript code._ 
+> _I wrote in the hope that I can find the answer to the confusing situation while writing the TypeScript code with [this course](https://nomadcoders.co/typescript-for-beginners)._ 
 
 - TypeScript Playground:
 	- https://www.typescriptlang.org/play

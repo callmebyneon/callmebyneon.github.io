@@ -20,7 +20,8 @@ const TocRenderer = styled.div`
   left: calc(50vw - (768px / 2) - 260px);
   top: 56px;
   word-break: keep-all;
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   li {
     list-style: none;

@@ -58,13 +58,31 @@ module.exports = {
               elements: [`h1`, `h2`, `h3`]
             }
           },
+
+          // {
+          //   resolve: 'gatsby-remark-prismjs',
+          //   options: {
+          //     classPrefix: 'language-',
+          //     showLineNumbers: true,
+          //   },
+          // },
+
           {
-            resolve: 'gatsby-remark-prismjs',
+            resolve: `gatsby-remark-vscode`,
             options: {
-              classPrefix: 'language-',
-              showLineNumbers: true,
-            },
+              theme: {
+                default: 'Dark+ (default dark)',
+                parentSelector: {
+                  // Any CSS selector will work!
+                  'html[data-theme=dark]': 'Abyss',
+                }
+              },
+              inlineCode: {
+                theme: 'Dark+ (default dark)'
+              }
+            }
           },
+
           {
             resolve: 'gatsby-remark-images',
             options: {

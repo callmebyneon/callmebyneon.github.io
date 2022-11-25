@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
+import 'gatsby-remark-vscode/styles.css'
 
 interface PostContentProps {
   html: string
@@ -103,7 +104,7 @@ const MarkdownRenderer = styled.div`
   }
 
   // Adjust Code Style
-  pre[class*='language-'] {
+  pre[data-language] {
     margin: 30px 0;
     // padding: 15px 20px;
     border-radius: 12px;
@@ -120,20 +121,18 @@ const MarkdownRenderer = styled.div`
     }
   }
 
-  code[class*='language-'] {
-    border-radius: 4px;
-  }
-
-  & :not(pre) > code[class*='language-'] {
+  & :not(pre) > code {
     padding: 1px 6px;
+    border-radius: 4px;
+    background: #1e1e1e;
+    color: #d4d4d4;
   }
 
-  code[class*='language-'],
-  pre[class*='language-'] {
+  code,
+  pre {
     tab-size: 2;
-    background-color: #e3e1e1;
-    font-size: 0.875rem;
-    font-family: 'Noto Sans Mono', monospace;
+    // font-size: 0.875rem;
+    // font-family: 'Noto Sans Mono', monospace;
   }
 
   // Markdown Responsive Design

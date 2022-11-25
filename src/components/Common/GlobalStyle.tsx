@@ -43,11 +43,12 @@ const defaultStyle = css`
     cursor: pointer;
   }
 
-  code[class*='language-'],
-  pre[class*='language-'],
-  code[class*='language-'] *,
-  pre[class*='language-'] * {
+  code,
+  pre,
+  code *,
+  pre * {
     font-family: 'Noto Sans Mono', monospace;
+    font-size: 14px;
   }
 
   small {

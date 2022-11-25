@@ -7,7 +7,7 @@ summary: "Let's start typescript"
 emoji: '🗂'
 ---
 
-<small><em>last modified: 2022-11-24</em></small>
+<small><em>last modified: 2022-11-25</em></small>
  
 
 # Let's start TypeScript
@@ -52,7 +52,7 @@ let dict: Words = {
 
 
 ### Optional [TS only]
-```ts
+```ts {numberLines}
 type NewPlayer = {
   age?: string | number // === string | number | undefined
 }
@@ -60,7 +60,7 @@ type NewPlayer = {
 const numeric = null // const numeric: null
 ```
 
-```ts
+```ts {numberLines:6}
 const player: {
   name: string,
   age?: number
@@ -141,7 +141,7 @@ function hello() { // function hello(): void
 
 ### Type 'never'
 When a function never return, using like below.
-```ts
+```ts {numberLines}
 function neverHello(): never {
   throw new Error('never function')
 }
@@ -158,7 +158,7 @@ function GoodHello(name: string | number) {
 }
 ```
 
-```ts
+```ts {numberLines:15}
 function helloAgain(): never {  // ERROR: 'never'를 반환하는 함수에는 연결 가능한 끝점이 있을 수 없습니다.
   return 'hello' // ERROR: 'string' 형식은 'never' 형식에 할당할 수 없습니다.
 }
@@ -262,7 +262,7 @@ superPrint([true, false, true])
 superPrint(["1", "2", "3"]) // 🤔 It's NOT GOOD answer
 superPrint(["1", 2, false, true]) // 🤔 It's NOT GOOD answer // ERROR: 이 호출과 일치하는 오버로드가 없습니다.
 
-// Using Generic type
+// => Using Generic type
 // type SuperPrintGeneric = <TypePlaceholder>(arr: TypePlaceholder[]) => TypePlaceholder
 // const superPrintWithGeneric: SuperPrintGeneric = (arr) => arr[0]
 function superPrintWithGeneric<T>(a: T[]) {
@@ -338,9 +338,10 @@ class WithInitialize {
 
 
 - abstract class (추상 클래스)
-After compile to JS, abstract class is just a class. Then we can create on instance of 'User' after compiled.
-```ts
-abstract class User {
+After compile to JS, abstract class is just a class. Then we can create on instance of 'User' after compiled. Then, line 17 and 20 show error like below.
+```ts{18,21}
+// Example1
+abstract class User {	// L1
 	constructor(										// private vs. protected vs. public
 		private firstName: string,		// only use in this class
 		private lastName: string,
@@ -356,14 +357,19 @@ abstract class User {
 	}
 }
 
-
-// const nico = new User("nico", "las", "니꼬")	// ERROR: Cannot create on instance of an abstract class.
+const nico = new User("nico", "las", "니꼬")	// ERROR: Cannot create on instance of an abstract class.
 
 // > private keyword only protect in ts code
-// nico.firstName // ERROR: Property 'firstName' is private and only accessible within class 'User'
+nico.firstName // ERROR: Property 'firstName' is private and only accessible within class 'User'
+```
 
-nico.nickname
+In `User` class above, nickname property is public only
+```ts {numberLines:18}
+nico.nickname		// ✅
+```
 
+```ts{5}
+// Example2
 class Player extends User {
 	getPoint() {
 		// `private` property even unaccessible within subclass of 'User'
@@ -372,9 +378,6 @@ class Player extends User {
 		console.log(this.point)
 	}
 }
-
-const nico = new Player("nico", "las", "니꼬")
-
 ```
 
 
@@ -473,17 +476,21 @@ const nico: User = {
 }
 ```
 
+If change abstract class to interface,
 ```ts
-// > abstract class => interface
-//abstract class User {
-//	constructor(
-//		protected firstName: string,
-//		protected lastName: string,
-//	) {}
-//	abstract sayHi(name: string): string
-//	abstract fullName(): string
-//}
-interface User {
+abstract class User {
+	constructor(
+		protected firstName: string,
+		protected lastName: string,
+	) {}
+	abstract sayHi(name: string): string
+	abstract fullName(): string
+}
+```
+
+All of inherited properties have to be 'public'.
+```ts{14-15}
+interface User {	//L1
 	firstName: string,
 	lastName: string,
 	sayHi(name: string): string
@@ -494,11 +501,20 @@ interface Human {
 }
 class NewPlayer implements User, Human {
 	constructor(
-		// private firstName: string,
-		// private lastName: string
 		// ERROR: Class 'Player' incorrectly implements interface 'User'. Property 'firstName' is private in type 'Player' but not in type 'User'.
 		// They have to be public
-		
+		private firstName: string,
+		private lastName: string,
+	)
+
+	...
+}
+```
+
+```ts
+// HAVE TO BE
+class NewPlayer implements User, Human {	//L10
+	constructor(
 		public firstName: string,
 		public lastName: string,
 		public heath: number
@@ -515,6 +531,7 @@ class NewPlayer implements User, Human {
 ```
 
 ### Generics in Classes or Interfaces
+https://www.typescriptlang.org/docs/handbook/2/generics.html
 ```ts
 interface SStorage<T> {
 	[key: string]: T
@@ -545,9 +562,8 @@ const booleansStorage = new LocalStorage<boolean()
 // booleansStorage.get(key: string): boolean
 ```
 
-# Ref
+# Docs
 
-- [https://www.typescriptlang.org/docs/handbook/2/basic-types.html](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
 - TypeScript Documentation
 	- ENG : [https://www.typescriptlang.org/docs/handbook/2/basic-types.html](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
 	- KOR: [https://www.typescriptlang.org/ko/docs/handbook/2/basic-types.html](https://www.typescriptlang.org/ko/docs/handbook/2/basic-types.html)

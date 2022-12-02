@@ -13,9 +13,9 @@ emoji: '🎞'
 > Hook은 React 16.8에서 새로 추가된 개념입니다. Hook을 통해 class를 작성하지 않고도 state와 같은 React 기능들을 사용할 수 있습니다.   
 > [Introducing Hooks - React 👉](https://reactjs.org/docs/hooks-intro.html)
 
-공식 문서에서는 위와 같이 Hook을 소개하고 있습니다. 말하자면 React가 클래스형 컴포넌트에서 함수형 컴포넌트 사용을 권장하면서 클래스형 컴포넌트에서 사용되었던 React의 기능들을 class 없이 함수형 컴포넌트에서 React 기능들을 사용할 수 있도록 도와줍니다.
+공식 문서에서는 위와 같이 Hook을 소개하고 있습니다. 말하자면 React가 클래스 형 컴포넌트에서 함수형 컴포넌트 사용을 권장하면서 클래스 형 컴포넌트에서 사용되었던 React의 기능들을 class 없이 함수형 컴포넌트에서 React 기능들을 사용할 수 있도록 도와줍니다.
 
-사용자가 커스텀 훅을 만들어 사용할 수도 있지만 React에는 기본적으로 내장되어 있는 Hook들이 있습니다. 이 훅들은 함수형 컴포넌트 혹은 커스텀 훅의 최상위 레벨(at the top level)에서만 사용되어야 합니다. 콜백 내부나 루프 내부에서 여러번 혹은 조건부로 호출할 수 없습니다.
+사용자가 커스텀 훅을 만들어 사용할 수도 있지만 React에는 기본적으로 내장되어 있는 Hook들이 있습니다. 이 훅들은 함수형 컴포넌트 혹은 커스텀 훅의 최상위 레벨(at the top level)에서만 사용되어야 합니다. 콜백 내부나 루프 내부에서 여러 번 혹은 조건부로 호출할 수 없습니다.
 
 [![react: Hooks - https://beta.reactjs.org/apis/react](./react-hooks-api-0.png)](https://beta.reactjs.org/apis/react)
 
@@ -27,15 +27,15 @@ emoji: '🎞'
 - [Context Hooks](https://beta.reactjs.org/apis/react#context-hooks)
     - `useContext`는 context를 읽고 구독합니다.  
 - [Ref Hooks](https://beta.reactjs.org/apis/react#ref-hooks)
-    - `useRef`는 ref 를 정의합니다. 어느 값이든 저장할 수 있지만 주로 DOM 노드를 저장하기 위해 사용합니다.  
+    - `useRef`는 ref를 정의합니다. 어느 값이든 저장할 수 있지만 주로 DOM 노드를 저장하기 위해 사용합니다.  
     - `useImperativeHandle`를 사용하여 구성 요소별로 노출된 참조를 사용자 정의할 수 있습니다.  
 - [Effect Hooks](https://beta.reactjs.org/apis/react#effect-hooks)
     - `useEffect`는 구성 요소를 외부 시스템에 연결합니다.  
     - `useLayoutEffect`는 브라우저가 화면을 다시 칠하기 전에 실행됩니다. 여기서 레이아웃을 측정할 수 있습니다.   
     - `useInsertionEffect`는 React가 DOM을 변경하기 전에 실행됩니다. 라이브러리는 여기에 동적 CSS를 삽입할 수 있습니다.  
 - [Performance Hooks](https://beta.reactjs.org/apis/react#performance-hooks)
-    - `useMemo`를 사용하면 비용이 많이 드는 계산 결과를 캐시할 수 있습니다.  
-    - `useCallback`을 사용하면 함수 정의를 최적화된 구성 요소로 전달하기 전에 캐시할 수 있습니다.  
+    - `useMemo`를 사용하면 비용이 많이 드는 계산 결과를 캐시 할 수 있습니다.  
+    - `useCallback`을 사용하면 함수 정의를 최적화된 구성 요소로 전달하기 전에 캐시 할 수 있습니다.  
     - `useTransition`을 사용하면 상태 전환을 긴급하지 않음으로 표시하고 다른 업데이트가 이를 중단할 수 있습니다.  
     - `useDeferredValue`를 사용하면 UI의 중요하지 않은 부분 업데이트를 연기하고 다른 부분이 먼저 업데이트되도록 할 수 있습니다.  
 - [Other Hooks](https://beta.reactjs.org/apis/react#other-hooks)
@@ -53,7 +53,7 @@ emoji: '🎞'
 
 ### React.useState
 
-useState는 상태값과 그 상태값을 업데이트 할 수 있는 업데이트 함수를 반환하는데, 타입정의를 빌려 설명하자면 다음과 같습니다.
+useState는 상태 값과 그 상태 값을 업데이트할 수 있는 업데이트 함수를 반환하는데, 타입 정의를 빌려 설명하자면 다음과 같습니다.
 
 - `@types/react/v17`
     
@@ -71,7 +71,7 @@ useState는 상태값과 그 상태값을 업데이트 할 수 있는 업데이�
     ```
     
 
-initialState를 인자로 받아 `[state, stateDispatcher]` 형태의 배열을 반환하고, initialState를 받지 않는다면 undefined를 초기값으로 갖는 state, dispatcher 배열을 반환합니다.
+initialState를 인자로 받아 `[state, stateDispatcher]` 형태의 배열을 반환하고, initialState를 받지 않는다면 undefined를 초깃값으로 갖는 state, dispatcher 배열을 반환합니다.
 
 실제로 사용한다면 아래 코드와 같이 사용할 수 있습니다.
 
@@ -90,13 +90,13 @@ function Counter() {
 
  
 
-반면 dispatcher는 아래처럼 업데이트해야할 stateful value 뿐만 아니라 prevState를 인자로 받는 콜백을 사용할수도 있습니다. 
+반면 dispatcher는 아래처럼 업데이트해야 할 stateful value뿐만 아니라 prevState를 인자로 받는 콜백을 사용할 수도 있습니다. 
 
 ```tsx
 type SetStateAction<S> = S | ((prevState: S) => S);
 ```
 
-두 경우를 비교해보기 위해 count가 3씩 증가하는 버튼을 추가해보겠습니다. 
+두 경우를 비교해 보기 위해 count가 3씩 증가하는 기능을 단순하게 추가해 보겠습니다. 
 
 ```tsx {diff}
 function Counter() {
@@ -144,7 +144,7 @@ function Counter() {
 
 ### React.useEffect
 
-useEffect는 쉽게 말해 컴포넌트가 렌더링되면서 발생하는 side effect를 지정할 수 있는 hook입니다. 타입정의를 빌려 설명하자면 다음과 같습니다.
+useEffect는 쉽게 말해 컴포넌트가 렌더링 되면서 발생하는 side effect를 지정할 수 있는 hook입니다. 타입 정의를 빌려 설명하자면 다음과 같습니다.
 
 - `@types/react/v17`
     
@@ -162,7 +162,7 @@ useEffect는 쉽게 말해 컴포넌트가 렌더링되면서 발생하는 side 
     ```
     
 
-useEffect 훅은 클래스형 컴포넌트의 생애주기 API를 사용하듯 EffectCallback을 통해 컴포넌트 생애주기에 발생하는 변형, 구독, 타이머, 로깅 등의 side effects를 생성하고 발생한 effect를 정리할 수 있도록 합니다. 의존성 배열을 통해 조건부 effect를 발생시킬 수도 있습니다.
+useEffect 훅은 클래스 형 컴포넌트의 생애 주기 API를 사용하듯 EffectCallback을 통해 컴포넌트 생애 주기에 발생하는 변형, 구독, 타이머, 로깅 등의 side effects를 생성하고 발생한 effect를 정리할 수 있도록 합니다. 의존성 배열을 통해 조건부 effect를 발생시킬 수도 있으며 다음과 같은 형태를 가지고 있습니다.
 
 ```tsx
 useEffect(() => {  // EffectCallback
@@ -190,9 +190,9 @@ function Stopwatch() {
 }
 ```
 
-1초가 지날때마다 second 값을 1씩 증가시켜 시간초가 가는 것을 보여주고, Stopwatch가 unmount 될 때 clearInterval가 수행되고 있습니다.
+1초가 지날 때마다 second 값을 1씩 증가시켜 시간 초가 가는 것을 보여주고, Stopwatch가 unmount 될 때 clearInterval가 수행되고 있습니다.
 
-만일 위 코드에서 setInterval을 사용하는 대신 두번째 인자인 의존성 배열을 전달하지 않은채로 second를 업데이트한다면, 화면의 second가 빠르게 증가하면서 아래와 같은 오류를 만나게 됩니다.
+만일 위 코드에서 setInterval을 사용하는 대신 두 번째 인자인 의존성 배열을 전달하지 않은 채로 second를 업데이트한다면, 화면의 second가 빠르게 증가하면서 아래와 같은 오류를 만나게 됩니다.
 
 ![react-hooks-api-1.png](./react-hooks-api-1.png)
 
@@ -200,7 +200,7 @@ function Stopwatch() {
 
 VS Code에서도 의존성 배열을 추가하기를 권하며 의존성 배열 없이는 무한하게 업데이트 체인이 발생할 수 있다고 알려줍니다.
 
-다시 위 코드로 돌아가 보면 두번째 인자로 빈 배열을 전달하고 있는데, 사실 빈 배열을 전달하지 않아도 화면의 second는 1초에 1씩 잘 증가하는 것을 볼 수 있습니다. 하지만 tickInterval을 선언하기 전에 console.log를 추가하여 로그를 확인해보면 두번째 인자 없이는 로그가 계속 새롭게 찍히는 것을 볼 수 있습니다.
+다시 위 코드로 돌아가 보면 두 번째 인자로 빈 배열을 전달하고 있는데, 사실 빈 배열을 전달하지 않아도 화면의 second는 1초에 1씩 잘 증가하는 것을 볼 수 있습니다. 하지만 tickInterval을 선언하기 전에 console.log를 추가하여 로그를 확인해 보면 두 번째 인자 없이는 로그가 계속 새롭게 찍히는 것을 볼 수 있습니다.
 
 ![react-hooks-api-3.png](./react-hooks-api-3.png)
 
@@ -223,7 +223,7 @@ function Stopwatch() {
 }
 ```
 
-마지막으로 한가지 예시를 더 비교해보겠습니다. 현재의 Stopwatch는 clearInterval을 위해 useEffect callback 내부에서 tickInterval을 변수에 저장하고 있는데, 언쯕보면 이 변수를 useEffect 밖으로 꺼내 아래처럼 작성할 수도 있을 것 같아 보입니다. 참고로 의존성 배열에 tickInterval을 추가하지 않으면 1초마다 제대로 second가 증가하지 않습니다.
+마지막으로 한 가지 예시를 더 비교해 보겠습니다. 현재의 Stopwatch는 clearInterval을 위해 useEffect callback 내부에서 tickInterval을 변수에 저장하고 있는데, 언뜻 보면 이 변수를 useEffect 밖으로 꺼내 아래처럼 작성할 수도 있을 것 같아 보입니다. 참고로 의존성 배열에 tickInterval을 추가하지 않으면 1초마다 제대로 second가 증가하지 않습니다.
 
 ```tsx {diff}
 function Stopwatch() {
@@ -246,9 +246,9 @@ function Stopwatch() {
 }
 ```
 
-위 코드를 실행시켜보면 second 값도 1초마다 잘 증가합니다. 하지만 tickInterval에 따라 useEffect실행되고 있으므로 콘솔에 ‘ticking’과 ‘stop ticking’이 second값이 증가할때 함께 찍히는 것을 볼 수 있습니다. 
+위 코드를 실행시켜보면 second 값도 1초마다 잘 증가합니다. 하지만 tickInterval에 따라 useEffect가 실행되고 있으므로 콘솔에 ‘ticking’과 ‘stop ticking’이 second 값이 증가할 때 함께 찍히는 것을 볼 수 있습니다. 
 
-second 값이 tickInterval에 의해 1씩 증가할때마다 값을 다시 보여주기 위해 컴포넌트가 업데이트되는데, 이렇게 업데이트될때마다 컴포넌트가 repaint 되기 때문에 cleanup 코드 내부에서 clearInterval을 실행됩니다. 그렇기 때문에 정확하게는 컴포넌트 첫 렌더링 시 ‘ticking’로그가 콘솔에 찍히고, second 값이 업데이트 될 때마다 ‘stop ticking’과 ‘ticking’이 한 번씩 브라우저 콘솔에 남게됩니다.
+second 값이 tickInterval에 의해 1씩 증가할 때마다 값을 다시 보여주기 위해 컴포넌트가 업데이트되는데, 이렇게 업데이트될 때마다 컴포넌트가 repaint 되기 때문에 cleanup 코드 내부에서 clearInterval을 실행됩니다. 그렇기 때문에 정확하게는 컴포넌트 첫 렌더링 시 ‘ticking’로그가 콘솔에 찍히고, second 값이 업데이트될 때마다 ‘stop ticking’과 ‘ticking’이 한 번씩 브라우저 콘솔에 남게 됩니다.
 
 useEffect에 대한 더 자세한 설명은 아래 공식 자료들을 참고하시기 바랍니다.
 
@@ -263,7 +263,7 @@ useEffect에 대한 더 자세한 설명은 아래 공식 자료들을 참고하
 
 useContext는 React.createContext에서 반환된 컨텍스트 오브젝트에 따라 컴포넌트 내부에서 현재 값을 사용할 수 있도록 합니다.
 
-타입정의를 빌려 설명하자면 다음과 같습니다.
+타입 정의를 빌려 설명하자면 다음과 같습니다.
 
 - `@types/react/v17`
     
@@ -389,7 +389,7 @@ function App() {
 
 ## Additional Hooks
 
-위 세가지 훅 이외에 자주 사용하게 될 훅들에 대해 간단한 사용방법들입니다.
+위 세 가지 훅 이외에 자주 사용하게 될 훅들에 대해 간단한 사용방법들입니다.
 
 ### React.useReducer
 

@@ -7,7 +7,7 @@ summary: 'What is Compound Component'
 emoji: '🧙‍♂️' 
 ---
 
-<small><em>last modified: 2022-11-03</em></small>
+<small><em>last modified: 2022-12-02</em></small>
 
 # Intro
 
@@ -167,7 +167,7 @@ const TableViewer = () => {
 - https://reach.tech/tabs/
 - https://www.radix-ui.com/docs/primitives/components/select#anatomy
 
-이외에도, [Ant Design의 Layout 컴포넌트](https://ant.design/components/layout/) 같이 UI 라이브러리들에서도 합성 컴포넌트 구조를 확인할 수 있습니다.
+이외에도, [Ant Design의 Layout 컴포넌트](https://ant.design/components/layout/)와 같은 UI 라이브러리들에서도 합성 컴포넌트 구조를 확인할 수 있습니다.
 
 
 # Outro, This is no silver bullet too

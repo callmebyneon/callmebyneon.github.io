@@ -135,6 +135,10 @@ const MarkdownRenderer = styled.div`
     // font-family: 'Noto Sans Mono', monospace;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   // Markdown Responsive Design
   @media (max-width: 768px) {
     width: 100%;

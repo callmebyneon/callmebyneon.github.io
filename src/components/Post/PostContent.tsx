@@ -139,6 +139,15 @@ const MarkdownRenderer = styled.div`
     max-width: 100%;
   }
 
+  figure {
+    & figcaption {
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+  }
+
   // Markdown Responsive Design
   @media (max-width: 768px) {
     width: 100%;

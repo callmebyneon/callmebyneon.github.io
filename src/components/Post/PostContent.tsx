@@ -42,7 +42,7 @@ const MarkdownRenderer = styled.div`
   * + h1,
   * + h2,
   * + h3 {
-    padding-top: 2em;
+    padding-top: 2.5em;
   }
 
   hr + h1,

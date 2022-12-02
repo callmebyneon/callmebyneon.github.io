@@ -61,6 +61,10 @@ const defaultStyle = css`
     -ms-user-select: none;
     user-select: none;
   }
+
+  .grvsc-code {
+    width: 100%;
+  }
 `
 
 const GlobalStyle: FunctionComponent = function () {

@@ -148,13 +148,13 @@ const TableViewer = () => {
 아래 그림에서 설명하듯이 하나의 큰 구조의 각 컴포넌트를 관심사별로 분리하고 역할을 분담하여 나눕니다.
 <figure>
   <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FY8oEa%2FbtrseQcYF2P%2FTk6r938XievtUGe6jpjTc0%2Fimg.png" alt="합성 컴포넌트를 이용한 관심사의 분리" />
-  <figcaption>대부분의 로직은 기본 Root 컴포넌트에 포함되며, React.Context를 사용해 모든 자식 컴포넌트의 states와 handlers를 공유하여 책임 소재를 명확히 분리할 수 있다.<br />이미지 출처: https://cocobi.tistory.com/120</figcaption>
+  <figcaption>대부분의 로직은 기본 Root 컴포넌트에 포함되며, React.Context를 사용해 모든 자식 컴포넌트의 states와 handlers를 공유하여 책임 소재를 명확히 분리할 수 있다.<br />&lt;이미지 출처: https://cocobi.tistory.com/120&gt;</figcaption>
 </figure>
 
 하지만 역시 아래 그림에서처럼 너무 자유도가 높아도 예상치 못한 문제가 발생할 수 있으므로 고정된 레이아웃이나 구조, 순서가 필요하다면 서브 컴포넌트를 작성하며 설정합니다.
 <figure>
   <img src="https://blog.kakaocdn.net/dn/bsGzm3/btrslWptc6h/GJRzOiaO6OcWi6MgZeFODK/img.png" alt="합성 컴포넌트를 사용하여 발생하는 과도한 UI 유연성" />
-  <figcaption>유연성이 높다는 것은 예기치 않은 동작을 유발할 가능성이 크다는 것을 의미한다.<br />이미지 출처: https://cocobi.tistory.com/120</figcaption>
+  <figcaption>유연성이 높다는 것은 예기치 않은 동작을 유발할 가능성이 크다는 것을 의미한다.<br />&lt;이미지 출처: https://cocobi.tistory.com/120&gt;</figcaption>
 </figure>
 
 

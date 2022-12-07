@@ -132,7 +132,7 @@ const MarkdownRenderer = styled.div`
   pre {
     tab-size: 2;
     // font-size: 0.875rem;
-    // font-family: 'Noto Sans Mono', monospace;
+    // font-family: 'Fira Mono', monospace;
   }
 
   img {

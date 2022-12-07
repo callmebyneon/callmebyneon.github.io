@@ -58,7 +58,7 @@ const Template: FunctionComponent<TemplateProps> = function ({
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
           rel="stylesheet"
         />
         <link

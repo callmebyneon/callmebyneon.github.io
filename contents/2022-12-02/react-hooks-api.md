@@ -458,8 +458,12 @@ const [isPending, startTransition] = useTransition();
 - [https://ko.reactjs.org/docs/hooks-intro.html#motivation](https://ko.reactjs.org/docs/hooks-intro.html#motivation)
 - [https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react/v17/index.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react/v17/index.d.ts)
 - [https://beta.reactjs.org/learn/state-as-a-snapshot](https://beta.reactjs.org/learn/state-as-a-snapshot)
+- [https://youtube.com/playlist?list=PLuHgQVnccGMCEfBwnNGsJCQDiqSWI-edj](https://youtube.com/playlist?list=PLuHgQVnccGMCEfBwnNGsJCQDiqSWI-edj)
+
+## 기타 참고 문서
 - [https://velog.io/@superlipbalm/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior](https://velog.io/@superlipbalm/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior)
     - 원문: [https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/)
 - [https://velog.io/@surim014/react-rerender](https://velog.io/@surim014/react-rerender)
     - 원문: [https://felixgerschau.com/react-rerender-components/](https://felixgerschau.com/react-rerender-components/)
-- [https://youtube.com/playlist?list=PLuHgQVnccGMCEfBwnNGsJCQDiqSWI-edj](https://youtube.com/playlist?list=PLuHgQVnccGMCEfBwnNGsJCQDiqSWI-edj)
+- [https://medium.com/@yujso66/%EB%B2%88%EC%97%AD-usememo-%EA%B7%B8%EB%A6%AC%EA%B3%A0-usecallback-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-844620cd41a1](https://medium.com/@yujso66/%EB%B2%88%EC%97%AD-usememo-%EA%B7%B8%EB%A6%AC%EA%B3%A0-usecallback-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-844620cd41a1)
+    - 원문: [https://www.joshwcomeau.com/react/usememo-and-usecallback/](https://www.joshwcomeau.com/react/usememo-and-usecallback/)

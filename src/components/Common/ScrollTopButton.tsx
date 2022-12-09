@@ -25,7 +25,7 @@ const FixedButton = styled.button`
   }
 `
 
-const ScrollTopCTA = () => {
+const ScrollTopButton = () => {
   const onScrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }
@@ -37,4 +37,4 @@ const ScrollTopCTA = () => {
   )
 }
 
-export default ScrollTopCTA
+export default ScrollTopButton

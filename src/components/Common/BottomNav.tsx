@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import ScrollTopCTA from './ScrollTopCTA'
+import ScrollTopButton from './ScrollTopButton'
 
 const BottomNavArea = styled.div`
   position: fixed;
@@ -18,8 +18,8 @@ const BottomNavArea = styled.div`
 const BottomNav = () => {
   return (
     <BottomNavArea>
-      {/* <ScrollTopCTA /> */}
-      <ScrollTopCTA />
+      {/* <ThemeToggleButton /> */}
+      <ScrollTopButton />
     </BottomNavArea>
   )
 }

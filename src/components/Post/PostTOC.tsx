@@ -20,8 +20,7 @@ const TocRenderer = styled.div`
   left: calc(50vw - (768px / 2) - 260px);
   top: 56px;
   word-break: keep-all;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden auto;
 
   li {
     list-style: none;
@@ -30,19 +29,21 @@ const TocRenderer = styled.div`
     color: #aaa;
     line-height: 2;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
 
     & > a {
       display: block;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      padding: 0.2em 0;
+      white-space: break-space;
+      line-height: 1.4;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
     }
 
     @media (hover: hover) {
       &:hover {
-        font-weight: 700;
-        color: rgb(64, 107, 159);
+        // font-weight: 700;
+        color: rgb(0, 0, 0); // rgb(64, 107, 159);
         border-width: 2px;
       }
     }

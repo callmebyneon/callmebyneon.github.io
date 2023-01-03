@@ -81,6 +81,15 @@ const MarkdownRenderer = styled.div`
 
   li {
     width: 100%;
+
+    & > ul,
+    & > p + * {
+      padding: 8px 0;
+    }
+
+    & > pre[data-language] {
+      margin: 8px 0;
+    }
   }
 
   // Adjust Horizontal Rule style
@@ -96,7 +105,7 @@ const MarkdownRenderer = styled.div`
     color: #4263eb;
     text-decoration: underline;
     overflow-wrap: anywhere;
-    word-break: break-all;
+    word-break: break-word;
 
     &.anchor.after {
       display: inline;

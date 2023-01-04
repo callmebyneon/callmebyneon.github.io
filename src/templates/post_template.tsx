@@ -58,18 +58,20 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
     <Template title={title} description={summary} url={href} image={emoji}>
       <ContentWrapper>
         <PostTOC html={tableOfContents} />
-        <Content>
-          <PostHead
-            title={title}
-            date={date}
-            category={category}
-            tags={tags}
-            emoji={emoji}
-          />
-          <PostContent html={html} />
-        </Content>
+        <div>
+          <Content>
+            <PostHead
+              title={title}
+              date={date}
+              category={category}
+              tags={tags}
+              emoji={emoji}
+            />
+            <PostContent html={html} />
+          </Content>
+          <CommentWidget />
+        </div>
       </ContentWrapper>
-      <CommentWidget />
       <BottomNav />
     </Template>
   )

@@ -645,7 +645,7 @@ useLayoutEffect(callback, [...dependencies])
 - useEffect와 동일한 방식으로 사용하며, useEffect로 인한 데이터 렌더 순서에 따른 화면 깜빡임을 막기 위해 useEffect를 대체함.
 - 참고 다이어그램
   <figure>
-    <img src="./react-hooks-api-6.png" alt="React Hook Flow Diagram - Mount & Update & Unmount" />
+    <img src="./react-hooks-api-6.png" alt="React Hook Flow Diagram. when the compoenent update, cleanup & run LayoutEffects first, and after the browser's screen painting, do cleanup & run Effects" />
     <figcaption>&lt;이미지 출처: https://github.com/donavon/hook-flow&gt;</figcaption>
   </figure>
 

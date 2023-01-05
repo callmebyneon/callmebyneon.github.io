@@ -51,6 +51,12 @@ const MarkdownRenderer = styled.div`
     padding-top: 0;
   }
 
+  h1 + :is(ol, ul),
+  h2 + :is(ol, ul),
+  h3 + :is(ol, ul) {
+    padding: 0;
+  }
+
   h1 {
     font-size: 1.875rem;
   }

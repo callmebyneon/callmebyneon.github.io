@@ -409,7 +409,7 @@ all/**/between
 
 ## another commands
 
-- [20 Git Commands you (probably) didn't know about 🧙‍♂️](https://dev.to/lissy93/20-git-commands-you-probably-didnt-know-about-4j4o), [Alicia Sykes](https://dev.to/lissy93) - blog post
+- [20 Git Commands you (probably) didn't know about 🧙‍♂️](https://dev.to/lissy93/20-git-commands-you-probably-didnt-know-about-4j4o), *[Alicia Sykes](https://dev.to/lissy93)* - blog post
 - [Git - git Documentation](https://git-scm.com/docs/git#_git_commands)
 
 # Documents

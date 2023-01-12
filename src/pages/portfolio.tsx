@@ -94,13 +94,15 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = ({
       <PageWrapper>
         <GlobalStyle />
         <HeroImage
-          dangerouslySetInnerHTML={{
-            __html: twemoji.parse('🚧', {
-              folder: 'svg',
-              ext: '.svg',
-            }),
-          }}
-        />
+        // dangerouslySetInnerHTML={{
+        //   __html: twemoji.parse('🚧', {
+        //     folder: 'svg',
+        //     ext: '.svg',
+        //   }),
+        // }}
+        >
+          <img src={publicURL} title="준비중" alt="준비중" />
+        </HeroImage>
         <Description>
           준비 중인 페이지입니다. <br />
           다른 콘텐츠를 보러 가보시겠어요?
@@ -122,7 +124,7 @@ export const getPageInfo = graphql`
         siteUrl
       }
     }
-    file(name: { eq: "logo" }) {
+    file(name: { eq: "1f6a7" }) {
       publicURL
     }
     allFile(filter: { absolutePath: { regex: "/portfolio/" }, publicURL: {} }) {

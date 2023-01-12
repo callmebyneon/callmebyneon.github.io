@@ -48,9 +48,14 @@ const Template: FunctionComponent<TemplateProps> = function ({
         <meta name="twitter:creator" content="@callmebyneon" />
         <meta name="theme-color" content="#f6f6f6" />
 
+        <script
+          src="https://unpkg.com/twemoji@14.0.2/dist/twemoji.min.js"
+          integrity="sha384-ICOlZarapRIX6UjKPcWKEpubjg7lGADN7Y9fYP4DU9zm0aPFhgnP5ef+XFaPyKv+"
+          crossOrigin="anonymous"
+        ></script>
+
         <html lang="ko" />
         <title>{title}</title>
-
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

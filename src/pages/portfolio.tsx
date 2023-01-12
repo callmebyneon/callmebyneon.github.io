@@ -82,7 +82,7 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = ({
   },
 }) => {
   const source = generateImageObject(nodes)
-  console.log(source)
+  // console.log(source)
 
   return (
     <Template

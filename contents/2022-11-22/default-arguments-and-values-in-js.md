@@ -1,7 +1,7 @@
 ---
 date: '2022-11-22 11:26:47'
 title: 'Default arguments and values in JS'
-category: 'Basic'
+category: 'JavaScript'
 tags: ['basic', 'function', 'javascript']
 summary: "What is the default arguments of the javascript function"
 emoji: '🔬'

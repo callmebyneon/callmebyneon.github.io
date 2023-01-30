@@ -1,7 +1,7 @@
 ---
 date: '2023-01-04 17:21:10'
 title: 'Node element에서 텍스트 추출하기'
-category: 'Basic'
+category: 'JavaScript'
 tags: ['til', 'node element', 'method', 'text']
 summary: "Here is a few ways to extract text from node element"
 emoji: '📇'

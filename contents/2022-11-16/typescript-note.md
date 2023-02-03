@@ -587,10 +587,10 @@ const booleansStorage = new LocalStorage<boolean()
 // booleansStorage.get(key: string): boolean
 ```
 
-# Docs
+# Docs +
 
 - TypeScript Documentation
   - ENG : [https://www.typescriptlang.org/docs/handbook/2/basic-types.html](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
   - KOR: [https://www.typescriptlang.org/ko/docs/handbook/2/basic-types.html](https://www.typescriptlang.org/ko/docs/handbook/2/basic-types.html)
 - TypeScript Deep Dive
-  - [https://radlohead.gitbook.io/typescript-deep-dive/](https://radlohead.gitbook.io/typescript-deep-dive/)
+  - [https://radlohead.gitbook.io/typescript-deep-dive/](https://radlohead.gitbook.io/typescript-deep-dive/

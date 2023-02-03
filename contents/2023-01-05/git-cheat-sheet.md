@@ -421,3 +421,4 @@ all/**/between
 
 - [https://youtu.be/XFm2qNs30BE](https://youtu.be/XFm2qNs30BE)
 - [https://youtu.be/EV3FZ3cWBp8](https://youtu.be/EV3FZ3cWBp8)
+- about git cancel: [https://gmlwjd9405.github.io/2018/05/25/git-add-cancle.html](https://gmlwjd9405.github.io/2018/05/25/git-add-cancle.html)

@@ -7,6 +7,8 @@ summary: "This week I learned : 자바스크립트부터 리액트까지의 기�
 emoji: '📃'
 ---
 
+<small><em>last modified: 2024-06-02</em></small>
+
 ![cover-image](./thenextjs-week-1-cover.png)
 
 # 1주차

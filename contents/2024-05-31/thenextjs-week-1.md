@@ -2,9 +2,8 @@
 date: '2024-05-31 00:00:00'
 title: '[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 1주차 사전직무교육'
 category: 'Course'
-tags:
-  ['til', 'b-log', 'project-camp', 'javascript', 'typescript', 'react', 'basic']
-summary: 'This week I learned : 자바스크립트부터 리액트까지의 기초 학습'
+tags: ['til', 'b-log', 'project-camp', 'javascript', 'typescript', 'react', 'basic']
+summary: "This week I learned : 자바스크립트부터 리액트까지의 기초 학습"
 emoji: '📃'
 ---
 
@@ -100,6 +99,7 @@ emoji: '📃'
 마지막으로 배운 것들을 토대로 **리액트+타입스크립트**를 활용하여 버튼(`<Button>`)과 입력창(`<Input>`) 컴포넌트를 제작하고 이를 사용한 다음과 같은 로그인 화면과 회원가입 입력 형식 컴포넌트를 만들어 본다.
 
 와이어프레임 예시
+
 ![로그인/회원 가입 와이프레임 예시](./thenextjs-week-1-wireframe.png)
 
 > 아래 코드에서는 화살표 함수 형태로 함수형 컴포넌트를 작성하여 export 하고, 컴포넌트의 스타일은 `*.module.css`에 작성하여 `styels`의 이름으로 스타일 모듈을 불러와 기본 스타일을 적용시키도록 했다. 코드 블럭들에서 css와 `styles`의 import 문은 생략되어 있다.

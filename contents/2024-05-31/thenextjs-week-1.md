@@ -9,9 +9,11 @@ emoji: '📃'
 
 <small><em>last modified: 2024-06-02</em></small>
 
-![cover-image](./thenextjs-week-1-cover.png)
+![학습 회고](./thenextjs-week-1-cover.png)
 
 # 1주차
+
+![수업 사진](./thenextjs-week-1-photo.jpg)
 
 ## What I Liked?
 
@@ -25,15 +27,15 @@ emoji: '📃'
 
 자바스크립트의 경우 기본적인 개념 혹은 문법 학습/복습 내용을 모두 정리하기엔 내용이 너무 길어지게 되고 이 글은 자바스크립트에 대한 전체적인 내용을 정리하는 것이 아니기 때문에 자바스크립트에 대해 학습한 내용 중 다시 한번 기억해야 할 것, 정확히 이해하지 못했던 개념들에 대해서만 정리하였다.
 
-- 자바스크립트는 초기 HTML/XML 웹 문서를 읽고 스타일링을 하는 것에서 그치지 않고 웹 콘텐츠를 동적으로 상호작용할 수 있도록 하는 작업을 수행할 수 있도록 하는 언어이다. 
+- 자바스크립트는 초기 HTML/XML 웹 문서를 읽고 스타일링을 하는 것에서 그치지 않고 웹 콘텐츠를 동적으로 상호작용할 수 있도록 하는 작업을 수행할 수 있도록 하는 언어이다.
   - 초기 브라우저들은 각각의 표준으로 자바스크립트 언어를 해석할 수 있는 엔진을 가지고 있었는데, 이렇게 제각각인 자바스크립트 엔진에 보다 쉽게 jQuery를 사용하기 시작했다.
-  - 2008년 이후 웹 브라우저들이 공통으로 표준을 다시 지정하기 시작하고(ECMAScript) 이를 따라 각자의 브라우저 속 자바스크립트 엔진들이 표준화가 이루어지면서 순수한 자바스크립트와 HTML, CSS를 사용하여 웹 서비스를 개발하는 것이 가능해진다. 그럼에도 불구하고 모든 브라우저, 특히 모바일 브라우저 같은 경우 최신 자바스크립트 문법을 지원하지 못하는 상황을 위해 Babel과 같은 transcompiler를 사용하여 최신 자바스크립트 문법을 사용하여 크로스 브라우징 개발이 가능하다. 
+  - 2008년 이후 웹 브라우저들이 공통으로 표준을 다시 지정하기 시작하고(ECMAScript) 이를 따라 각자의 브라우저 속 자바스크립트 엔진들이 표준화가 이루어지면서 순수한 자바스크립트와 HTML, CSS를 사용하여 웹 서비스를 개발하는 것이 가능해진다. 그럼에도 불구하고 모든 브라우저, 특히 모바일 브라우저 같은 경우 최신 자바스크립트 문법을 지원하지 못하는 상황을 위해 Babel과 같은 transcompiler를 사용하여 최신 자바스크립트 문법을 사용하여 크로스 브라우징 개발이 가능하다.
   - 최근에는 웹상에서 SaaS, PWA와 같이 서비스가 커지게 되면서 SPA 웹 개발 기술을 이용한 웹 서비스가 보편화되기도 했다.
-- 브라우저는 HTML 문서를 읽다가 `<script src="some.js">` 태그를 만나면 src의 자바스크립트 파일을 다운로드하고, 이후 문서를 해석한다. 
-  - 이런 해석 방법은 크기가 큰 자바스크립트 파일일 때 화면 요소가 렌더링 되기까지 시간이 지연되는 문제가 발생하고, 이를 해결하기 위해 HTML 문서의 `<body>` 태그 아래 가장 마지막에 스크립트 태그를 작성하는 방법을 선택했다. 
+- 브라우저는 HTML 문서를 읽다가 `<script src="some.js">` 태그를 만나면 src의 자바스크립트 파일을 다운로드하고, 이후 문서를 해석한다.
+  - 이런 해석 방법은 크기가 큰 자바스크립트 파일일 때 화면 요소가 렌더링 되기까지 시간이 지연되는 문제가 발생하고, 이를 해결하기 위해 HTML 문서의 `<body>` 태그 아래 가장 마지막에 스크립트 태그를 작성하는 방법을 선택했다.
   - 하지만 이 역시도 HTML 문서 객체들이 많은 HTML 경우 문서 객체를 모두 렌더링 한 이후 자바스크립트 파일을 다운로드하기까지 자바스크립트 내부에 작성된 상호작용이 불가능한 문제 상황이 발생한다.
   - 이런 점을 보완하기 위해 스크립트 태그에 `async`와 `defer` 속성을 추가할 수 있게 되었다. 이 속성들은 스크립트 태그 이후의 문서 객체들을 파싱(parsing) 하는 작업을 자바스크립트 파일 다운로드와 병렬 처리하게 되는데, `async` 속성이 true인 경우 다운로드 완료 시점에 따른 실행 순서가 보장되지 않지만 `defer` 속성이 true인 경우 다운로드까지만 병렬 처리 후 HTML 문서를 끝까지 해석한 후 자바스크립트를 순서에 맞게 실행한다.
-- 자바스크립트의 동작은 FILO(First In Last Out) 형태의 스택 구조로 실행된다. 엔진은 콜 스택에 가장 먼저 전역 실행 컨텍스트(Global Context)를 집어넣고 이 컨텍스트 안에서 코드를 실행한다. 
+- 자바스크립트의 동작은 FILO(First In Last Out) 형태의 스택 구조로 실행된다. 엔진은 콜 스택에 가장 먼저 전역 실행 컨텍스트(Global Context)를 집어넣고 이 컨텍스트 안에서 코드를 실행한다.
   - 이 실행 컨텍스트는 내부적으로 렉시컬 스코프라고 불리는 레코드와 아우터라는 객체를 가지고 있고 레코드는 생성과 실행 두 가지 단계를 거친다. 레코드의 생성 단계에서 선언문들을 환경 레코드에 기록하고 이렇게 기록된 선언문들을 실행 단계에서 실행한다.
   - 이때 레코드의 생성 단계에서 저장된 함수가 실행되었을 때 함수 실행 컨텍스트를 콜 스택에 추가한다. 이 함수의 실행 컨텍스트는 마찬가지로 레코드의 생성과 실행 단계를 거쳐 내부에 있는 선언문을 기록하고 실행한다. 콜 스택에서 이 함수 컨텍스트가 종료된 후에 전역 실행 컨텍스트를 마저 실행하게 된다.
   - 이렇게 콜 스택에 실행 컨텍스트가 쌓였을 때, 렉시컬 스코프의 아우터 객체는 바깥 렉시컬 스코프를 참조할 수 있도록 단방향으로 연결하고(Scope Chaining), 이런 이유로 함수 외부에서 선언된 변수를 함수 내부에서 접근할 수 있게 된다.
@@ -51,8 +53,8 @@ emoji: '📃'
   - 프로미스(Promise)는 비동기 작업의 상태를 알려주는 객체로, 이 객체를 통해 이전 작업이 끝나기 전까지 다음 작업을 연기하거나 작업 실패에 대응하는 새로운 기능을 사용할 수 있다.
   - `new Promise(executor)`로 프로미스 객체를 생성하고 이 프로미스는 콜백 함수를 반환한다. 내부적으로 `resolve와 reject`(executor)를 매개변수로 사용한다. 콜백과 기능적인 부분에서 개선된 방법이라고 할 수는 없지만 비동기 작업의 순서를 조작하고 이 순서를 보다 명확히 읽을 수 있다는 이점으로 콜백 함수 중첩보다 프로미스 사용이 주로 사용된다.
   - 이 프로미스는 대기(pending), 이행 (fulfilled), 거부 (rejected) 상태를 갖고 프로미스 객체를 생성하면 자동으로 대기 상태를 표시한다. resolve 함수를 실행하면 이행 상태가 되고 reject 함수를 사용하면 거부 상태가 된다. 프로미스가 이행 상태가 되면 `then` 메서드가 자동으로 실행되고, 거부 상태가 되면 `catch` 메서드가 자동으로 호출된다. 프로미스에서 resolve 함수의 매개변수는 `then` 메서드의 콜백 함수 매개변수로 전달하고 reject 함수의 매개변수는 catch 메서드 콜백의 매개변수로 전달한다. 프로미스는 resolve 혹은 reject가 호출되면 `finally` 메서드의 함수가 실행된다.
-  - 여러개의 프로미스를 차례대로 실행할 때, `then` 내부에서 프로미스는 이행되면 콜백 함수와 같아 보이지만 `then` 함수를 자동으로 반환하는 특징 때문에  이행함수(onfulfilled)에서 프로미스를 반환하면 `then`을 그대로 체이닝하여 순서에 따라 실행할 수 있다. 이렇게 `then`을 실행 순서대로 체이닝하여 목표로 하는 순서를 명시적으로 보여준다. 체이닝된 프로미스들에서 오류가 발생했을 때 에러를 `catch`할 때에도 오류가 발생한 메서드의 아래에서 `.catch((error) => )`를 사용하여 명시적으로 처리할 수 있다.
-  - `async function` 키워드를 이용한 비동기 함수는 내부적으로 프로미스를 반환하는 것과 같은 역할을 한다. `await` 키워드를 사용하면 키워드를 사용한 함수가 끝나기 전까지 다음 코드를 실행하지 않도록 한다. 
+  - 여러개의 프로미스를 차례대로 실행할 때, `then` 내부에서 프로미스는 이행되면 콜백 함수와 같아 보이지만 `then` 함수를 자동으로 반환하는 특징 때문에 이행함수(onfulfilled)에서 프로미스를 반환하면 `then`을 그대로 체이닝하여 순서에 따라 실행할 수 있다. 이렇게 `then`을 실행 순서대로 체이닝하여 목표로 하는 순서를 명시적으로 보여준다. 체이닝된 프로미스들에서 오류가 발생했을 때 에러를 `catch`할 때에도 오류가 발생한 메서드의 아래에서 `.catch((error) => )`를 사용하여 명시적으로 처리할 수 있다.
+  - `async function` 키워드를 이용한 비동기 함수는 내부적으로 프로미스를 반환하는 것과 같은 역할을 한다. `await` 키워드를 사용하면 키워드를 사용한 함수가 끝나기 전까지 다음 코드를 실행하지 않도록 한다.
   - 이렇게 프로미스들을 순차적으로만 처리하려면 웹 문서를 처음 로딩할 때처럼 여러 API에서 많은 데이터를 가져오는 경우에 자바스크립트 코드 완료까지 너무 오랜 시간이 걸린다. 이를 방지하기 위해 `Promise.all([...promises])`을 사용하여 프로미스 실행을 동시에 시작하여 마지막까지 대기 상태였던 프로미스가 종료되는 순간 종료되도록 병렬로 동작하게 할 수 있다.
   - 하지만 이렇게 다수의 API를 동시에 병렬로 호출하는 케이스는 많은 처리를 병렬로 진행하기 때문에 메모리를 크게 사용하기 때문에 주의가 필요하기도 하고, 동시에 작업하는 프로미스 중 하나가 오류가 발생하는 모든 처리가 중단되고 오류가 발생한다는 특징이 있기 때문에 이런 경우에 성공적으로 이행한 결과가 필요한 경우에 `Promise.allSettled` 메서드를 사용할 수 있다.
 
@@ -69,21 +71,21 @@ emoji: '📃'
 - 정의된 타입은 `|` 연산자와 `&` 연산자를 이용하여 각각 유니언 타입(Union Type)과 인터섹션 타입(Intersection Type)으로 작성할 수도 있다. `|` 연산자는 자바스크립트에서 `|| (OR)`와 같이 연산된 타입 중 하나를 만족한다는 의미의 타입을 만들어 내고, `&` 연산자는 자바스크립트에서 `&& (AND)`와 같이 연산된 타입을 모두 만족하는 병합된/확장된 하나의 타입을 의미한다.
   - 타입스크립트는 타입 변환을 위해 정의되어 있는 전역에서 사용 가능한 유틸리티 타입이 있어 이 유틸리티 타입을 이용하여 타입 연산을 할 수도 있다.
   - 객체 타입에서 한 속성을 선택하고자 할 때에는 유틸리티 타입을 사용할 수도 있겠지만 자바스크립트 객체에서 대괄호로 속성에 접근하는 것처럼 `[객체타입][키값]`으로 접근할 수도 있다.
-- 다양한 타입을 허용하는 배열을 매개변수로 갖는 함수가 있을 때, 매개변수의 타입을 허용하는 범위 내의 타입을 `|` 연산자로 표현한다면 타입이 너무 길고 복잡해진다. 이렇게 타입을 유동적으로 전달받아 사용할 수 있도록 제네릭 타입을 사용할 수 있다. 
-  - 함수에서 이 제네릭 타입을 사용할 매개변수의 묶음(소괄호) 앞에 `<[식별자]>` 형태로 제네릭 함수를 사용한다. 제네릭은 `any` 타입과 언뜻 비슷해 보이지만 제네릭을 사용할 때 요구되는 타입을 지정하여 사용하게 되므로 해당 함수 호출 코드에서 필요한 타입의 값을 명시된 타입에 따라 사용할 수 있다. 
+- 다양한 타입을 허용하는 배열을 매개변수로 갖는 함수가 있을 때, 매개변수의 타입을 허용하는 범위 내의 타입을 `|` 연산자로 표현한다면 타입이 너무 길고 복잡해진다. 이렇게 타입을 유동적으로 전달받아 사용할 수 있도록 제네릭 타입을 사용할 수 있다.
+  - 함수에서 이 제네릭 타입을 사용할 매개변수의 묶음(소괄호) 앞에 `<[식별자]>` 형태로 제네릭 함수를 사용한다. 제네릭은 `any` 타입과 언뜻 비슷해 보이지만 제네릭을 사용할 때 요구되는 타입을 지정하여 사용하게 되므로 해당 함수 호출 코드에서 필요한 타입의 값을 명시된 타입에 따라 사용할 수 있다.
   - 객체 타입 또는 인터페이스를 정의할 때도 제네릭 타입을 지정할 수 있는데, 이때에는 각 이름 뒤에 `<[식별자]>` 와 함께 사용하여 제네릭 타입을 전달하여 사용할 수 있도록 한다. 타입 정의와 인터페이스 정의 모두 동일하게 제네릭 타입을 활용할 수 있다.
 
 ### 리액트
 
 - 리액트는 화면 구성 요소를 **컴포넌트** 기능을 통해 화면 요소를 작성하고, **Virtual DOM(가상 돔)**으로 DOM Tree를 관리, 변경, 업데이트하는 **CSR(Client Side Rendering)** 프레임워크이다.
-  - 리액트는 화면 요소를 컴포넌트 단위로 작성하고, 각 컴포넌트는 JSX를 반환한다. JSX(JavaScriptXML)은 HTML 마크업을 자바스크립트에서 더 편하게 사용하기 위해 개발된 언어로, 기본적으로 HTML 태그들을 거의 그대로 사용할 수 있고 다른 컴포넌트를 가져와 포함시킬 수도 있다. 
+  - 리액트는 화면 요소를 컴포넌트 단위로 작성하고, 각 컴포넌트는 JSX를 반환한다. JSX(JavaScriptXML)은 HTML 마크업을 자바스크립트에서 더 편하게 사용하기 위해 개발된 언어로, 기본적으로 HTML 태그들을 거의 그대로 사용할 수 있고 다른 컴포넌트를 가져와 포함시킬 수도 있다.
   - 각 컴포넌트는 클래스형과 함수형으로 작성할 수 있으며 어느 형식의 컴포넌트인지와 상관없이 리턴되는 JSX는 가장 상위의 요소가 하나여야만 한다.
 - 리액트는 JSX 태그 혹은 컴포넌트에 이벤트 핸들러 속성으로 함수를 등록할 수 있다. 이 핸들러 속성은 HTML에서 모두 소문자로 사용하는 이름을 가지고 있지만 리액트에서는 카멜 케이스 형식으로 이름 지어져 있다.
 - 리액트 컴포넌트는 어떠한 값을 하위 컴포넌트(자식 컴포넌트)에게 전달할 수 있는데, 하위 컴포넌트에 태그 속성을 작성하듯이 전달하고자 하는 속성을 추가한다. 하위 컴포넌트는 컴포넌트 함수의 매개변수로 이 속성들의 집합을 객체 형태로 전달받아 컴포넌트 내부에서 마침표 연산자 혹은 대괄호 연산자로 사용하거나 또 다른 컴포넌트로 전달할 수 있다. 함수 역시 이렇게 Props로 전달하여 사용할 수 있다. 또, 이 Props는 객체 형태이기 때문에 구조 분해 할당으로 속성의 이름만을 변수로 사용할 수도 있고 여러 개의 일부 속성 객체를 하나의 변수로 받아 스프레드 연산자를 통해 JSX 태그에 한 번에 전달할 수도 있다.
   - 리액트의 컴포넌트는 `children`이라는 속성을 갖는데, 컴포넌트 태그 안(돔 트리 하위) 자식 요소들을 포함한다. 이 `children` 속성을 통해 부모 컴포넌트는 자식 컴포넌트를 동적으로 조작할 수 있게 된다.
   - 컴포넌트에 콜백 함수를 전달하는 경우 정의한 함수명을 전달하거나 매개변수를 부모 컴포넌트에서 전달할 수 있다. 전자의 경우는 함수명 그대로 전달할 수 있지만 후자의 경우 함수 실행식만 전달하는 순간 컴포넌트가 렌더링 될 때 함수가 계속해서 실행되기 때문에 콜백 함수의 형태로 전달한다.
-- 리액트 컴포넌트는 다양한 방식으로 스타일링을 지정할 수 있다. 
-  - HTML과 같이 태그에 style 속성으로 css 값을 지정하거나 외부 css 파일을 만들어 컴포넌트 파일에서 css 파일을 import 하여 사용할 수도 있다. 인라인 형식으로 스타일을 작성할 때는 css 속성을 객체 형식으로 입력하는데, 마찬가지로 카멜 케이스 형식으로 css 속성명을 키값으로 작성한다. 
+- 리액트 컴포넌트는 다양한 방식으로 스타일링을 지정할 수 있다.
+  - HTML과 같이 태그에 style 속성으로 css 값을 지정하거나 외부 css 파일을 만들어 컴포넌트 파일에서 css 파일을 import 하여 사용할 수도 있다. 인라인 형식으로 스타일을 작성할 때는 css 속성을 객체 형식으로 입력하는데, 마찬가지로 카멜 케이스 형식으로 css 속성명을 키값으로 작성한다.
   - 혹은 css 모듈 파일에 적용하고자 하는 스타일을 클래스명으로 지정하여 작성하고 이 모듈 스타일을 import 하여 JSX에서 className에 지정한 클래스를 하나의 속성처럼 추가한다. 이러한 방식은 실제 렌더링 후 적용될 때 클래스를 해시 된 고유 클래스로 지정하고 있는 것을 확인할 수 있다.
   - css를 직접 작성하지 않고 TailwindCSS와 같은 프레임워크를 사용하여 스타일을 적용할 수도 있다. TailwindCSS는 HTML 문서의 body 태그, 즉 화면의 가장 상위 문서 객체의 스타일에 `--tw-*`로 시작하는 속성 값들을 미리 설정하고 이 값들을 이용하여 스타일을 지정할 수 있는 클래스들을 가지고 있다.
   - CSS-in-JS는 자바스크립트에서 css를 작성하고 관리하는 방법이다. 대표적으로 사용되는 CSS-in-JS 라이브러리는 'Styled Components'와 'emotion', 'Vanila Extract' 등이 있다. 'Styled Components'와 'emotion'는 컴포넌트가 렌더링 될 때 스타일을 생성하여 적용하기 때문에 프로그램이 실행되는 동안 추가적인 연산이나 자원 소비가 일어날 수 있다는 단점이 존재하는데, 이러한 점을 보완할 수 있는 'Vanila Extract'와 같은 제로 런 타임의 특징을 갖는 CSS-in-JS 라이브러리를 사용할 수도 있다.
@@ -97,36 +99,33 @@ emoji: '📃'
 마지막으로 배운 것들을 토대로 **리액트+타입스크립트**를 활용하여 버튼(`<Button>`)과 입력창(`<Input>`) 컴포넌트를 제작하고 이를 사용한 다음과 같은 로그인 화면과 회원가입 입력 형식 컴포넌트를 만들어 본다.
 
 와이어프레임 예시
-![wireframe-example](./thenextjs-week-1-wireframe.png)
 
+![로그인/회원 가입 와이프레임 예시](./thenextjs-week-1-wireframe.png)
 
-아래 코드에서는 화살표 함수 형태로 함수형 컴포넌트를 작성하여 export 하고, 컴포넌트의 스타일은 `*.module.css`에 작성하여 `styels`의 이름으로 스타일 모듈을 불러와 기본 스타일을 적용시키도록 했다. 코드 블럭들에서 css와 `styles`의 import 문은 생략되어 있다.
-
+> 아래 코드에서는 화살표 함수 형태로 함수형 컴포넌트를 작성하여 export 하고, 컴포넌트의 스타일은 `*.module.css`에 작성하여 `styels`의 이름으로 스타일 모듈을 불러와 기본 스타일을 적용시키도록 했다. 코드 블럭들에서 css와 `styles`의 import 문은 생략되어 있다.
 
 **Button 컴포넌트**
 
 ```ts
-type TButtonProps = React.ComponentProps<"button"> & {
-  children: ReactNode;
-};
-
-const Button = (props: TButtonProps) => {
-  const { children, ...restButtonProps } = props;
-  return (
-    <button className={styles.button}>{children}</button>
-  )
+type TButtonProps = React.ComponentProps<'button'> & {
+  children: ReactNode
 }
 
-export default Button;
+const Button = (props: TButtonProps) => {
+  const { children, ...restButtonProps } = props
+  return <button className={styles.button}>{children}</button>
+}
+
+export default Button
 ```
 
 **Input 컴포넌트**
 
 ```ts
-type TInputProps = React.ComponentProps<"input">;
+type TInputProps = React.ComponentProps<'input'>
 
 const Input = (props: TInputProps) => {
-  return <input className={styles.input} />;
+  return <input className={styles.input} />
 }
 ```
 
@@ -135,13 +134,13 @@ const Input = (props: TInputProps) => {
 **Checkbox 컴포넌트**
 
 ```ts
-type TCheckboxProps = React.ComponentProps<"input"> & {
-  children: ReactNode;
-};
+type TCheckboxProps = React.ComponentProps<'input'> & {
+  children: ReactNode
+}
 
 const Checkbox = (props: TCheckboxProps) => {
-  const { children, ...restCheckboxProps } = props;
-  const checkboxId = useId();
+  const { children, ...restCheckboxProps } = props
+  const checkboxId = useId()
   return (
     <div>
       <input
@@ -151,33 +150,40 @@ const Checkbox = (props: TCheckboxProps) => {
         {...restCheckboxProps}
       />
       <label htmlFor={checkboxId}>
-        <div 
+        <div
           style={{
-            display: "flex",
-            flexDirection: "row",
-            gap: "8px",
+            display: 'flex',
+            flexDirection: 'row',
+            gap: '8px',
           }}
         >
           <div className={styles.checksign}>
-            <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              width="13"
+              height="9"
+              viewBox="0 0 13 9"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path
                 d="M11.799 0.76665C11.7246 0.691685 11.6362 0.632184 11.5387 0.591578C11.4413 0.550973 11.3367 0.530067 11.2311 0.530067C11.1255 0.530067 11.021 0.550973 10.9235 0.591578C10.8261 0.632184 10.7376 0.691685 10.6633 0.76665L4.70466 6.73325L2.20125 4.22184C2.12405 4.14726 2.03292 4.08863 1.93306 4.04927C1.8332 4.00992 1.72657 3.99062 1.61925 3.99248C1.51193 3.99433 1.40603 4.01731 1.30759 4.06009C1.20915 4.10288 1.1201 4.16463 1.04552 4.24183C0.970951 4.31903 0.912313 4.41016 0.872959 4.51002C0.833605 4.60989 0.814306 4.71652 0.816162 4.82384C0.818019 4.93116 0.840996 5.03706 0.883781 5.1355C0.926565 5.23394 0.98832 5.32299 1.06552 5.39756L4.1368 8.46884C4.21115 8.54381 4.29961 8.60331 4.39708 8.64391C4.49454 8.68452 4.59908 8.70542 4.70466 8.70542C4.81025 8.70542 4.91479 8.68452 5.01225 8.64391C5.10972 8.60331 5.19818 8.54381 5.27253 8.46884L11.799 1.94237C11.8802 1.86748 11.945 1.77658 11.9893 1.6754C12.0336 1.57423 12.0565 1.46497 12.0565 1.35451C12.0565 1.24406 12.0336 1.1348 11.9893 1.03362C11.945 0.932447 11.8802 0.841547 11.799 0.76665V0.76665Z"
                 fill="white"
-              /></svg>
+              />
+            </svg>
           </div>
           <div>{children}</div>
         </div>
       </label>
     </div>
-  );
-};
+  )
+}
 
-export default Checkbox;
+export default Checkbox
 ```
 
 `<input type="checkbox" />` 요소는 type을 text, email, password를 값으로 가질 때와 달리 텍스트 등의 `<label>` 요소와 함께 사용되기 때문에 `ReactNode` 타입의 `children`을 반드시 받아 `<label>` 요소 아래에 표시하도록 한다.
 
-`<label>` 요소를 JSX로 사용하기 위해서는 본래의 for 속성을 htmlFor라는 이름의 속성으로 연결되는 input의 id 값을 전달한다. 이 id 값을 컴포넌트가 생성될 때마다 유일한 값으로 사용하기 위해 `<input type="checkbox" />`에 `useId()`를 사용한 checkboxId를 전달한다. 
+`<label>` 요소를 JSX로 사용하기 위해서는 본래의 for 속성을 htmlFor라는 이름의 속성으로 연결되는 input의 id 값을 전달한다. 이 id 값을 컴포넌트가 생성될 때마다 유일한 값으로 사용하기 위해 `<input type="checkbox" />`에 `useId()`를 사용한 checkboxId를 전달한다.
 
 브라우저에 따른 체크박스 요소의 인터페이스 디자인을 통일시키기 위해 `children` 보다 앞에 svg 아이콘을 추가하여 `styles.checksign` 스타일을 적용시켜 `checked 속성 상태를 화면에 표시한다.
 
@@ -186,48 +192,50 @@ export default Checkbox;
 ```ts
 // SingUp.tsx
 type TSignUpForm = {
-  name: string;
-  email: string;
-  password: string;
+  name: string
+  email: string
+  password: string
 }
 
 const SignUp = () => {
   // 1️⃣
   const [userInput, setUserInput] = useState<TSignUpForm>({
-    name: "",
-    email: "",
-    password: "",
-  });
+    name: '',
+    email: '',
+    password: '',
+  })
   const inputChangeHandler = (e: ChangeEvent<HTMLInputElement>) =>
-    setUserInput((prevInput) => ({
+    setUserInput(prevInput => ({
       ...prevInput,
       [e.target.name]: e.target.value,
-    }));
+    }))
 
-  const pwInputRef = useRef(null);
+  const pwInputRef = useRef(null)
 
   // 2️⃣
-  const [agreeChecked, setAgreeChecked] = useState(false);
+  const [agreeChecked, setAgreeChecked] = useState(false)
 
   // 3️⃣
   const signupHandler = () => {
     // sign up logic ...
     if (userInput.password.length < 4) {
-      alert("비밀번호를 4자리 이상으로 입력하세요.");
+      alert('비밀번호를 4자리 이상으로 입력하세요.')
 
       if (nameInputRef.current) {
         nameInputRef.current.focus()
-        return;
+        return
       }
     }
-    console.log("회원가입 완료")
+    console.log('회원가입 완료')
   }
 
   return (
     <div className={styles.outerbox}>
       <h2>회원 가입</h2>
-      <p>이름과 이메일, 비밀번호를 입력한 후 약관에 동의해야 가입할 수 있습니다.</p>
-      <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+      <p>
+        이름과 이메일, 비밀번호를 입력한 후 약관에 동의해야 가입할 수 있습니다.
+      </p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         {/* 1️⃣ */}
         <Input
           name="name"
@@ -257,19 +265,19 @@ const SignUp = () => {
         {/* 2️⃣ */}
         <Checkbox
           checked={agreeChecked}
-          onChange={() => setAgreeChecked((checked) => !checked)}
+          onChange={() => setAgreeChecked(checked => !checked)}
         >
           <b>약관</b>에 동의합니다.
         </Checkbox>
       </div>
-      <div style={{ diaply: "flex", flexDirection: "column", gap: "16px" }}>
+      <div style={{ diaply: 'flex', flexDirection: 'column', gap: '16px' }}>
         {/* 3️⃣ */}
         <Button
           type="submit"
-          style={{ 
-            width: "100%", 
-            backgroundColor: "#4f4f4f", 
-            color: "#fff" 
+          style={{
+            width: '100%',
+            backgroundColor: '#4f4f4f',
+            color: '#fff',
           }}
           disabled={!agreeChecked}
           onClick={signupHandler}
@@ -279,13 +287,13 @@ const SignUp = () => {
         <Button
           type="button"
           style={{
-            width: "100%",
-            backgroundColor: "#fff",
-            color: "#4f4f4f",
-            border: "1px solid #4f4f4f",
+            width: '100%',
+            backgroundColor: '#fff',
+            color: '#4f4f4f',
+            border: '1px solid #4f4f4f',
           }}
           onClick={() => {
-            location.hash = "login";
+            location.hash = 'login'
           }}
         >
           로그인 페이지로 이동
@@ -295,7 +303,7 @@ const SignUp = () => {
   )
 }
 
-export default SignUp;
+export default SignUp
 ```
 
 처음 와이어 프레임 예시에서 로그인 컴포넌트와 회원 가입 컴포넌트는 이름을 입력하는 입력창이 없고 제목이나 안내문, 버튼의 텍스트들 정도의 차이만 있기 때문에 회원 가입 컴포넌트만을 예시로 위에 작성하였다.
@@ -324,4 +332,4 @@ export default SignUp;
 
 본 후기는 본 후기는 [유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 과정(B-log) 리뷰로 작성 되었습니다.
 
-#유데미 #udemy #웅진씽크빅 #스나이퍼팩토리 #인사이드아웃 #미래내일일경험 #프로젝트캠프 #부트캠프 #Next.js #프론트엔드개발자양성과정 #개발자교육과정 
+#유데미 #udemy #웅진씽크빅 #스나이퍼팩토리 #인사이드아웃 #미래내일일경험 #프로젝트캠프 #부트캠프 #Next.js #프론트엔드개발자양성과정 #개발자교육과정

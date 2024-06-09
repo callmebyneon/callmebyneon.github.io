@@ -36,7 +36,8 @@ const Content = styled.div`
   margin: 0;
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: calc(100vw - 20px * 2);
+    max-width: 768px;
   }
 `
 

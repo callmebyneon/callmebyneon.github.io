@@ -2,8 +2,8 @@
 date: '2024-06-09 21:00:00'
 title: '[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 2주차 사전직무교육'
 category: 'Course'
-tags: ['til', 'b-log', 'project-camp', 'typescript', 'react', 'basic']
-summary: 'This week I learned : React의 활용과 Next.JS에서의 라우팅'
+tags: ['til', 'b-log', 'project-camp', 'typescript', 'react', 'nextjs', 'basic']
+summary: 'This week I learned : React의 활용과 Next.js에서의 라우팅'
 emoji: '📃'
 ---
 

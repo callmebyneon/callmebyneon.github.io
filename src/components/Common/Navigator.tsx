@@ -56,7 +56,7 @@ const Navigator: FunctionComponent = function () {
           href="https://github.com/callmebyneon"
           target="_blank"
         >
-          Github <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          Github ↗
         </a>
       </NavLinks>
     </NavigatorWrapper>

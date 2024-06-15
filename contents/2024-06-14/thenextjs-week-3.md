@@ -313,12 +313,15 @@ await User.findByIdAndDelete(id)
 
 **사용자 인증**
 
+- _(참고) Authentication verifies your identity. Authorization determines what you can access._
+
+  - 인증(Authentication; 인증, 입증; ≒verification)은 사용자의 신원을 확인하고,
+  - 인증 이후 인가(Authorization; 허가, 인가; ≒permission) 된 범위에 따라 접근할 수 있는 항목을 결정한다.
+
 - 🖇️
+
   - [Installation of Auth.js(NextAuth.js v5)](https://authjs.dev/getting-started/installation)
   - [예시 코드 (repo): next-auth](https://github.com/callmebyneon/next-auth)
-
-> Authentication verifies your identity. Authorization determines what you can access.  
-> 인증(Authentication; 인증, 입증; ≒verification)은 사용자의 신원을 확인하고, 인증 이후 인가(Authorization; 허가, 인가; ≒permission) 된 범위에 따라 접근할 수 있는 항목을 결정한다.
 
 - Next.js 공식 홈페이지에서 [NextAuth.js](https://authjs.dev/reference/nextjs)를 사용하여 애플리케이션에 인증을 추가하는 방법을 소개하고 있다.
 

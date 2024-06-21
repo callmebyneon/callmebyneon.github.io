@@ -163,6 +163,27 @@ const MarkdownRenderer = styled.div`
     }
   }
 
+  table {
+    border-collapse: collapse;
+  }
+
+  thead {
+    background-color: #e9e9e9;
+  }
+
+  tr {
+    border-bottom: 1px solid #e9e9e9;
+  }
+
+  th,
+  td {
+    padding: 2px 8px;
+
+    &:not(:last-child) {
+      border-right: 1px solid #e9e9e9;
+    }
+  }
+
   // Markdown Responsive Design
   @media (max-width: 768px) {
     width: 100%;

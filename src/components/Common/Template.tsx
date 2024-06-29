@@ -50,6 +50,11 @@ const Template: FunctionComponent<TemplateProps> = function ({
 
         <html lang="ko" />
         <title>{title}</title>
+        <link
+          rel="shortcut icon"
+          href="/images/favicon.ico"
+          type="image/x-icon"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

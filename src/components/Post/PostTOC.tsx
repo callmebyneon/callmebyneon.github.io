@@ -26,7 +26,7 @@ const TocRenderer = styled.div`
     list-style: none;
     display: block;
     width: 96%;
-    color: #aaa;
+    color: rgb(var(--toc-color));
     line-height: 2;
     font-size: 14px;
     font-weight: 500;
@@ -43,7 +43,7 @@ const TocRenderer = styled.div`
     @media (hover: hover) {
       &:hover {
         // font-weight: 700;
-        color: rgb(0, 0, 0); // rgb(64, 107, 159);
+        color: rgb(var(--accent)); // rgb(64, 107, 159);
         border-width: 2px;
       }
     }

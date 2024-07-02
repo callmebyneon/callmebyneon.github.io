@@ -32,7 +32,7 @@ const CategoryListWrapper = styled.div`
     top: 0;
     margin-top: 30px;
     padding: 20px;
-    background: var(--background-color);
+    background: rgb(rgb(var(--background-color)));
     z-index: var(--z-sticky);
 
     &:after {
@@ -45,7 +45,7 @@ const CategoryListWrapper = styled.div`
       height: 50px;
       background: linear-gradient(
         to bottom,
-        var(--background-color),
+        rgb(rgb(var(--background-color))),
         rgba(255, 255, 255, 0)
       );
     }
@@ -61,9 +61,10 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   font-size: 16px;
   letter-spacing: 0.2px;
   font-weight: ${({ active }) => (active ? '700' : '400')};
-  background: ${({ active }) => (active ? '#000' : '#aaa')};
+  background: ${({ active }) =>
+    active ? 'rgb(var(--accent))' : 'rgb(var(--dimmed))'};
   border-radius: 4px;
-  color: #fff;
+  color: rgb(var(--background-color));
   cursor: pointer;
 
   &:last-of-type {
@@ -72,8 +73,8 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
 
   @media (hover: hover) {
     &:hover {
-      color: #fff;
-      background-color: #000;
+      color: rgb(var(--background-color));
+      background-color: rgb(var(--accent));
     }
   }
 
@@ -83,7 +84,7 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
     font-size: 1.15rem;
 
     &:hover {
-      color: #fff;
+      color: rgb(var(--background-color));
       background: inherit;
     }
   }

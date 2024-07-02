@@ -16,7 +16,7 @@ const PostHeadInfoWrapper = styled.div`
   height: 100%;
   margin: 0 auto;
   padding: 20px 0;
-  color: #000;
+  color: rgb(var(--accent));
 
   @media (max-width: 1200px) {
     width: 768px;

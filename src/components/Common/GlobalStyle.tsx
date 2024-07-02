@@ -4,11 +4,32 @@ import { Global, css } from '@emotion/react'
 const defaultStyle = css`
   :root {
     // colors
-    --background-color: #f6f6f6;
+    --background-color: 246, 246, 246;
+    --text-color: 30, 33, 38;
+    --tag-color: 64, 107, 159;
+    --anchor-color: 66, 99, 235;
+    --toc-color: 170, 170, 170;
+    --accent: 0, 0, 0;
+    --dimmed: 112, 112, 112;
+    --shade: 232, 232, 232;
+    --extreme: 225, 225, 225;
 
     // z-index
     --z-sticky: 10;
     --z-fixed: 20;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: 30, 33, 38;
+      --text-color: 246, 246, 246;
+      --tag-color: 127, 157, 194;
+      --anchor-color: 139, 160, 249;
+      --accent: 255, 255, 255;
+      --dimmed: 119, 119, 119;
+      --shade: 48, 48, 48;
+      --extreme: 0, 0, 0;
+    }
   }
 
   * {
@@ -26,7 +47,8 @@ const defaultStyle = css`
   #___gatsby {
     height: 100%;
     font-size: 16px;
-    background-color: var(--background-color);
+    background-color: rgb(var(--background-color));
+    color: rgb(var(--text-color));
 
     @media (max-width: 768px) {
       font-size: 14px;

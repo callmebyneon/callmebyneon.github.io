@@ -1,8 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 const NavigatorWrapper = styled.nav`
   display: block;
@@ -11,6 +9,7 @@ const NavigatorWrapper = styled.nav`
 
 const NavLinks = styled.div`
   display: flex;
+  gap: 2.5rem;
   width: 1200px;
   margin: 0 auto;
   height: 100px;
@@ -19,7 +18,6 @@ const NavLinks = styled.div`
 
   & > a {
     display: block;
-    margin-left: 2.5em;
     font-size: 1.25rem;
     font-weight: 700;
     border-bottom: 1px solid;

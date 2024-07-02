@@ -18,8 +18,8 @@ const PostItemWrapper = styled(Link)`
   cursor: pointer;
   overflow: hidden;
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(var(--accent), 0.1);
+  background: rgba(var(--accent), 0.02);
 
   &:first-of-type {
     margin-top: 0;
@@ -36,7 +36,7 @@ const PostItemWrapper = styled(Link)`
   @media (hover: hover) {
     &:hover {
       filter: brightness(95%);
-      background: rgba(0, 0, 0, 0.05);
+      background: rgba(var(--accent), 0.05);
 
       & .date__wrapper {
         opacity: 0;
@@ -53,9 +53,9 @@ const ThumbnailWrapper = styled.div`
   display: block;
   width: 120px;
   height: 120px;
-  background: #e8e8e8;
+  background: rgb(var(--shade));
   overflow: hidden;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(var(--accent), 0.1);
   transition: 200ms all ease-out;
 
   @media (max-width: 768px) {
@@ -157,10 +157,10 @@ const CategoryItem = styled.div`
   margin-left: auto;
   padding: 2px 4px;
   border-radius: 3px;
-  background-color: #000;
+  background-color: rgb(var(--accent));
   font-size: 14px;
   font-weight: 500;
-  color: white;
+  color: rgb(var(--extreme));
 
   @media (max-width: 768px) {
     margin-left: 0;
@@ -173,7 +173,7 @@ const TagItem = styled.div`
   border-radius: 3px;
   font-size: 14px;
   font-weight: 500;
-  color: rgb(64, 107, 159);
+  color: rgb(var(--tag-color));
 
   &:first-of-type {
     margin-left: 0;

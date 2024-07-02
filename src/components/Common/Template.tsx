@@ -4,6 +4,7 @@ import GlobalStyle from 'components/Common/GlobalStyle'
 import Navigator from 'components/Common/Navigator'
 import Footer from 'components/Common/Footer'
 import { Helmet } from 'react-helmet'
+import useDarkMode from 'hooks/useDarkMode'
 
 type TemplateProps = {
   title: string
@@ -26,8 +27,9 @@ const Template: FunctionComponent<TemplateProps> = function ({
   image,
   children,
 }) {
+  const { dark } = useDarkMode()
   return (
-    <Container>
+    <Container className={dark ? 'dark' : 'light'}>
       <Helmet>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

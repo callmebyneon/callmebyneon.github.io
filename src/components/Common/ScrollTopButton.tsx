@@ -14,14 +14,13 @@ const FixedButton = styled.button`
   border: 2px solid;
   border-radius: 50%;
   box-sizing: border-box;
-  background: rgba(246, 246, 246, 0.8);
+  background: rgba(var(--background-color), 0.8);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   transition: 200ms all;
 
   @media (hover: hover) {
     &:hover {
-      // color: rgb(64, 107, 159);
       transform: translateY(-10%);
     }
   }

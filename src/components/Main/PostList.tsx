@@ -12,7 +12,7 @@ function NoPostBox() {
     font-weight: 700;
     text-align: center;
     line-height: 1.3;
-    color: #707070;
+    color: rgb(var(--dimmed));
   `
 
   return (

@@ -73,8 +73,8 @@ const MarkdownRenderer = styled.div`
   blockquote {
     margin: 30px 0;
     padding: 5px 15px;
-    background: rgba(0, 0, 0, 0.03);
-    border-left: 2px solid #000000;
+    background: rgba(var(--accent), 0.03);
+    border-left: 2px solid rgba(var(--accent));
     font-weight: 700;
   }
 
@@ -100,7 +100,7 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Horizontal Rule style
   hr {
-    border: 1px solid #000000;
+    border: 1px solid rgba(var(--accent));
     margin: 100px 0;
   }
 
@@ -108,7 +108,7 @@ const MarkdownRenderer = styled.div`
   a {
     display: inline;
     width: 100%;
-    color: #4263eb;
+    color: rgb(var(--anchor-color));
     text-decoration: underline;
     overflow-wrap: anywhere;
     word-break: break-word;
@@ -126,7 +126,7 @@ const MarkdownRenderer = styled.div`
     overflow: auto;
 
     ::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(var(--extreme), 0.5);
       border-radius: 3px;
     }
 
@@ -139,8 +139,8 @@ const MarkdownRenderer = styled.div`
   & :not(pre) > code {
     padding: 1px 6px;
     border-radius: 4px;
-    background: #1e1e1e;
-    color: #d4d4d4;
+    background: rgb(var(--text-color));
+    color: rgb(var(--background-color));
   }
 
   code,
@@ -168,11 +168,11 @@ const MarkdownRenderer = styled.div`
   }
 
   thead {
-    background-color: #e9e9e9;
+    background-color: rgb(var(--shade));
   }
 
   tr {
-    border-bottom: 1px solid #e9e9e9;
+    border-bottom: 1px solid rgb(var(--shade));
   }
 
   th,
@@ -180,7 +180,7 @@ const MarkdownRenderer = styled.div`
     padding: 2px 8px;
 
     &:not(:last-child) {
-      border-right: 1px solid #e9e9e9;
+      border-right: 1px solid rgb(var(--shade));
     }
   }
 

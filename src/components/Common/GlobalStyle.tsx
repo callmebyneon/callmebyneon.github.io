@@ -17,10 +17,8 @@ const defaultStyle = css`
     // z-index
     --z-sticky: 10;
     --z-fixed: 20;
-  }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
+    [data-color-scheme='dark'] {
       --background-color: 30, 33, 38;
       --text-color: 246, 246, 246;
       --tag-color: 127, 157, 194;
@@ -30,6 +28,9 @@ const defaultStyle = css`
       --shade: 48, 48, 48;
       --extreme: 0, 0, 0;
     }
+  }
+
+  @media (prefers-color-scheme: dark) {
   }
 
   * {
@@ -44,7 +45,9 @@ const defaultStyle = css`
 
   html,
   body,
-  #___gatsby {
+  #___gatsby,
+  [data-color-scheme='light'],
+  [data-color-scheme='dark'] {
     height: 100%;
     font-size: 16px;
     background-color: rgb(var(--background-color));

@@ -4,7 +4,6 @@ import GlobalStyle from 'components/Common/GlobalStyle'
 import Navigator from 'components/Common/Navigator'
 import Footer from 'components/Common/Footer'
 import { Helmet } from 'react-helmet'
-import useDarkMode from 'hooks/useDarkMode'
 
 type TemplateProps = {
   title: string
@@ -20,6 +19,7 @@ const Container = styled.main`
   height: 100%;
 `
 
+const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 const Template: FunctionComponent<TemplateProps> = function ({
   title,
   description,
@@ -27,9 +27,8 @@ const Template: FunctionComponent<TemplateProps> = function ({
   image,
   children,
 }) {
-  const { dark } = useDarkMode()
   return (
-    <Container className={dark ? 'dark' : 'light'}>
+    <Container data-color-scheme={isDark ? 'dark' : 'light'}>
       <Helmet>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

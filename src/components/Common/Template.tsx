@@ -19,7 +19,7 @@ const Container = styled.main`
   height: 100%;
 `
 
-const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+// const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 const Template: FunctionComponent<TemplateProps> = function ({
   title,
   description,
@@ -28,7 +28,7 @@ const Template: FunctionComponent<TemplateProps> = function ({
   children,
 }) {
   return (
-    <Container data-color-scheme={isDark ? 'dark' : 'light'}>
+    <Container data-color-scheme={'light'}>
       <Helmet>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

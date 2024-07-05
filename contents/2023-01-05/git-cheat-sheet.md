@@ -3,9 +3,11 @@ date: '2023-01-05 15:13:15'
 title: 'Git cheat sheet'
 category: 'Basic'
 tags: ['git', 'github', 'git-flow', 'cheat sheet']
-summary: "Git cheat sheet for me"
+summary: 'Git cheat sheet for me'
 emoji: '📌'
 ---
+
+<small><em>last modified: 2024-07-05</em></small>
 
 # 💡 more information
 
@@ -15,7 +17,7 @@ emoji: '📌'
 
 : 버전 관리를 위해 사용
 
-*ref :* [https://git-scm.com/docs/](https://git-scm.com/docs/)
+_ref :_ [https://git-scm.com/docs/](https://git-scm.com/docs/)
 
 # 0. start
 
@@ -93,12 +95,12 @@ git diff
 git difftool
 # vim 에디터로 파일을 열어 확인
 # `:i`를 입력하여 파일 수정
-# `:q` 혹은 `:qa`을 입력하여 에디터 종료 
+# `:q` 혹은 `:qa`을 입력하여 에디터 종료
 ```
 
 - 특정 커밋과의 코드 차이 확인: `git difftool <commit_id>`.
 - 두 개의 커밋을 특정하여 코드 차이 확인: `git difftool <commit_id> <another_commit_id>`.
-- VSCode의 GUI extension을 사용할 수도 있음 *ex. “Git Graph” in VSCode extension*
+- VSCode의 GUI extension을 사용할 수도 있음 _ex. “Git Graph” in VSCode extension_
 
 ## $ git stash
 
@@ -216,7 +218,7 @@ git merge new_branch
 
 병합하려고 하는 두 브랜치에 모두 1개 이상의 커밋이 있는 경우 두 브랜치가 병합된 새로운 커밋 생성
 
-*ref.*
+_ref._
 
 ![git-cheat-sheet-3.png](./git-cheat-sheet-3.png)
 
@@ -224,7 +226,7 @@ git merge new_branch
 
 베이스 브랜치가 병합하고자 하는 브랜치 이후에 새 커밋이 없는 경우, 새로운 커밋을 만들지 않고 병합하고자 하는 브랜치의 커밋을 베이스 브랜치로 그대로 가져옴
 
-*ref.*
+_ref._
 
 ![git-cheat-sheet-4.png](./git-cheat-sheet-4.png)
 
@@ -310,7 +312,7 @@ git clone https://github.com/<someone>/<some_repository_name>
 
 원격 변경사항을 로컬 저장소와 통합
 
-*원격에 로컬 작업이 없는 경우, 커밋을 push하기 전에 원격 변경 사항을 로컬 저장소와 통합 먼저 진행*
+_원격에 로컬 작업이 없는 경우, 커밋을 push하기 전에 원격 변경 사항을 로컬 저장소와 통합 먼저 진행_
 
 ```bash
 git pull
@@ -360,6 +362,7 @@ by Vincent Driessen
 
 - ci/cd에 적합하지 않음
 - 개발 환경 등에 맞도록 변경하여 사용
+- 참고: [Gitflow - Atlassian Git Tutorial](https://www.atlassian.com/ko/git/tutorials/comparing-workflows/gitflow-workflow)
 
 <figure>
   <img src="./git-cheat-sheet-7.png" alt="develop, feature, release, hotfix 브랜치의 역할에 따라 사용. develop 브랜치를 주로 개발을 진행하며 개발하는 기능별 feature 브랜치를 추가, 병합을 반복하고 release 브랜치를 생성하여 배포. 긴급한 오류 수정 시 hotfix 브랜치를 생성하여 main과 develop 브랜치에 병합" />
@@ -409,7 +412,7 @@ all/**/between
 
 ## another commands
 
-- [20 Git Commands you (probably) didn't know about 🧙‍♂️](https://dev.to/lissy93/20-git-commands-you-probably-didnt-know-about-4j4o), *[Alicia Sykes](https://dev.to/lissy93)* - blog post
+- [20 Git Commands you (probably) didn't know about 🧙‍♂️](https://dev.to/lissy93/20-git-commands-you-probably-didnt-know-about-4j4o), _[Alicia Sykes](https://dev.to/lissy93)_ - blog post
 - [Git - git Documentation](https://git-scm.com/docs/git#_git_commands)
 
 # Documents

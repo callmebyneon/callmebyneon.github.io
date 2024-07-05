@@ -11,6 +11,7 @@ tags:
     'github',
     'functional-specification',
     'user-flow',
+    'design-system',
   ]
 summary: 'This week WE did : 프로젝트 시작 준비'
 emoji: '💻'

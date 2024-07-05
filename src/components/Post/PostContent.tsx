@@ -152,6 +152,7 @@ const MarkdownRenderer = styled.div`
 
   img {
     max-width: 100%;
+    border-radius: 8px;
   }
 
   figure {

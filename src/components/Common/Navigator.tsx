@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
+import ThemeToggleButton from './ThemeToggleButton'
 
 const NavigatorWrapper = styled.nav`
   display: block;
@@ -56,6 +57,7 @@ const Navigator: FunctionComponent = function () {
         >
           Github ↗
         </a>
+        <ThemeToggleButton />
       </NavLinks>
     </NavigatorWrapper>
   )

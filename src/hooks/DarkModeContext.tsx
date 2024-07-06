@@ -1,10 +1,8 @@
 import { createContext, ReactNode, useEffect, useState } from 'react'
 
-const DEFAULT_THEME = localStorage?.getItem('theme')
-const defaultDarkMode = DEFAULT_THEME === 'dark'
-
+const defaultDarkModeIs = true
 export const DarkModeContext = createContext({
-  dark: defaultDarkMode,
+  dark: defaultDarkModeIs,
   toggleMode: () => {},
 })
 
@@ -18,7 +16,7 @@ export function ThemeModeProvider({ children }: { children: ReactNode }) {
 }
 
 export function useDarkMode() {
-  const [dark, setDark] = useState<boolean>(defaultDarkMode)
+  const [dark, setDark] = useState<boolean>(defaultDarkModeIs)
 
   useEffect(() => {
     if (!localStorage.getItem('theme')) {
@@ -28,6 +26,9 @@ export function useDarkMode() {
         : 'light'
       localStorage.setItem('theme', PREFER_SCHEME)
       setDark(PREFER_SCHEME === 'dark')
+    } else {
+      const STORAGE = localStorage.getItem('theme')
+      setDark(STORAGE === 'dark')
     }
   }, [])
 

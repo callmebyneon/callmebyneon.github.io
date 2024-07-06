@@ -1,8 +1,14 @@
-import React, { createRef, FunctionComponent, useEffect } from 'react'
+import React, {
+  createRef,
+  FunctionComponent,
+  useContext,
+  useEffect,
+} from 'react'
 import styled from '@emotion/styled'
+import { DarkModeContext } from 'hooks/DarkModeContext'
 
 const src = 'https://utteranc.es/client.js'
-const repo = 'callmebyneon/callmebyneon.github.io' // 자신 계정의 레포지토리로 설정
+const repo = 'callmebyneon/callmebyneon.github.io'
 
 type UtterancesAttributesType = {
   src: string
@@ -23,10 +29,11 @@ const UtterancesWrapper = styled.div`
 
 const CommentWidget: FunctionComponent = function () {
   const element = createRef<HTMLDivElement>()
+  const { dark } = useContext(DarkModeContext)
 
   useEffect(() => {
     if (element.current === null) return
-
+    console.log(element.current)
     const utterances: HTMLScriptElement = document.createElement('script')
 
     const attributes: UtterancesAttributesType = {
@@ -34,7 +41,7 @@ const CommentWidget: FunctionComponent = function () {
       repo,
       'issue-term': 'pathname',
       label: 'Comment',
-      theme: 'preferred-color-scheme',
+      theme: dark ? 'github-dark' : 'github-light',
       crossorigin: 'anonymous',
       async: 'true',
     }
@@ -43,8 +50,12 @@ const CommentWidget: FunctionComponent = function () {
       utterances.setAttribute(key, value)
     })
 
+    if (element.current.childElementCount === 1) {
+      const child = element.current.firstChild
+      element.current.removeChild(child!)
+    }
     element.current.appendChild(utterances)
-  }, [])
+  }, [dark])
 
   return <UtterancesWrapper ref={element} />
 }

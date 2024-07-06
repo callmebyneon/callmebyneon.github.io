@@ -1,10 +1,6 @@
-import { createContext, ReactNode, useState } from 'react'
+import { createContext, ReactNode, useEffect, useState } from 'react'
 
-const PREFER_SCHEME = window.matchMedia('(prefers-color-scheme: dark)').matches
-  ? 'dark'
-  : 'light'
-const STORAGE = localStorage?.getItem('theme')
-const DEFAULT_THEME = STORAGE || PREFER_SCHEME
+const DEFAULT_THEME = localStorage?.getItem('theme')
 const defaultDarkMode = DEFAULT_THEME === 'dark'
 
 export const DarkModeContext = createContext({
@@ -23,6 +19,18 @@ export function ThemeModeProvider({ children }: { children: ReactNode }) {
 
 export function useDarkMode() {
   const [dark, setDark] = useState<boolean>(defaultDarkMode)
+
+  useEffect(() => {
+    if (!localStorage.getItem('theme')) {
+      const PREFER_SCHEME = window.matchMedia('(prefers-color-scheme: dark)')
+        .matches
+        ? 'dark'
+        : 'light'
+      localStorage.setItem('theme', PREFER_SCHEME)
+      setDark(PREFER_SCHEME === 'dark')
+    }
+  }, [])
+
   const toggleMode = () => {
     setDark(prev => !prev)
     localStorage.setItem('theme', dark ? 'light' : 'dark')

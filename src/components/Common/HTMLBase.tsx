@@ -1,9 +1,7 @@
-import { ReactNode, FunctionComponent, useContext, useEffect } from 'react'
+import { ReactNode, FunctionComponent, useContext } from 'react'
 import styled from '@emotion/styled'
 import { Helmet } from 'react-helmet'
-import Footer from './Footer'
 import GlobalStyle from './GlobalStyle'
-import Navigator from './Navigator'
 import { DarkModeContext } from 'hooks/DarkModeContext'
 
 type TemplateProps = {

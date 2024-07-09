@@ -1,4 +1,6 @@
 import styled from '@emotion/styled'
+import { DarkModeContext } from 'hooks/DarkModeContext'
+import { useContext } from 'react'
 
 const ThemingButton = styled.button`
   width: 26px;
@@ -18,14 +20,15 @@ const ThemingButtonIcons = styled.div`
   transform: rotate(360deg);
   transition: transform ease-out 200ms;
 
-  [data-dark='true'] & {
+  [data-theme='dark'] & {
     transform: rotate(180deg);
   }
 `
 
 const ThemeToggleButton = function () {
+  const { toggleMode } = useContext(DarkModeContext)
   return (
-    <ThemingButton>
+    <ThemingButton onClick={toggleMode}>
       <ThemingButtonIcons>
         <svg
           width="26"

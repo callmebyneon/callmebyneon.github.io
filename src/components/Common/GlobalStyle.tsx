@@ -18,7 +18,7 @@ const defaultStyle = css`
     --z-sticky: 10;
     --z-fixed: 20;
 
-    [data-color-scheme='dark'] {
+    [data-theme='dark'] {
       --background-color: 30, 33, 38;
       --text-color: 246, 246, 246;
       --tag-color: 127, 157, 194;
@@ -28,9 +28,6 @@ const defaultStyle = css`
       --shade: 48, 48, 48;
       --extreme: 0, 0, 0;
     }
-  }
-
-  @media (prefers-color-scheme: dark) {
   }
 
   * {
@@ -43,11 +40,15 @@ const defaultStyle = css`
       'Segoe UI Symbol', sans-serif;
   }
 
+  main {
+    min-height: 100vh;
+  }
+
   html,
   body,
   #___gatsby,
-  [data-color-scheme='light'],
-  [data-color-scheme='dark'] {
+  [data-theme='light'],
+  [data-theme='dark'] {
     height: 100%;
     font-size: 16px;
     background-color: rgb(var(--background-color));

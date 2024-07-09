@@ -32,7 +32,7 @@ const CategoryListWrapper = styled.div`
     top: 0;
     margin-top: 30px;
     padding: 20px;
-    background: rgb(rgb(var(--background-color)));
+    background: rgb(var(--background-color));
     z-index: var(--z-sticky);
 
     &:after {
@@ -45,8 +45,8 @@ const CategoryListWrapper = styled.div`
       height: 50px;
       background: linear-gradient(
         to bottom,
-        rgb(rgb(var(--background-color))),
-        rgba(255, 255, 255, 0)
+        rgb(var(--background-color)),
+        rgba(var(--background-color), 0)
       );
     }
   }

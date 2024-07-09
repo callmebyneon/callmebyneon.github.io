@@ -40,6 +40,10 @@ const defaultStyle = css`
       'Segoe UI Symbol', sans-serif;
   }
 
+  main {
+    min-height: 100vh;
+  }
+
   html,
   body,
   #___gatsby,

@@ -160,7 +160,7 @@ git revert HEAD
 ```
 
 <figure>
-  <img src="./git-cheat-sheet-1.png" alt="'git revert commit2_id' 커멘드 실행 시 commit2가 삭제된 새로운 commit4 커밋 생성" />
+  <img src="./git-cheat-sheet-1.jpg" alt="'git revert commit2_id' 커멘드 실행 시 commit2가 삭제된 새로운 commit4 커밋 생성" />
   <figcaption>'git revert commit2_id' 커멘드 실행 시 commit2가 삭제된 새로운 commit4 커밋 생성</figcaption>
 </figure>
 
@@ -180,7 +180,7 @@ git revert HEAD
 ```
 
 <figure>
-  <img src="./git-cheat-sheet-2.png" alt="'git reset --hard commit2' 커멘드 실행 시 commit2 위치로 리셋되어 이후의 내용 삭제" />
+  <img src="./git-cheat-sheet-2.jpg" alt="'git reset --hard commit2' 커멘드 실행 시 commit2 위치로 리셋되어 이후의 내용 삭제" />
   <figcaption>'git reset --hard commit2' 커멘드 실행 시 commit2 위치로 리셋되어 이후의 내용 삭제</figcaption>
 </figure>
 
@@ -220,7 +220,7 @@ git merge new_branch
 
 _ref._
 
-![git-cheat-sheet-3.png](./git-cheat-sheet-3.png)
+![git-cheat-sheet-3.jpg](./git-cheat-sheet-3.jpg)
 
 ### fast-forward
 
@@ -228,7 +228,7 @@ _ref._
 
 _ref._
 
-![git-cheat-sheet-4.png](./git-cheat-sheet-4.png)
+![git-cheat-sheet-4.jpg](./git-cheat-sheet-4.jpg)
 
 ```bash
 # fast-forward를 수행해도 되는 상황에서 강제로 3-way 방법으로 병합
@@ -250,7 +250,7 @@ git switch main
 git merge new_branch
 ```
 
-![git-cheat-sheet-5.png](./git-cheat-sheet-5.png)
+![git-cheat-sheet-5.jpg](./git-cheat-sheet-5.jpg)
 
 ### squash
 
@@ -258,7 +258,7 @@ git merge new_branch
 git merge --squash new_new_branch
 ```
 
-![git-cheat-sheet-6.png](./git-cheat-sheet-6.png)
+![git-cheat-sheet-6.jpg](./git-cheat-sheet-6.jpg)
 
 - commit4의 로그에 commit2-1, commit2-2가 남지 않음
 
@@ -365,7 +365,7 @@ by Vincent Driessen
 - 참고: [Gitflow - Atlassian Git Tutorial](https://www.atlassian.com/ko/git/tutorials/comparing-workflows/gitflow-workflow)
 
 <figure>
-  <img src="./git-cheat-sheet-7.png" alt="develop, feature, release, hotfix 브랜치의 역할에 따라 사용. develop 브랜치를 주로 개발을 진행하며 개발하는 기능별 feature 브랜치를 추가, 병합을 반복하고 release 브랜치를 생성하여 배포. 긴급한 오류 수정 시 hotfix 브랜치를 생성하여 main과 develop 브랜치에 병합" />
+  <img src="./git-cheat-sheet-7.jpg" alt="develop, feature, release, hotfix 브랜치의 역할에 따라 사용. develop 브랜치를 주로 개발을 진행하며 개발하는 기능별 feature 브랜치를 추가, 병합을 반복하고 release 브랜치를 생성하여 배포. 긴급한 오류 수정 시 hotfix 브랜치를 생성하여 main과 develop 브랜치에 병합" />
   <figcaption>develop, feature, release, hotfix 브랜치의 역할에 따라 사용. develop 브랜치를 주로 개발을 진행하며 개발하는 기능별 feature 브랜치를 추가, 병합을 반복하고 release 브랜치를 생성하여 배포. 긴급한 오류 수정 시 hotfix 브랜치를 생성하여 main과 develop 브랜치에 병합</figcaption>
 </figure>
 
@@ -377,7 +377,7 @@ main 브랜치만을 사용 `≒ Github Flow`
 - ci/cd에 적합함
 
 <figure>
-  <img src="./git-cheat-sheet-8.png" alt="main 브랜치를 기준으로 개발하는 기능에 따라 브랜치 생성 후 main 브랜치에 병합 반복" />
+  <img src="./git-cheat-sheet-8.jpg" alt="main 브랜치를 기준으로 개발하는 기능에 따라 브랜치 생성 후 main 브랜치에 병합 반복" />
   <figcaption>main 브랜치를 기준으로 개발하는 기능에 따라 브랜치 생성 후 main 브랜치에 병합 반복</figcaption>
 </figure>
 

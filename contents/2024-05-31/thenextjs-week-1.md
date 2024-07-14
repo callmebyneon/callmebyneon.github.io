@@ -10,7 +10,7 @@ emoji: '📃'
 
 <small><em>last modified: 2024-06-02</em></small>
 
-![학습 회고](./thenextjs-week-1-cover.png)
+![학습 회고](./thenextjs-week-1-cover.jpg)
 
 # 1주차
 
@@ -101,7 +101,7 @@ emoji: '📃'
 
 와이어프레임 예시
 
-![로그인/회원 가입 와이프레임 예시](./thenextjs-week-1-wireframe.png)
+![로그인/회원 가입 와이프레임 예시](./thenextjs-week-1-wireframe.jpg)
 
 > 아래 코드에서는 화살표 함수 형태로 함수형 컴포넌트를 작성하여 export 하고, 컴포넌트의 스타일은 `*.module.css`에 작성하여 `styels`의 이름으로 스타일 모듈을 불러와 기본 스타일을 적용시키도록 했다. 코드 블럭들에서 css와 `styles`의 import 문은 생략되어 있다.
 

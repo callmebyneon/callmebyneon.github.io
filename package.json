@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "dev-log",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Blog with Gatsby starter",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Yi Nayeon <2n.ayoen.yi@gmail.com>",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",

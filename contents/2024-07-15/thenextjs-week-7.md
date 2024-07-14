@@ -72,10 +72,7 @@ export default function ReviewSwiper({ children }: TProps) {
             slidesPerView={3.5}
             centeredSlides={true}
             grabCursor={true}
-            pagination={{
-              clickable: true,
-              renderBullet: ...
-            }}
+            pagination={...}
           >
             {children}
             <div className="bg-gradient-to-r from-white w-[520px] h-full absolute top-0 left-0 z-10"></div>

@@ -8,7 +8,7 @@ summary: 'This week WE did : 개발 진행 시작 & 데이터 스키마 이해'
 emoji: '💻'
 ---
 
-![프로젝트 셋째주 회고](./thenextjs-week-6-cover.png)
+![프로젝트 셋째주 회고](./thenextjs-week-6-cover.jpg)
 
 # 6주차
 
@@ -31,15 +31,15 @@ emoji: '💻'
 
 그중 Input 컴포넌트는 `Input.[type]`과 같은 형태로 사용할 수 있도록 Compound Component 형태로 Molecules 레벨에서 만들어 내보냈다.
 
-![Compounded input components](./thenextjs-week-6-1-1.png)
+![Compounded input components](./thenextjs-week-6-1-1.jpg)
 
 커뮤니티 글 작성 페이지와 같이 사용할 때에는 입력 요소 grid 스타일을 적용하기 위해 Field로 각 입력 요소를 묶어 사용하고 있다.
 
-![Use Input.* in page component](./thenextjs-week-6-1-2.png)
+![Use Input.* in page component](./thenextjs-week-6-1-2.jpg)
 
 또 다른 예로 드롭다운(Dropdown)의 경우 트리거 버튼을 클릭하면 드롭다운 메뉴가 상위 레이어에 나타나고 드롭다운 메뉴 중 하나를 클릭하거나 메뉴 상자 바깥 화면을 클릭하면 드롭다운 메뉴가 닫혀야 하기 때문에 onClick 속성을 사용하기 위해 클라이언트 컴포넌트로 만들어 사용하게 했다. 이 드롭다운 컴포넌트는 트리거 버튼, 백드롭 레이어, 드롭다운 메뉴 세 가지 요소가 필요하다.
 
-![Dropdown molecule component](./thenextjs-week-6-1-3.png)
+![Dropdown molecule component](./thenextjs-week-6-1-3.jpg)
 
 간단하게 트리거 버튼과 드롭다운 메뉴 레이어를 감싸는 div 요소에 `position: relative;` 속성을 주고 백드롭 레이어에 `position: fixed;` 속성을, 드롭다운 메뉴에 `position: absolute;` 속성을 줘서 fixed된 백드롭 레이어는 스크롤의 위치가 움직이더라도 화면 전체를 채우고 있도록 하고 드롭다운 메뉴는 상위의 relative div 요소와 상대적인 위치를 유지할 수 있도록 했다. 만약 Portal을 이용하여 가장 바깥 영역에서 상위 레이어에 드롭다운 메뉴가 나타나도록 한다면 트리거 버튼을 감싸는 div와의 위치 관계가 없어지기 때문에 openMenu가 동작할 때 드롭 다운 메뉴의 위치를 정할 수 있도록 위치값을 저장하고 이용하는 코드가 필요했을 것이다.
 
@@ -123,18 +123,18 @@ type UserProfileCardData = Pick<UserLoginInfo, 'userId'> &
 <details>
   <summary><em>카디널리티 (Cardinality)?</em></summary>
 
-> SQL문에서의 **카디널리티(Cardinality)**는 데이터베이스 테이블의 단일 열(속성; column, attribute) 또는 필드의 값이 가지는 고유성을 나타낸다. 카디널리티가 높을수록 열에 중복된 요소가 적어 매우 흔하지 않거나 고유한 값을 갖는 열을 말하고, 낮은 카디널리티를 가진 열은 중복된 요소가 많아 가장 낮은 카디널리티를 가진 열은 거의 모든 행(row)에 대해 동일한 값을 가진다.
+> SQL문에서의 *카디널리티(Cardinality)*는 데이터베이스 테이블의 단일 열(속성; column, attribute) 또는 필드의 값이 가지는 고유성을 나타낸다. 카디널리티가 높을수록 열에 중복된 요소가 적어 매우 흔하지 않거나 고유한 값을 갖는 열을 말하고, 낮은 카디널리티를 가진 열은 중복된 요소가 많아 가장 낮은 카디널리티를 가진 열은 거의 모든 행(row)에 대해 동일한 값을 가진다.
 
 - _참고_
   - [위키피디아](<https://en.wikipedia.org/wiki/Cardinality_(SQL_statements)>)
   - [카디널리티 및 참조 무결성](https://help.tableau.com/current/pro/desktop/ko-kr/cardinality_and_ri.htm)
   </details>
 
-![ERD 카디널리티를 이루는 기호와 카디널리티의 의미들](./thenextjs-week-6-2-1.png)
+![ERD 카디널리티를 이루는 기호와 카디널리티의 의미들](./thenextjs-week-6-2-1.jpg)
 
 이렇게 기호들을 조합하여 데이터들의 관계를 정의할 수 있고 이해할 수 있는데, 예를 들어 한 명의 사용자는 0 혹은 다수의 Job_Category의 categoryId 값을 가질 수 있고 하나의 Job_Category의 id 값은 User의 interestIds에 0 혹은 하나의 값이 존재할 것이기 때문에 아래와 같이 관계를 설명할 수 있을 것으로 보인다.
 
-![ERD 예시](./thenextjs-week-6-2-2.png)
+![ERD 예시](./thenextjs-week-6-2-2.jpg)
 
 물론 하나의 예시로 그린 관계도이고, 각 데이터 타입과 같은 정의를 모두 설명하고 있는 예시는 아니지만 확실히 이렇게 관계도를 다이어그램으로 시각화하여 보니 이해가 잘 되는 기분이다. 기존의 관계 설정이 된 RDB 구조에 좀 더 익숙하다 보니 NoSQL 사용에 어색함이 있었는데 결국 같은 데이터를 다루기 위해서는 NoSQL 인지 RDB 인지와 상관없이 각 데이터 간의 속성들과 관계를 이해하는 것이 필요한 과정임을 느낀다.
 

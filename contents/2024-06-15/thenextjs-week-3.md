@@ -18,7 +18,7 @@ summary: 'This week I learned : Data Fetching and Caching, Auth with MongoDB'
 emoji: '📃'
 ---
 
-![학습 회고](./thenextjs-week-3-cover.png)
+![학습 회고](./thenextjs-week-3-cover.jpg)
 
 # 3주차
 
@@ -40,13 +40,13 @@ emoji: '📃'
 - 세그먼트들은 각각 **로딩 컴포넌트**와 **에러 컴포넌트**를 가질 수 있다. 페이지는 자신의 라우트 경로와 가장 인접한 `loading.tsx`와 `error.tsx`를 보여준다.
   - 페이지 컴포넌트의 로딩이 오래 걸리는 경우 서버 컴폰너트는 화면은 아무 반응이 없는 상태에서 화면을 볼 수 없고, 이때 로딩 컴포넌트를 추가하여 로딩되는 시간 동안 이 로딩 컴포넌트를 화면에 보여준다. 이 페이지에 각자 다른 렌더링 시간을 가진 하위 컴포넌트가 있을 때, 이 하위 컴포넌트들의 렌더링은 병렬 처리되기 때문에 가장 오래 걸리는 하위 컴포넌트의 로딩 시간만큼 `loading.tsx`가 보여지게 된다. _[(= 스트리밍: 문서#what-is-streaming)](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming#what-is-streaming)_
   - 이 로딩 컴포넌트로 전체 화면에 대한 로딩을 표시할 수도 있지만 react의 `<Suspense fallback={}></Suspense>`를 사용하여 이 suspense 컴포넌트로 감싼 각각의 비동기 컴포넌트에 대한 멀티 로딩 처리를 보여줄 수 있다. `fallback` 속성에 로딩 처리 중 보여줄 요소(예: 스켈레톤)를 전달한다.
-    ![streaming](./thenextjs-week-3-streaming.png)
+    ![streaming](./thenextjs-week-3-streaming.jpg)
   - 에러 컴포넌트는 `"use client"`를 사용해야 하는 유저 컴포넌트(클라이언트 컴포넌트)이며 `{ error: object, reset: () => void }` 객체를 props로 받아와 사용할 수 있어 `props.error.message`로 에러 메세지에 접근하여 화면에 출력할 수 있다. reset 함수를 실행시키면 이전에 실행했던 컴포넌트를 다시 시도하는데, 정상적으로 다시 시도하여 컴포넌트를 렌더링 하기 위해선 이전에 실행했던 컴포넌트 역시 클라이언트 컴포넌트여야 한다.
 
 > 라우팅 그룹`()`을 사용하면 앱 라우터가 이 폴더 이름을 유효한 라우트 경로로 간주하지 않도록 명시하기 때문에 `(protected)/page.tsx`는 생성하지 않는다. vercel에서 빌드하며 안내된 오류 메시지를 확인할 수 있다. _[(참고)](https://github.com/orgs/vercel/discussions/3580#discussioncomment-7510923)_
 
 <figure>
-  <img src="./thenextjs-week-3-no-page-in-protected.png" alt="no such file or directory, lstat '**/(admin)/page...'" />
+  <img src="./thenextjs-week-3-no-page-in-protected.jpg" alt="no such file or directory, lstat '**/(admin)/page...'" />
   <figcaption>vercel에서 빌드 중 발생한 오류 메시지</figcaption>
 </figure>
 
@@ -156,35 +156,35 @@ export async function DELETE(request: Request) {
 
 Next.js에서는 아래 그림과 같이 페이지 렌더링과 데이터 패칭 요청을 캐싱 하여 최적화하여 사용한다.
 
-![Diagram: the default caching behavior in Next.js for the four mechanisms, with HIT, MISS and SET at build time and when a route is first visited](./thenextjs-week-3-caching-summary.png)
+![Diagram: the default caching behavior in Next.js for the four mechanisms, with HIT, MISS and SET at build time and when a route is first visited](./thenextjs-week-3-caching-summary.jpg)
 
 Next.js를 이용하여 만든 페이지에 `new Date().toLocaleTimeString()`과 같은 데이터를 출력했을 때, 페이지를 새로고침하지 않고 다른 라우트로 이동하더라도 기본적으로 처음 화면에 보여준 데이터가 유지되는 것을 확인할 수 있다.
 
 1. 사용자가 특정 정적 세그먼트에 접근했을 때, 페이지를 서버 사이드에서 파싱한 결과(html 문서)를 캐싱하여 보여주기 때문에 사용자가 다른 경로로 이동했다가 다시 돌아와도 처음 캐시에 저장해뒀던 페이지를 화면에 보여준다. (동적 라우트는 캐시되지 않는다.)  
    이때 브라우저(클라이언트 사이드)는 [라우터 캐시, Router Cache]에서 1️⃣캐싱 된 데이터를 찾아 반환하고, 2️⃣캐싱 된 데이터가 없는 경우 서버 사이드의 [전체 라우터 캐시, Full Router Cache]에서 캐싱 된 데이터를 찾는다.
 
-![정적 라우트가 빌드되는 과정](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fstatic-and-dynamic-routes.png&w=1920&q=75)
+![정적 라우트가 빌드되는 과정](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fstatic-and-dynamic-routes.jpg&w=1920&q=75)
 
 2. [라우터 캐시]는 브라우저가 새로고침되면 초기화되기 때문에 페이지가 새로고침되었을 때, [라우터 캐시]가 초기화된 상태에서 [전체 라우터 캐시]에 저장되어 있는 세그먼트를 가져온다. [전체 라우터 캐시]에 저장된 개별 세그먼트의 캐시는 특정 시간이 지나면 자동으로 무효화되는데, 예를 들어 정적 세그먼트는 5분이 지나면 자동으로 무효화되어 업데이트되고, 동적 세그먼트는 30초마다 무효화되어 갱신된다.
 
 3. 만일 같은 경로에 대한 GET 메서드 요청에 대해 [요청 메모이제이션, Request Memoization]을 통해 응답을 기억하고 이미 기억하고 있는 응답은 서버에 요청을 전달하지 않고 캐싱 된 데이터를 반환한다. 이 요청 메모이제이션은 Next.js에서 추가된 기능이 아니라 React 기능이기 때문에 리액트 컴포넌트 트리인 page.tsx와 layout.tsx 등 서버 컴포넌트에서의 fetch 요청에 적용된다. 라우트 핸들러는 리액트 컴포넌트 트리의 일부가 아니기 때문에 라우트 핸들러에서의 fetch 요청에는 적용되지 않는다.
 
-![Duplicated Fetch Request](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Frequest-memoization.png&w=1920&q=75)
+![Duplicated Fetch Request](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Frequest-memoization.jpg&w=1920&q=75)
 
 이러한 메커니즘으로 RootLayout의 generateMetadat와 루트 페이지에서 같은 경로로 GET api 요청을 하는 경우 [요청 메모이제이션]되어 실제 서버는 한 번의 요청만이 기록되는 것을 확인할 수 있다.
 
 <figure>
-  <img src="./thenextjs-week-3-request-memoization-1.png" alt="layout.tsx와 page.tsx에서 같은 경로의 GET api를 요청하고 있는 코드" />
+  <img src="./thenextjs-week-3-request-memoization-1.jpg" alt="layout.tsx와 page.tsx에서 같은 경로의 GET api를 요청하고 있는 코드" />
   <figcaption>layout.tsx와 page.tsx에서 같은 경로의 GET api를 요청하고 있는 코드</figcaption>
 </figure>
 
 <figure>
-  <img src="./thenextjs-week-3-request-memoization-2.png" alt="server.js에서 한 번만 실행된걸 확인할 수 있는 GET 요청에 대한 콘솔 로그" />
+  <img src="./thenextjs-week-3-request-memoization-2.jpg" alt="server.js에서 한 번만 실행된걸 확인할 수 있는 GET 요청에 대한 콘솔 로그" />
   <figcaption>server.js에서 한 번만 실행된 걸 확인할 수 있는 GET 요청에 대한 콘솔 로그</figcaption>
 </figure>
 
 <figure>
-  <img src="./thenextjs-week-3-request-memoization-3.png" alt="제대로 적용된 title 메타데이터와 페이지에서 출력된 데이터" />
+  <img src="./thenextjs-week-3-request-memoization-3.jpg" alt="제대로 적용된 title 메타데이터와 페이지에서 출력된 데이터" />
   <figcaption>제대로 적용된 title 메타데이터와 페이지에서 출력된 데이터</figcaption>
 </figure>
 
@@ -192,23 +192,23 @@ Next.js를 이용하여 만든 페이지에 `new Date().toLocaleTimeString()`과
 
 ⅰ. 첫 번째로, fetch API를 사용할 때 첫 번째 url 값 다음 두 번째 인자로 `{ cache: 옵션 }`을 전달하여 무력화하고 `"no-store"` 옵션을 전달하면 해당 요청에 대한 캐시를 언제나 회피할 수 있다. _[MDN 문서 (fetch#cache)](https://developer.mozilla.org/ko/docs/Web/API/fetch#cache)_
 
-![Data Cache가 동작하는 방법](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fdata-cache.png&w=1920&q=75)
+![Data Cache가 동작하는 방법](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fdata-cache.jpg&w=1920&q=75)
 
 ⅱ. 두 번째는 마찬가지로 fetch API를 사용할 때 두 번째 인자로 `{ next: { revalidate: 재검증_시간 } }`을 전달하여 몇 초마다 요청에 대한 응답을 재검증할 것인지 설정한다. `revalidate`를 사용하여 캐시를 무력화하는 방법은 설정한 시간이 지나고 새로운 요청이 발생하면 재검증을 하는 한 번의 요청에 대해 캐시 되어 있던 데이터를 반환하고 다시 새로운 데이터를 캐시에 저장하여 다음 요청에서 다시 캐시 된 데이터를 반환한다. 이 방법은 이벤트를 기반으로 데이터를 재검증하는 방식보다 자주 변경되지 않는, 최신성이 중요하지 않는 데이터에 유용하게 사용할 수 있다.
 
-![시간이 지남에 따라 Data Cache 재검증](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Ftime-based-revalidation.png&w=1920&q=75)
+![시간이 지남에 따라 Data Cache 재검증](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Ftime-based-revalidation.jpg&w=1920&q=75)
 
 ⅲ. "next/cache" 패키지에서 제공하는 `revalidatePath(경로)` 함수를 사용하여 무력화가 필요한 URL을 직접 지정하여 [데이터 캐시]를 재검증하여 최신 상태의 데이터를 가져온다. 이 함수의 경우 지정한 경로에서 발생하는 요청 결과에 대해 모두 무력화한다.
 
 RootLayout에서 캐싱 된 데이터는 요청 메모이제이션으로 인해 "/a", "/b"로 이동하더라도 같은 API 경로로 데이터를 요청하기 때문에 서버에 GET 요청이 한 번만 전달된 것을 터미널에서 확인할 수 있는데, 때문에 RootLayout과 page b에서 사용하는 fetch API가 같을 때, page b에서 `revalidatePath`를 이용하여 루트 경로의 데이터 캐시 재검증을 요청하면 page b의 json도 함께 변하는 것을 확인할 수 있다.
 
-![컴포넌트들에서 발생하는 다수의 요청은 메모이제이션되어 각각 요청을 한 번만 서버에 전달한다](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fdeduplicated-fetch-requests.png&w=1920&q=75)
+![컴포넌트들에서 발생하는 다수의 요청은 메모이제이션되어 각각 요청을 한 번만 서버에 전달한다](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fdeduplicated-fetch-requests.jpg&w=1920&q=75)
 
 하지만 page b에서 fetch API 사용 시 `next.revalidate` 옵션을 추가했을 때에는 RootLayout의 json만 업데이트되는 것을 볼 수 있는데, 사실 RootLayout의 json 역시 새로고침을 하면 다시 되돌아가게 되고 Home에서 새로고침하여 [라우트 캐시]를 초기화해야만 page b에서도 갱신된 데이터를 표시한다. 이런 현상을 방지하기 위해 `revalidatePath("/", "layout")`과 같이 두 번째 type에 선택적으로 재검증할 경로 유형을 명시할 수 있다. 경로에 동적 세그먼트가 포함된 경우 두 번째 인자로 "layout" 값을 전달하여 재검증을 통해 실시간으로 데이터 출력을 갱신한다. [(예시)](https://nextjs.org/docs/app/api-reference/functions/revalidatePath#examples)
 
 ⅳ. fetch API의 두 번째 인자로 `{ next: { tags: [...태그(들)] } }`을 전달하고 마찬가지로 "next/cache" 패키지에서 제공하는 `revalidateTags(태그)` 함수를 사용하여 원하는 태그를 가진 요청에 대한 데이터 캐시를 무력화할 수 있다.
 
-![경로 주문형 재검증을 이용한 Data Cache 무력화](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fon-demand-revalidation.png&w=1920&q=75)
+![경로 주문형 재검증을 이용한 Data Cache 무력화](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fon-demand-revalidation.jpg&w=1920&q=75)
 
 `next.tags` 옵션은 배열 형태로 두 개 이상의 태그를 지정할 수 있지만 `revalidateTag` 함수는 string type의 하나의 매개 변수만을 받는다.
 
@@ -218,13 +218,13 @@ revalidateTag(tag: string): void;
 
 아래 이미지와 같이 데이터를 갱신하고 revalidateTag를 이용하여 무력화한 경우 RootLayout에서 사용하고 있는 데이터와 같은 API의 결과를 가지고 오지만 page a에서의 데이터만 갱신되는 것을 확인할 수 있다.
 
-![데이터를 갱신하고 revalidateTag를 이용하여 무력화한 경우 RootLayout에서 사용하고 있는 데이터와 같은 API의 결과를 가지고 오지만 page a에서의 데이터만 갱신되고 있다.](./thenextjs-week-3-revalidate-tag.png)
+![데이터를 갱신하고 revalidateTag를 이용하여 무력화한 경우 RootLayout에서 사용하고 있는 데이터와 같은 API의 결과를 가지고 오지만 page a에서의 데이터만 갱신되고 있다.](./thenextjs-week-3-revalidate-tag.jpg)
 
 > `revalidateTag`와 `revalidatePath`는 모두 서버 액션으로, 정적으로 생성되는 스토어가 필요하기 때문에 `“use server”` 키워드가 필요하다. 때문에 두 함수를 button을 클릭했을 때 핸들러 함수 내에서 실행하려고 하면 `“use server”` 선언이 클라이언트 컴포넌트 내에서 사용될 수 없는 특성으로 인해 src/libs/action.ts 파일에서 내부에 `“use server”` 선언을 한 후 액션 함수를 정의 후 내보내기 하여 `<form action={액션함수}></form>`에 해당 함수를 사용하는 방법을 쓴다. 이때 서버 액션은 비동기 함수여야 한다.
 
-![It is not allowd to define inline "use server" annotated Server Actions in Client Component](./thenextjs-week-3-no-inline-use-server.png)
+![It is not allowd to define inline "use server" annotated Server Actions in Client Component](./thenextjs-week-3-no-inline-use-server.jpg)
 
-![Server actions must be async functions](./thenextjs-week-3-async-action-fn.png)
+![Server actions must be async functions](./thenextjs-week-3-async-action-fn.jpg)
 
 ```tsx
 //(예시)

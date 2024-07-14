@@ -16,7 +16,7 @@ summary: 'This week WE did : 프로젝트 시작 준비'
 emoji: '💻'
 ---
 
-![프로젝트 첫째주 회고](./thenextjs-week-4-cover.png)
+![프로젝트 첫째주 회고](./thenextjs-week-4-cover.jpg)
 
 # 4주차
 
@@ -32,7 +32,7 @@ emoji: '💻'
 
 ### 1. 프로젝트 기획안 파악
 
-![프로젝트 기획안의 컨셉 설명과 로고, 슬로건](./thenextjs-week-4-project-concept.png)
+![프로젝트 기획안의 컨셉 설명과 로고, 슬로건](./thenextjs-week-4-project-concept.jpg)
 
 우리 팀은 [유데미 큐레이션](https://udemy.wjtb.co.kr/) 서비스에서 학습한 사용자들이 사용자들끼리 함께 스터디로 이어질 수 있는 SaaS형 스터디 서비스를 개발하게 되었다. (팀원들 모두 이 프로젝트를 1순위로 지원하여 만나게 되었고 아주 다행이라고 생각한다ㅎ😸)
 
@@ -58,14 +58,14 @@ emoji: '💻'
 ### 2. 사용자 흐름
 
 <figure>
-  <img src="./thenextjs-week-4-flow-chart-symbols.png" alt="사용자 흐름(user flow)을 그리는 기호들. 출처: https://brunch.co.kr/@hyoi0303/1" />
+  <img src="./thenextjs-week-4-flow-chart-symbols.jpg" alt="사용자 흐름(user flow)을 그리는 기호들. 출처: https://brunch.co.kr/@hyoi0303/1" />
   <figcaption>사용자 흐름(user flow)을 그리는 기호들<br />출처: <a href="https://brunch.co.kr/@hyoi0303/1">https://brunch.co.kr/@hyoi0303/1</a></figcaption>
 </figure>
 
 기호들을 정확히 지켜가며 그리진 않고 페이지와 필요한 데이터, 액션에 따른 모달/알림 바(notification) 변화, 화면 출력 내용 등을 중점으로 그려나갔다.
 
 <figure>
-  <img src="./thenextjs-week-4-flow-chart-elements.png" alt="사용한 기호들 예시" />
+  <img src="./thenextjs-week-4-flow-chart-elements.jpg" alt="사용한 기호들 예시" />
   <figcaption>사용한 기호들 예시</figcaption>
 </figure>
 

@@ -74,9 +74,7 @@ export default function ReviewSwiper({ children }: TProps) {
             grabCursor={true}
             pagination={{
               clickable: true,
-              renderBullet: function (_, className) {
-                return `<span class="${className} [&.swiper-pagination-bullet-active]:bg-label-strong"></span>`
-              },
+              renderBullet: ...
             }}
           >
             {children}

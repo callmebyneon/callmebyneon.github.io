@@ -54,78 +54,59 @@ emoji: '💻'
 
 아래 코드에서 현재 프로젝트의 컴포넌트들을 크게 비즈니스 로직/데이터 계층과 표현 계층으로 나눠본다. 예를 들어 메인 페이지에서의 스터디 리뷰 카드 슬라이드를 컴포넌트를 나눌 때, Swiper.js를 사용해 만든 전체 코드를 Swiper(`swiper/react`) 컴포넌트를 이용하여 기본적인 컴포넌트 디자인과 구조를 만드는 컴포넌트, 데이터를 보여줄 각 슬라이드 요소의 디자인 표현 컴포넌트(presentaional), 데이터를 사용하여 실제 페이지 컴포넌트에서 바로 사용하게 될 슬라이드 섹션 컨텐츠 컴포넌트로 각각의 관심사별로 레이어를 구분하여 이해할 수 있다.
 
-```tsx
-// Swiper Slide Component
+```jsx
+// ReviewSwiper.tsx
 ...
-export default function ReviewSwiper({ children }: TProps) {
-  return (
-    <>
-      <div className="flex items-center justify-center w-full mx-auto overflow-hidden relative">
-        <div className="swiperContainer w-[1900px] mx-auto">
-          <Swiper
-            modules={[Navigation, Pagination, A11y]}
-            navigation={{
-              prevEl: '.prevNavigation',
-              nextEl: '.nextNavigation',
-            }}
-            spaceBetween={24}
-            slidesPerView={3.5}
-            centeredSlides={true}
-            grabCursor={true}
-            pagination={{
-              clickable: true,
-              renderBullet: ...
-            }}
-          >
-            {children}
-            <div className="bg-gradient-to-r from-white w-[520px] h-full absolute top-0 left-0 z-10"></div>
-            <div className="bg-gradient-to-l from-white w-[520px] h-full absolute top-0 right-0 z-10"></div>
-          </Swiper>
-        </div>
-        <div className="navigations">
-          <div className="prevNavigation">
-            <SliderNavigationButton direction="prev" />
-          </div>
-          <div className="nextNavigation">
-            <SliderNavigationButton direction="next" />
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
+<div className="flex items-center justify-center w-full mx-auto overflow-hidden relative">
+  <div className="swiperContainer w-[1900px] mx-auto">
+    <Swiper
+      modules={[Navigation, Pagination, A11y]}
+      navigation={{
+        prevEl: '.prevNavigation',
+        nextEl: '.nextNavigation',
+      }}
+      spaceBetween={24}
+      slidesPerView={3.5}
+      centeredSlides={true}
+      grabCursor={true}
+      pagination={...}
+    >
+      {children}
+      <div className="bg-gradient-to-r from-white w-[520px] h-full absolute top-0 left-0 z-10"></div>
+      <div className="bg-gradient-to-l from-white w-[520px] h-full absolute top-0 right-0 z-10"></div>
+    </Swiper>
+  </div>
+  <div className="navigations">
+    <div className="prevNavigation">
+      <SliderNavigationButton direction="prev" />
+    </div>
+    <div className="nextNavigation">
+      <SliderNavigationButton direction="next" />
+    </div>
+  </div>
+</div>
 ```
 
 ```tsx
-// UserStudyReviewItem
+// UserReviewItem.tsx
 ...
-export default function UserReviewItem({
-  review,
-  className,
-}: {
-  review: TReview
-  className?: string
-}) {
-  return (
-    <div
-      className={
-        clsx(
-          'snap-center rounded-twenty overflow-hidden w-[520px] flex flex-col border border-line-alt select-none mb-12 ',
-          className
-        )
-      }
-    >
-      <div className="flex flex-col items-center justify-center py-4 px-16 bg-card h-[200px]">
-        <p className="text-body-400 w-[380px] text-justify">{review.text}</p>
-      </div>
-      <div className="flex flex-col items-center justify-center gap-2 py-2 h-[90px] relative">
-        <div className="triangle w-0 h-0 border-x-[15px] border-y-[25px] border-t-[#f0f4fa] border-b-transparent border-l-transparent border-r-transparent absolute top-0 left-1/4 -translate-x-full"></div>
-        <p className="text-label-600">'{review.studyName}' 후기</p>
-        <p className="text-label-400">{review.writerKeyword}</p>
-      </div>
-    </div>
-  )
-}
+<div
+  className={
+    clsx(
+      'snap-center rounded-twenty overflow-hidden w-[520px] flex flex-col border border-line-alt select-none mb-12 ',
+      className
+    )
+  }
+>
+  <div className="flex flex-col items-center justify-center py-4 px-16 bg-card h-[200px]">
+    <p className="text-body-400 w-[380px] text-justify">{review.text}</p>
+  </div>
+  <div className="flex flex-col items-center justify-center gap-2 py-2 h-[90px] relative">
+    <div className="triangle w-0 h-0 border-x-[15px] border-y-[25px] border-t-[#f0f4fa] border-b-transparent border-l-transparent border-r-transparent absolute top-0 left-1/4 -translate-x-full"></div>
+    <p className="text-label-600">'{review.studyName}' 후기</p>
+    <p className="text-label-400">{review.writerKeyword}</p>
+  </div>
+</div>
 ```
 
 ```tsx

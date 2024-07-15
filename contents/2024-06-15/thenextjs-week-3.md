@@ -1,21 +1,21 @@
 ---
-date: '2024-06-15 20:00:00'
-title: '[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 3주차 사전직무교육'
-category: 'Camp'
+date: "2024-06-15 20:00:00"
+title: "[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 3주차 사전직무교육"
+category: "Camp"
 tags:
   [
-    'til',
-    'b-log',
-    'project-camp',
-    'nextjs',
-    'fetch',
-    'cache',
-    'route',
-    'auth',
-    'mongodb',
+    "til",
+    "b-log",
+    "project-camp",
+    "nextjs",
+    "fetch",
+    "cache",
+    "route",
+    "auth",
+    "mongodb",
   ]
-summary: 'This week I learned : Data Fetching and Caching, Auth with MongoDB'
-emoji: '📃'
+summary: "This week I learned : Data Fetching and Caching, Auth with MongoDB"
+emoji: "📃"
 ---
 
 ![학습 회고](./thenextjs-week-3-cover.jpg)
@@ -61,57 +61,57 @@ emoji: '📃'
     ```tsx
     // (예시)
     // In Client Component,
-    'use client'
-    import { useEffect, useState } from 'react'
+    "use client";
+    import { useEffect, useState } from "react";
 
     type TPost = {
-      userId: number
-      id: number
-      title: string
-      body: string
-    }
+    	userId: number;
+    	id: number;
+    	title: string;
+    	body: string;
+    };
     export default function ClientComp() {
-      const [isLoading, setLoading] = useState(true)
-      const [posts, setPosts] = useState<TPost[]>([])
-      const getPosts = async () => {
-        setLoading(true)
-        try {
-          const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-          const data = await res.json()
-          setPosts(data)
-        } catch (error) {
-          console.error(error)
-        }
-        setLoading(false)
-      }
-      useEffect(() => {
-        getPosts()
-      }, [])
+    	const [isLoading, setLoading] = useState(true);
+    	const [posts, setPosts] = useState<TPost[]>([]);
+    	const getPosts = async () => {
+    		setLoading(true);
+    		try {
+    			const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    			const data = await res.json();
+    			setPosts(data);
+    		} catch (error) {
+    			console.error(error);
+    		}
+    		setLoading(false);
+    	};
+    	useEffect(() => {
+    		getPosts();
+    	}, []);
 
-      return (
-        <>
-          <h1 className="text-xl font-bold">Client Component</h1>
-          {isLoading ? (
-            'Loading...'
-          ) : (
-            <pre>{JSON.stringify(posts, null, 2)}</pre>
-          )}
-        </>
-      )
+    	return (
+    		<>
+    			<h1 className="text-xl font-bold">Client Component</h1>
+    			{isLoading ? (
+    				"Loading..."
+    			) : (
+    				<pre>{JSON.stringify(posts, null, 2)}</pre>
+    			)}
+    		</>
+    	);
     }
 
     // In Server Component,
     const getPosts = async () =>
-      await (await fetch('https://jsonplaceholder.typicode.com/posts')).json()
+    	await (await fetch("https://jsonplaceholder.typicode.com/posts")).json();
 
     export default async function ServerComp() {
-      const posts = await getPosts()
-      return (
-        <>
-          <h1 className="text-xl font-bold">Server Component</h1>
-          <pre>{JSON.stringify(posts, null, 2)}</pre>
-        </>
-      )
+    	const posts = await getPosts();
+    	return (
+    		<>
+    			<h1 className="text-xl font-bold">Server Component</h1>
+    			<pre>{JSON.stringify(posts, null, 2)}</pre>
+    		</>
+    	);
     }
     ```
 
@@ -122,29 +122,29 @@ emoji: '📃'
 
 ```ts
 // app/api/route.ts
-import { NextRequest } from 'next/server'
+import { NextRequest } from "next/server";
 
 export async function GET(request: NextRequest) {
-  // 쿼리 스트링에 접근
-  // (1) request: Request
-  // const { searchParams } = new URL(request.url);
-  // (2) request: NextRequest
-  const searchParams = request.nextUrl.searchParams
-  return Response.json('GET METHOD : ' + searchParams.get('lang'))
+	// 쿼리 스트링에 접근
+	// (1) request: Request
+	// const { searchParams } = new URL(request.url);
+	// (2) request: NextRequest
+	const searchParams = request.nextUrl.searchParams;
+	return Response.json("GET METHOD : " + searchParams.get("lang"));
 }
 export async function POST(request: Request) {
-  // body data 사용
-  const data = await request.json()
-  return Response.json(data)
+	// body data 사용
+	const data = await request.json();
+	return Response.json(data);
 }
 export async function PUT(request: Request) {
-  return Response.json('PUT METHOD')
+	return Response.json("PUT METHOD");
 }
 export async function PATCH(request: Request) {
-  return Response.json('PATCH METHOD')
+	return Response.json("PATCH METHOD");
 }
 export async function DELETE(request: Request) {
-  return Response.json('DELETE METHOD')
+	return Response.json("DELETE METHOD");
 }
 ```
 
@@ -156,7 +156,7 @@ export async function DELETE(request: Request) {
 
 Next.js에서는 아래 그림과 같이 페이지 렌더링과 데이터 패칭 요청을 캐싱 하여 최적화하여 사용한다.
 
-![Diagram: the default caching behavior in Next.js for the four mechanisms, with HIT, MISS and SET at build time and when a route is first visited](./thenextjs-week-3-caching-summary.jpg)
+![Diagram: the default caching behavior in Next.js for the four mechanisms, with HIT, MISS and SET at build time and when a route is first visited](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fcaching-overview.png&w=1920&q=75)
 
 Next.js를 이용하여 만든 페이지에 `new Date().toLocaleTimeString()`과 같은 데이터를 출력했을 때, 페이지를 새로고침하지 않고 다른 라우트로 이동하더라도 기본적으로 처음 화면에 보여준 데이터가 유지되는 것을 확인할 수 있다.
 
@@ -230,18 +230,18 @@ revalidateTag(tag: string): void;
 //(예시)
 // app/**/page.tsx
 export default function page() {
-  return (
-    <form action={onDemandRevalidate}>
-      <button>click</button>
-    </form>
-  )
+	return (
+		<form action={onDemandRevalidate}>
+			<button>click</button>
+		</form>
+	);
 }
 
 // libs/action.ts
 export async function onDemandRevalidate() {
-  revalidatePath('/')
-  // OR
-  //revalidateTag('realtime')
+	revalidatePath("/");
+	// OR
+	//revalidateTag('realtime')
 }
 ```
 
@@ -253,48 +253,48 @@ export async function onDemandRevalidate() {
 
 ```ts
 // @/libs/db.ts
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 const connectDB = async () => {
-  try {
-    if (mongoose.connection.readyState >= 1) {
-      console.log('Already conencted to MongoDB')
-      return
-    }
-    await mongoose.connect(process.env.MONGODB_URL as string)
-    console.log('MongoDB connected')
-  } catch (e) {
-    // error handling
-    process.exit(1)
-  }
-}
-export default connectDB
+	try {
+		if (mongoose.connection.readyState >= 1) {
+			console.log("Already conencted to MongoDB");
+			return;
+		}
+		await mongoose.connect(process.env.MONGODB_URL as string);
+		console.log("MongoDB connected");
+	} catch (e) {
+		// error handling
+		process.exit(1);
+	}
+};
+export default connectDB;
 ```
 
 - 스키마를 생성하여 내보낸다. 이미 생성된 스키마가 다시 생성되지 않도록 `mongoose.models`에서 해당 스키마를 찾아 사용하거나 없는 경우에만 `mongoose.model(이름, 스키마)`로 생성한 스키마를 사용할 수 있도록 한다.
 
 ```ts
 // @/libs/schema.ts
-import mongoose from 'mongoose'
-const option = {}
+import mongoose from "mongoose";
+const option = {};
 const userSchema = new mongoose.Schema(
-  {
-    name: {
-      type: String,
-      required: true,
-    },
-    email: {
-      type: String,
-      required: true,
-      match: /.+\@.+\..+/,
-    },
-    role: {
-      type: String,
-      enum: ['admin', 'user'],
-    },
-  },
-  option,
-)
-export const User = mongoose.models?.User || mongoose.model('User', userSchema)
+	{
+		name: {
+			type: String,
+			required: true,
+		},
+		email: {
+			type: String,
+			required: true,
+			match: /.+\@.+\..+/,
+		},
+		role: {
+			type: String,
+			enum: ["admin", "user"],
+		},
+	},
+	option,
+);
+export const User = mongoose.models?.User || mongoose.model("User", userSchema);
 ```
 
 - 이렇게 생성한 스키마의 쿼리 메서드를 이용하여 데이터를 가져오거나 수정하는 등 CRUD 기능을 구현할 수 있다. [(참고)](https://mongoosejs.com/docs/api/query.html)
@@ -302,20 +302,20 @@ export const User = mongoose.models?.User || mongoose.model('User', userSchema)
 ```ts
 // Create
 await new User({
-  name,
-  email,
-  role: 'user',
-}).save()
+	name,
+	email,
+	role: "user",
+}).save();
 
 // Read
-await User.find()
-await User.findOne({ email }).select('+password +role')
+await User.find();
+await User.findOne({ email }).select("+password +role");
 
 // Update
-await User.findByIdAndUpdate(id)
+await User.findByIdAndUpdate(id);
 
 // Delete
-await User.findByIdAndDelete(id)
+await User.findByIdAndDelete(id);
 ```
 
 **사용자 인증**
@@ -363,40 +363,40 @@ import { auth as middleware } from '@/auth';
 
 ```ts
 // @/libs/action.ts
-'use server'
-import { redirect } from 'next/navigation'
-import connectDB from './db'
-import { User } from './schema'
-import { hash } from 'bcryptjs'
+"use server";
+import { redirect } from "next/navigation";
+import connectDB from "./db";
+import { User } from "./schema";
+import { hash } from "bcryptjs";
 
 export async function register(formData: FormData) {
-  const name = formData.get('name')
-  const email = formData.get('email')
-  const password = formData.get('password')
+	const name = formData.get("name");
+	const email = formData.get("email");
+	const password = formData.get("password");
 
-  if (name === '' || email === '' || password === '') {
-    // 예외처리
-    return
-  }
+	if (name === "" || email === "" || password === "") {
+		// 예외처리
+		return;
+	}
 
-  connectDB()
+	connectDB();
 
-  // 있는 회원인지 조회
-  const existingUser = await User.findOne({ email })
-  if (existingUser) {
-    // 예외처리
-  }
+	// 있는 회원인지 조회
+	const existingUser = await User.findOne({ email });
+	if (existingUser) {
+		// 예외처리
+	}
 
-  // 없는 회원인 경우 DB에 저장
-  const hashedPassword = await hash(String(password), 10) // bcryptjs hash 함수를 사용하여 비밀번호 해시값 저장
-  const newUser = new User({
-    name,
-    email,
-    password: hashedPassword,
-  })
-  await newUser.save()
+	// 없는 회원인 경우 DB에 저장
+	const hashedPassword = await hash(String(password), 10); // bcryptjs hash 함수를 사용하여 비밀번호 해시값 저장
+	const newUser = new User({
+		name,
+		email,
+		password: hashedPassword,
+	});
+	await newUser.save();
 
-  redirect('/login')
+	redirect("/login");
 }
 ```
 
@@ -456,54 +456,54 @@ export const { handlers, signIn, signOut, auth }: Partial<NextAuthResult> = Next
 
 ```ts
 // @/libs/action.ts
-import { signIn } from '@/auth'
+import { signIn } from "@/auth";
 export async function login(formData: FormData) {
-  const email = formData.get('email')
-  const password = formData.get('password')
+	const email = formData.get("email");
+	const password = formData.get("password");
 
-  if (email === '' || password === '') {
-    return
-  }
+	if (email === "" || password === "") {
+		return;
+	}
 
-  try {
-    // authorize로 email, password를 전달
-    await signIn('credentials', {
-      redirect: false,
-      callbackUrl: '/',
-      email,
-      password,
-    })
-  } catch (e) {
-    // 오류 처리
-  }
+	try {
+		// authorize로 email, password를 전달
+		await signIn("credentials", {
+			redirect: false,
+			callbackUrl: "/",
+			email,
+			password,
+		});
+	} catch (e) {
+		// 오류 처리
+	}
 
-  redirect('/')
+	redirect("/");
 }
 ```
 
 ```tsx
 // @/components/LoginForm.tsx
-import { githubLogin, login } from '@/libs/action'
-import Link from 'next/link'
+import { githubLogin, login } from "@/libs/action";
+import Link from "next/link";
 
 export default function LoginForm() {
-  return (
-    <>
-      <form
-        action={login}
-        className="flex flex-col gap-2 justify-start w-80 mt-4"
-      >
-        <input type="email" name="email" placeholder="YourEmail@example.com" />
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter Your Password"
-        />
-        <button>Log In</button>
-      </form>
-      ...
-    </>
-  )
+	return (
+		<>
+			<form
+				action={login}
+				className="flex flex-col gap-2 justify-start w-80 mt-4"
+			>
+				<input type="email" name="email" placeholder="YourEmail@example.com" />
+				<input
+					type="password"
+					name="password"
+					placeholder="Enter Your Password"
+				/>
+				<button>Log In</button>
+			</form>
+			...
+		</>
+	);
 }
 ```
 
@@ -511,12 +511,12 @@ export default function LoginForm() {
 
 ```ts
 // @/libs/getSession.ts
-import { auth } from '@/auth'
+import { auth } from "@/auth";
 
 export const getSession = async () => {
-  const session = await auth()
-  return session
-}
+	const session = await auth();
+	return session;
+};
 ```
 
 NextAuth config 객체 콜백에서 사용자 유형(role)을 세션에 저장하여 admin role 사용자만 dashboard에 접근하도록 지정할 수도 있다.
@@ -551,18 +551,18 @@ _[(참고) Auth.js/guides - Using the role](https://authjs.dev/guides/extending-
 
 ```tsx
 // @/(admin)/layout.tsx
-import { getSession } from '@/libs/getSession'
-import { redirect } from 'next/navigation'
+import { getSession } from "@/libs/getSession";
+import { redirect } from "next/navigation";
 
 export default async function AdminLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode
+	children: React.ReactNode;
 }) {
-  const session: Session | null = await getSession()
-  if (!session) redirect('/login')
-  else if (session.user?.role !== 'admin') redirect('/dashboard')
-  return <>{children}</>
+	const session: Session | null = await getSession();
+	if (!session) redirect("/login");
+	else if (session.user?.role !== "admin") redirect("/dashboard");
+	return <>{children}</>;
 }
 ```
 

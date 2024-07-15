@@ -1,11 +1,11 @@
 ---
-date: '2024-05-31 00:00:00'
-title: '[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 1주차 사전직무교육'
-category: 'Camp'
+date: "2024-05-31 00:00:00"
+title: "[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 1주차 사전직무교육"
+category: "Camp"
 tags:
-  ['til', 'b-log', 'project-camp', 'javascript', 'typescript', 'react', 'basic']
-summary: 'This week I learned : 자바스크립트부터 리액트까지의 기초 학습'
-emoji: '📃'
+  ["til", "b-log", "project-camp", "javascript", "typescript", "react", "basic"]
+summary: "This week I learned : 자바스크립트부터 리액트까지의 기초 학습"
+emoji: "📃"
 ---
 
 <small><em>last modified: 2024-06-02</em></small>
@@ -108,26 +108,26 @@ emoji: '📃'
 **Button 컴포넌트**
 
 ```ts
-type TButtonProps = React.ComponentProps<'button'> & {
-  children: ReactNode
-}
+type TButtonProps = React.ComponentProps<"button"> & {
+	children: ReactNode;
+};
 
 const Button = (props: TButtonProps) => {
-  const { children, ...restButtonProps } = props
-  return <button className={styles.button}>{children}</button>
-}
+	const { children, ...restButtonProps } = props;
+	return <button className={styles.button}>{children}</button>;
+};
 
-export default Button
+export default Button;
 ```
 
 **Input 컴포넌트**
 
 ```ts
-type TInputProps = React.ComponentProps<'input'>
+type TInputProps = React.ComponentProps<"input">;
 
 const Input = (props: TInputProps) => {
-  return <input className={styles.input} />
-}
+	return <input className={styles.input} />;
+};
 ```
 
 먼저 HTML의 버튼과 입력창 요소에 기본 스타일 값을 적용하고 사용할 수 있는 속성을 받아 각각의 태그에 전달한다. 각 버튼과 입력창의 타입 혹은 스타일은 컴포넌트를 사용하면서 지정 가능하도록 `React.ComponentProps<[태그명]>`의 형태로 속성의 타입을 명시해 준다. 버튼은 입력창과 달리 내부 텍스트 혹은 요소를 추가해야만 하도록 `ReactNode` 타입의 `children` 속성이 옵셔널 하지 않도록 명시한다.
@@ -135,51 +135,51 @@ const Input = (props: TInputProps) => {
 **Checkbox 컴포넌트**
 
 ```ts
-type TCheckboxProps = React.ComponentProps<'input'> & {
-  children: ReactNode
-}
+type TCheckboxProps = React.ComponentProps<"input"> & {
+	children: ReactNode;
+};
 
 const Checkbox = (props: TCheckboxProps) => {
-  const { children, ...restCheckboxProps } = props
-  const checkboxId = useId()
-  return (
-    <div>
-      <input
-        id={checkboxId}
-        type="checkbox"
-        className={styles.invisible}
-        {...restCheckboxProps}
-      />
-      <label htmlFor={checkboxId}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '8px',
-          }}
-        >
-          <div className={styles.checksign}>
-            <svg
-              width="13"
-              height="9"
-              viewBox="0 0 13 9"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11.799 0.76665C11.7246 0.691685 11.6362 0.632184 11.5387 0.591578C11.4413 0.550973 11.3367 0.530067 11.2311 0.530067C11.1255 0.530067 11.021 0.550973 10.9235 0.591578C10.8261 0.632184 10.7376 0.691685 10.6633 0.76665L4.70466 6.73325L2.20125 4.22184C2.12405 4.14726 2.03292 4.08863 1.93306 4.04927C1.8332 4.00992 1.72657 3.99062 1.61925 3.99248C1.51193 3.99433 1.40603 4.01731 1.30759 4.06009C1.20915 4.10288 1.1201 4.16463 1.04552 4.24183C0.970951 4.31903 0.912313 4.41016 0.872959 4.51002C0.833605 4.60989 0.814306 4.71652 0.816162 4.82384C0.818019 4.93116 0.840996 5.03706 0.883781 5.1355C0.926565 5.23394 0.98832 5.32299 1.06552 5.39756L4.1368 8.46884C4.21115 8.54381 4.29961 8.60331 4.39708 8.64391C4.49454 8.68452 4.59908 8.70542 4.70466 8.70542C4.81025 8.70542 4.91479 8.68452 5.01225 8.64391C5.10972 8.60331 5.19818 8.54381 5.27253 8.46884L11.799 1.94237C11.8802 1.86748 11.945 1.77658 11.9893 1.6754C12.0336 1.57423 12.0565 1.46497 12.0565 1.35451C12.0565 1.24406 12.0336 1.1348 11.9893 1.03362C11.945 0.932447 11.8802 0.841547 11.799 0.76665V0.76665Z"
-                fill="white"
-              />
-            </svg>
-          </div>
-          <div>{children}</div>
-        </div>
-      </label>
-    </div>
-  )
-}
+	const { children, ...restCheckboxProps } = props;
+	const checkboxId = useId();
+	return (
+		<div>
+			<input
+				id={checkboxId}
+				type="checkbox"
+				className={styles.invisible}
+				{...restCheckboxProps}
+			/>
+			<label htmlFor={checkboxId}>
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "row",
+						gap: "8px",
+					}}
+				>
+					<div className={styles.checksign}>
+						<svg
+							width="13"
+							height="9"
+							viewBox="0 0 13 9"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M11.799 0.76665C11.7246 0.691685 11.6362 0.632184 11.5387 0.591578C11.4413 0.550973 11.3367 0.530067 11.2311 0.530067C11.1255 0.530067 11.021 0.550973 10.9235 0.591578C10.8261 0.632184 10.7376 0.691685 10.6633 0.76665L4.70466 6.73325L2.20125 4.22184C2.12405 4.14726 2.03292 4.08863 1.93306 4.04927C1.8332 4.00992 1.72657 3.99062 1.61925 3.99248C1.51193 3.99433 1.40603 4.01731 1.30759 4.06009C1.20915 4.10288 1.1201 4.16463 1.04552 4.24183C0.970951 4.31903 0.912313 4.41016 0.872959 4.51002C0.833605 4.60989 0.814306 4.71652 0.816162 4.82384C0.818019 4.93116 0.840996 5.03706 0.883781 5.1355C0.926565 5.23394 0.98832 5.32299 1.06552 5.39756L4.1368 8.46884C4.21115 8.54381 4.29961 8.60331 4.39708 8.64391C4.49454 8.68452 4.59908 8.70542 4.70466 8.70542C4.81025 8.70542 4.91479 8.68452 5.01225 8.64391C5.10972 8.60331 5.19818 8.54381 5.27253 8.46884L11.799 1.94237C11.8802 1.86748 11.945 1.77658 11.9893 1.6754C12.0336 1.57423 12.0565 1.46497 12.0565 1.35451C12.0565 1.24406 12.0336 1.1348 11.9893 1.03362C11.945 0.932447 11.8802 0.841547 11.799 0.76665V0.76665Z"
+								fill="white"
+							/>
+						</svg>
+					</div>
+					<div>{children}</div>
+				</div>
+			</label>
+		</div>
+	);
+};
 
-export default Checkbox
+export default Checkbox;
 ```
 
 `<input type="checkbox" />` 요소는 type을 text, email, password를 값으로 가질 때와 달리 텍스트 등의 `<label>` 요소와 함께 사용되기 때문에 `ReactNode` 타입의 `children`을 반드시 받아 `<label>` 요소 아래에 표시하도록 한다.
@@ -193,118 +193,118 @@ export default Checkbox
 ```ts
 // SingUp.tsx
 type TSignUpForm = {
-  name: string
-  email: string
-  password: string
-}
+	name: string;
+	email: string;
+	password: string;
+};
 
 const SignUp = () => {
-  // 1️⃣
-  const [userInput, setUserInput] = useState<TSignUpForm>({
-    name: '',
-    email: '',
-    password: '',
-  })
-  const inputChangeHandler = (e: ChangeEvent<HTMLInputElement>) =>
-    setUserInput(prevInput => ({
-      ...prevInput,
-      [e.target.name]: e.target.value,
-    }))
+	// 1️⃣
+	const [userInput, setUserInput] = useState<TSignUpForm>({
+		name: "",
+		email: "",
+		password: "",
+	});
+	const inputChangeHandler = (e: ChangeEvent<HTMLInputElement>) =>
+		setUserInput(prevInput => ({
+			...prevInput,
+			[e.target.name]: e.target.value,
+		}));
 
-  const pwInputRef = useRef(null)
+	const pwInputRef = useRef(null);
 
-  // 2️⃣
-  const [agreeChecked, setAgreeChecked] = useState(false)
+	// 2️⃣
+	const [agreeChecked, setAgreeChecked] = useState(false);
 
-  // 3️⃣
-  const signupHandler = () => {
-    // sign up logic ...
-    if (userInput.password.length < 4) {
-      alert('비밀번호를 4자리 이상으로 입력하세요.')
+	// 3️⃣
+	const signupHandler = () => {
+		// sign up logic ...
+		if (userInput.password.length < 4) {
+			alert("비밀번호를 4자리 이상으로 입력하세요.");
 
-      if (nameInputRef.current) {
-        nameInputRef.current.focus()
-        return
-      }
-    }
-    console.log('회원가입 완료')
-  }
+			if (nameInputRef.current) {
+				nameInputRef.current.focus();
+				return;
+			}
+		}
+		console.log("회원가입 완료");
+	};
 
-  return (
-    <div className={styles.outerbox}>
-      <h2>회원 가입</h2>
-      <p>
-        이름과 이메일, 비밀번호를 입력한 후 약관에 동의해야 가입할 수 있습니다.
-      </p>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        {/* 1️⃣ */}
-        <Input
-          name="name"
-          type="text"
-          placeholder="Enter Your Name"
-          required={true}
-          value={userInput.name}
-          onChange={inputChangeHandler}
-        />
-        <Input
-          name="email"
-          type="email"
-          placeholder="someone@example.com"
-          required={true}
-          value={userInput.email}
-          onChange={inputChangeHandler}
-        />
-        <Input
-          ref={pwInputRef}
-          name="password"
-          type="password"
-          placeholder="Enter Password"
-          required={true}
-          value={userInput.password}
-          onChange={inputChangeHandler}
-        />
-        {/* 2️⃣ */}
-        <Checkbox
-          checked={agreeChecked}
-          onChange={() => setAgreeChecked(checked => !checked)}
-        >
-          <b>약관</b>에 동의합니다.
-        </Checkbox>
-      </div>
-      <div style={{ diaply: 'flex', flexDirection: 'column', gap: '16px' }}>
-        {/* 3️⃣ */}
-        <Button
-          type="submit"
-          style={{
-            width: '100%',
-            backgroundColor: '#4f4f4f',
-            color: '#fff',
-          }}
-          disabled={!agreeChecked}
-          onClick={signupHandler}
-        >
-          회원 가입
-        </Button>
-        <Button
-          type="button"
-          style={{
-            width: '100%',
-            backgroundColor: '#fff',
-            color: '#4f4f4f',
-            border: '1px solid #4f4f4f',
-          }}
-          onClick={() => {
-            location.hash = 'login'
-          }}
-        >
-          로그인 페이지로 이동
-        </Button>
-      </div>
-    </div>
-  )
-}
+	return (
+		<div className={styles.outerbox}>
+			<h2>회원 가입</h2>
+			<p>
+				이름과 이메일, 비밀번호를 입력한 후 약관에 동의해야 가입할 수 있습니다.
+			</p>
+			<div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+				{/* 1️⃣ */}
+				<Input
+					name="name"
+					type="text"
+					placeholder="Enter Your Name"
+					required={true}
+					value={userInput.name}
+					onChange={inputChangeHandler}
+				/>
+				<Input
+					name="email"
+					type="email"
+					placeholder="someone@example.com"
+					required={true}
+					value={userInput.email}
+					onChange={inputChangeHandler}
+				/>
+				<Input
+					ref={pwInputRef}
+					name="password"
+					type="password"
+					placeholder="Enter Password"
+					required={true}
+					value={userInput.password}
+					onChange={inputChangeHandler}
+				/>
+				{/* 2️⃣ */}
+				<Checkbox
+					checked={agreeChecked}
+					onChange={() => setAgreeChecked(checked => !checked)}
+				>
+					<b>약관</b>에 동의합니다.
+				</Checkbox>
+			</div>
+			<div style={{ diaply: "flex", flexDirection: "column", gap: "16px" }}>
+				{/* 3️⃣ */}
+				<Button
+					type="submit"
+					style={{
+						width: "100%",
+						backgroundColor: "#4f4f4f",
+						color: "#fff",
+					}}
+					disabled={!agreeChecked}
+					onClick={signupHandler}
+				>
+					회원 가입
+				</Button>
+				<Button
+					type="button"
+					style={{
+						width: "100%",
+						backgroundColor: "#fff",
+						color: "#4f4f4f",
+						border: "1px solid #4f4f4f",
+					}}
+					onClick={() => {
+						location.hash = "login";
+					}}
+				>
+					로그인 페이지로 이동
+				</Button>
+			</div>
+		</div>
+	);
+};
 
-export default SignUp
+export default SignUp;
 ```
 
 처음 와이어 프레임 예시에서 로그인 컴포넌트와 회원 가입 컴포넌트는 이름을 입력하는 입력창이 없고 제목이나 안내문, 버튼의 텍스트들 정도의 차이만 있기 때문에 회원 가입 컴포넌트만을 예시로 위에 작성하였다.

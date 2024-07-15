@@ -1,10 +1,10 @@
 ---
-date: '2024-07-11 22:00:00'
-title: 'Add dark mode context and make toggle theme'
-category: 'React'
-tags: ['blog', 'theme', 'react', 'gatsby', 'react-context', 'react-hook', 'ssr']
-summary: 'react context를 사용한 Gatsby 블로그 다크 모드 적용기'
-emoji: '🔦'
+date: "2024-07-11 22:00:00"
+title: "Add dark mode context and make toggle theme"
+category: "React"
+tags: ["blog", "theme", "react", "gatsby", "react-context", "react-hook", "ssr"]
+summary: "react context를 사용한 Gatsby 블로그 다크 모드 적용기"
+emoji: "🔦"
 ---
 
 # Start to dark mode blog
@@ -31,18 +31,18 @@ emoji: '🔦'
 블로그에 설정한 다크 모드 테마를 변경하기 위해 가장 먼저 다크 모드 상태 값을 관리할 수 있는 훅을 만들었다. `localStorage`에 theme 아이템으로 테마 값을 저장하여 세션이 종료되어도 테마를 기억하도록 했다.
 
 ```tsx
-const PREFERS = window.matchMedia('(prefers-color-scheme: dark)').matches
-const DEFAULT_THEME = localStorage.getItem('theme') || PREFERS
-const defaultDarkMode = DEFAULT_THEME === 'dark'
+const PREFERS = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const DEFAULT_THEME = localStorage.getItem("theme") || PREFERS;
+const defaultDarkMode = DEFAULT_THEME === "dark";
 
 export function useDarkMode() {
-  const [dark, setDark] = useState<boolean>(defaultDarkMode)
+	const [dark, setDark] = useState<boolean>(defaultDarkMode);
 
-  const toggleMode = () => {
-    setDark(prev => !prev)
-    localStorage.setItem('theme', dark ? 'light' : 'dark')
-  }
-  return { dark, toggleMode }
+	const toggleMode = () => {
+		setDark(prev => !prev);
+		localStorage.setItem("theme", dark ? "light" : "dark");
+	};
+	return { dark, toggleMode };
 }
 ```
 
@@ -50,12 +50,12 @@ export function useDarkMode() {
 
 ```tsx
 export function ThemeModeProvider({ children }: { children: ReactNode }) {
-  const value = useDarkMode()
-  return (
-    <DarkModeContext.Provider value={value}>
-      {children}
-    </DarkModeContext.Provider>
-  )
+	const value = useDarkMode();
+	return (
+		<DarkModeContext.Provider value={value}>
+			{children}
+		</DarkModeContext.Provider>
+	);
 }
 ```
 
@@ -72,40 +72,40 @@ const Template: FunctionComponent<TemplateProps> = function ({...}) {
       </HTMLBase>
     </ThemeModeProvider>
   )
-}
+};
 
-export default Template
+export default Template;
 ```
 
 그리고 토글 버튼을 만들어 모드가 변경될 때 아이콘이 뜨고 지는 것처럼 느껴지도록 스타일을 적용하고 버튼을 클릭할 때 컨텍스트에서 가져온 `toggleMode`을 실행하도록 핸들러 함수를 추가했다.
 
 ```tsx
 const ThemingButtonIcons = styled.div`
-  width: 26px;
-  height: 52px;
-  display: flex;
-  flex-direction: column;
-  transform: rotate(360deg);
-  transition: transform ease-out 200ms;
+	width: 26px;
+	height: 52px;
+	display: flex;
+	flex-direction: column;
+	transform: rotate(360deg);
+	transition: transform ease-out 200ms;
 
-  [data-theme='dark'] & {
-    transform: rotate(180deg);
-  }
-`
+	[data-theme="dark"] & {
+		transform: rotate(180deg);
+	}
+`;
 
 const ThemeToggleButton = function () {
-  const { toggleMode } = useContext(DarkModeContext)
-  return (
-    <ThemingButton onClick={toggleMode}>
-      <ThemingButtonIcons>
-        <SunIcon />
-        <MoonIcon />
-      </ThemingButtonIcons>
-    </ThemingButton>
-  )
-}
+	const { toggleMode } = useContext(DarkModeContext);
+	return (
+		<ThemingButton onClick={toggleMode}>
+			<ThemingButtonIcons>
+				<SunIcon />
+				<MoonIcon />
+			</ThemingButtonIcons>
+		</ThemingButton>
+	);
+};
 
-export default ThemeToggleButton
+export default ThemeToggleButton;
 ```
 
 # trouble shooting
@@ -151,7 +151,7 @@ const CommentWidget: FunctionComponent = function () {
     element.current.appendChild(utterances)
   }, [dark])
   ...
-}
+};
 ```
 
 ## 404 page theme
@@ -160,14 +160,14 @@ const CommentWidget: FunctionComponent = function () {
 
 ```tsx
 const NotFoundPage: FunctionComponent = function () {
-  return (
-    <HTMLBase>
-      <NotFoundPageWrapper>...</NotFoundPageWrapper>
-    </HTMLBase>
-  )
-}
+	return (
+		<HTMLBase>
+			<NotFoundPageWrapper>...</NotFoundPageWrapper>
+		</HTMLBase>
+	);
+};
 
-export default NotFoundPage
+export default NotFoundPage;
 ```
 
 # optimize?

@@ -13,7 +13,7 @@ tags:
     "fsd",
     "container-presentational",
   ]
-summary: "This week WE did : 개발 진행 시작 & 데이터 스키마 이해"
+summary: "This week WE did : 컴포넌트의 관심사 분리와 리팩토링"
 emoji: "💻"
 ---
 

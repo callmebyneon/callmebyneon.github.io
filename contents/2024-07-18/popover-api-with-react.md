@@ -34,7 +34,7 @@ function Modal({ children }: { children: ReactNode }) {
 }
 ```
 
-위에서 적은 설명처럼 이 popover 속성 자체가 다른 부분과 상호작용할 수 있는지를 결정하지 않기 때문에 모달이라는 요소의 특징을 구현해주기 위해 `dialog` 요소 안에서 백드롭 레이어를 위한 div와 모달 상자 내부에서 children을 보여주도록 div로 감싼다. 이 요소들을 클릭했을 때와 <kbd>esc</kbd> 이벤트를 구현하기 위해 `useRef`를 통해 `dialog` 요소를 저장하여 이벤트를 연결한다.
+위에서 적은 설명처럼 이 popover 속성 자체가 다른 부분과 상호작용할 수 있는지를 결정하지 않기 때문에 모달이라는 요소의 특징을 구현해주기 위해 `dialog` 요소 안에서 백드롭 레이어를 위한 div와 모달 상자 내부에서 children을 보여주도록 div로 감싼다. 이 요소들을 클릭했을 때와 <kbd>esc</kbd> keydown 이벤트를 구현하기 위해 `useRef`를 통해 `dialog` 요소를 저장하여 이벤트를 연결한다.
 
 ```tsx
 function Modal({ children }: { children: ReactNode }) {

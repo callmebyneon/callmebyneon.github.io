@@ -1,10 +1,10 @@
 ---
-date: '2024-06-09 21:00:00'
-title: '[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 2주차 사전직무교육'
-category: 'Camp'
-tags: ['til', 'b-log', 'project-camp', 'typescript', 'react', 'nextjs', 'basic']
-summary: 'This week I learned : React의 활용과 Next.js에서의 라우팅'
-emoji: '📃'
+date: "2024-06-09 21:00:00"
+title: "[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 2주차 사전직무교육"
+category: "Camp"
+tags: ["til", "b-log", "project-camp", "typescript", "react", "nextjs", "basic"]
+summary: "This week I learned : React의 활용과 Next.js에서의 라우팅"
+emoji: "📃"
 ---
 
 ![학습 회고](./thenextjs-week-2-cover.jpg)
@@ -117,31 +117,31 @@ emoji: '📃'
 
     ```ts
     const DefaultLayout = () => {
-      return (
-        <>
-          <Header />
-          <Outlet />
-          <Footer />
-        </>
-      )
-    }
+    	return (
+    		<>
+    			<Header />
+    			<Outlet />
+    			<Footer />
+    		</>
+    	);
+    };
 
     function App() {
-      return (
-        <BrowserRouter>
-          <Routes>
-            <Route element={<DefaultLayout />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-            </Route>
-            <Route element={<BlogLayout />}>
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:id" element={<BlogDetail />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      )
+    	return (
+    		<BrowserRouter>
+    			<Routes>
+    				<Route element={<DefaultLayout />}>
+    					<Route path="/" element={<Home />} />
+    					<Route path="/login" element={<Login />} />
+    					<Route path="/register" element={<Register />} />
+    				</Route>
+    				<Route element={<BlogLayout />}>
+    					<Route path="/blog" element={<Blog />} />
+    					<Route path="/blog/:id" element={<BlogDetail />} />
+    				</Route>
+    			</Routes>
+    		</BrowserRouter>
+    	);
     }
     ```
 
@@ -152,40 +152,40 @@ emoji: '📃'
 
   ```ts
   const reouter = createBrowserRouter([
-    {
-      element: <DefaultLayout />,
-      children: [
-        {
-          path: '/',
-          element: <Home />,
-        },
-        {
-          path: '/login',
-          element: <Login />,
-        },
-        {
-          path: '/register',
-          element: <Register />,
-        },
-      ],
-    },
-    {
-      element: <BlogLayout />,
-      children: [
-        {
-          path: '/blog',
-          element: <Blog />,
-        },
-        {
-          path: '/blog/:id',
-          element: <BlogDetail />,
-        },
-      ],
-    },
-  ])
+  	{
+  		element: <DefaultLayout />,
+  		children: [
+  			{
+  				path: "/",
+  				element: <Home />,
+  			},
+  			{
+  				path: "/login",
+  				element: <Login />,
+  			},
+  			{
+  				path: "/register",
+  				element: <Register />,
+  			},
+  		],
+  	},
+  	{
+  		element: <BlogLayout />,
+  		children: [
+  			{
+  				path: "/blog",
+  				element: <Blog />,
+  			},
+  			{
+  				path: "/blog/:id",
+  				element: <BlogDetail />,
+  			},
+  		],
+  	},
+  ]);
 
   function App() {
-    return <BrowserRouter router={router} />
+  	return <BrowserRouter router={router} />;
   }
   ```
 
@@ -202,7 +202,7 @@ emoji: '📃'
 
 - Next.JS 13부터 앱 라우터(App Router) 방식이 추가되었고 현재는 앱 라우터 방식이 권장되고 있다. 설명은 앱 라우터 방식을 기반으로 정리되었다.
 
-![Next.js App Router 방식의 폴더 구조와 경로 예시](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fpage-special-file.jpg&w=1920&q=75)
+![Next.js App Router 방식의 폴더 구조와 경로 예시](./thenextjs-week-2-page-special-file.jpg)
 
 - 앱 라우터 방식의 라우팅은 app 디렉토리 아래의 폴더를 기반으로 `page.tsx`에서 내보내는 default 컴포넌트를 읽어 페이지를 출력한다. 앱 라우터는 폴더를 생성하는 즉시 라우팅에 반영되고, 이 페이지를 구분하는 폴더명은 바로 경로명이 되기 때문에 url에 사용되는 관습대로 kebab-case 형식으로 이름 짓는다. 이때 경로는 기본적으로 `page.tsx`를 필수로 가져 경로가 컴포넌트를 가리키게 되고 그렇지 않으면 Not Found 에러를 보여준다.
 - **루트 경로**에는 애플리케이션의 전체적인 구조를 담당하는 `layout.tsx` 파일을 필수적으로 가져야 하기 때문에 없는 상태로 빌드 한다면 Next.js가 자동으로 생성하여 html head 내부의 메타데이터를 설정할 수 있다.

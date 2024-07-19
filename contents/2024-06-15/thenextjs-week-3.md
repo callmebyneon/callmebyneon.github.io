@@ -163,13 +163,13 @@ Next.js를 이용하여 만든 페이지에 `new Date().toLocaleTimeString()`과
 1. 사용자가 특정 정적 세그먼트에 접근했을 때, 페이지를 서버 사이드에서 파싱한 결과(html 문서)를 캐싱하여 보여주기 때문에 사용자가 다른 경로로 이동했다가 다시 돌아와도 처음 캐시에 저장해뒀던 페이지를 화면에 보여준다. (동적 라우트는 캐시되지 않는다.)  
    이때 브라우저(클라이언트 사이드)는 [라우터 캐시, Router Cache]에서 1️⃣캐싱 된 데이터를 찾아 반환하고, 2️⃣캐싱 된 데이터가 없는 경우 서버 사이드의 [전체 라우터 캐시, Full Router Cache]에서 캐싱 된 데이터를 찾는다.
 
-![정적 라우트가 빌드되는 과정](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fstatic-and-dynamic-routes.jpg&w=1920&q=75)
+![정적 라우트가 빌드되는 과정](./thenextjs-week-3-caching-overview.jpg)
 
 2. [라우터 캐시]는 브라우저가 새로고침되면 초기화되기 때문에 페이지가 새로고침되었을 때, [라우터 캐시]가 초기화된 상태에서 [전체 라우터 캐시]에 저장되어 있는 세그먼트를 가져온다. [전체 라우터 캐시]에 저장된 개별 세그먼트의 캐시는 특정 시간이 지나면 자동으로 무효화되는데, 예를 들어 정적 세그먼트는 5분이 지나면 자동으로 무효화되어 업데이트되고, 동적 세그먼트는 30초마다 무효화되어 갱신된다.
 
 3. 만일 같은 경로에 대한 GET 메서드 요청에 대해 [요청 메모이제이션, Request Memoization]을 통해 응답을 기억하고 이미 기억하고 있는 응답은 서버에 요청을 전달하지 않고 캐싱 된 데이터를 반환한다. 이 요청 메모이제이션은 Next.js에서 추가된 기능이 아니라 React 기능이기 때문에 리액트 컴포넌트 트리인 page.tsx와 layout.tsx 등 서버 컴포넌트에서의 fetch 요청에 적용된다. 라우트 핸들러는 리액트 컴포넌트 트리의 일부가 아니기 때문에 라우트 핸들러에서의 fetch 요청에는 적용되지 않는다.
 
-![Duplicated Fetch Request](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Frequest-memoization.jpg&w=1920&q=75)
+![Duplicated Fetch Request](./thenextjs-week-3-request-memoization.jpg)
 
 이러한 메커니즘으로 RootLayout의 generateMetadat와 루트 페이지에서 같은 경로로 GET api 요청을 하는 경우 [요청 메모이제이션]되어 실제 서버는 한 번의 요청만이 기록되는 것을 확인할 수 있다.
 

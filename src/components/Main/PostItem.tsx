@@ -158,7 +158,7 @@ const CategoryItem = styled.div`
 	padding: 2px 4px;
 	border-radius: 3px;
 	background-color: rgb(var(--accent));
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: 500;
 	color: rgb(var(--extreme));
 
@@ -171,7 +171,7 @@ const CategoryItem = styled.div`
 const TagItem = styled.div`
 	margin: 2.5px 5px;
 	border-radius: 3px;
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: 500;
 	color: rgb(var(--tag-color));
 

@@ -1,12 +1,11 @@
+import { graphql } from "gatsby";
+import queryString, { ParsedQuery } from "query-string";
 import React, { FunctionComponent, useMemo } from "react";
-import Introduction from "components/Main/Introduction";
+import Header from "components/Main/Header";
 import CategoryList, { CategoryListProps } from "components/Main/CategoryList";
 import Template from "components/Common/Template";
 import PostList from "components/Main/PostList";
 import { PostListItemType } from "types/PostItem.types";
-import { IGatsbyImageData } from "gatsby-plugin-image";
-import { graphql } from "gatsby";
-import queryString, { ParsedQuery } from "query-string";
 import BottomNav from "components/Common/BottomNav";
 
 type IndexPageProps = {
@@ -25,9 +24,6 @@ type IndexPageProps = {
 			edges: PostListItemType[];
 		};
 		file: {
-			childImageSharp: {
-				gatsbyImageData: IGatsbyImageData;
-			};
 			publicURL: string;
 		};
 	};
@@ -40,10 +36,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
 			siteMetadata: { title, description, siteUrl },
 		},
 		allMarkdownRemark: { edges },
-		file: {
-			childImageSharp: { gatsbyImageData },
-			publicURL,
-		},
+		file: { publicURL },
 	},
 }) {
 	const parsed: ParsedQuery<string> = queryString.parse(search);
@@ -86,7 +79,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
 			url={siteUrl}
 			image={publicURL}
 		>
-			<Introduction profileImage={gatsbyImageData} />
+			<Header />
 			<CategoryList
 				selectedCategory={selectedCategory}
 				categoryList={categoryList}
@@ -130,9 +123,6 @@ export const getPostList = graphql`
 			}
 		}
 		file(name: { eq: "logo" }) {
-			childImageSharp {
-				gatsbyImageData(width: 120, height: 120)
-			}
 			publicURL
 		}
 	}

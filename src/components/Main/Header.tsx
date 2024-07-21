@@ -1,16 +1,10 @@
 import React, { FunctionComponent } from "react";
 import styled from "@emotion/styled";
-import ProfileImage from "components/Main/ProfileImage";
-import { IGatsbyImageData } from "gatsby-plugin-image";
-
-type IntroductionProps = {
-	profileImage: IGatsbyImageData;
-};
 
 const HeaderBackground = styled.div`
 	width: 100%;
 
-	@media (max-width: 768px) {
+	@media (max-width: 1080px) {
 		margin-top: 80px;
 		padding-bottom: 20px;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -58,14 +52,10 @@ const SubTitle = styled.div`
 	}
 `;
 
-const Introduction: FunctionComponent<IntroductionProps> = function ({
-	// TODO: alter logo image
-	profileImage,
-}) {
+const Header: FunctionComponent = function () {
 	return (
 		<HeaderBackground>
 			<Wrapper>
-				<ProfileImage profileImage={profileImage} />
 				<div>
 					<Title>Dev Log</Title>
 					<SubTitle>
@@ -77,4 +67,4 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
 	);
 };
 
-export default Introduction;
+export default Header;

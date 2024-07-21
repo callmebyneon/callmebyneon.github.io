@@ -69,7 +69,12 @@ export const getPageInfo = graphql`
 			}
 			publicURL
 		}
-		allFile(filter: {ext: {eq: ".jpg"}, name: {regex: "/(project__)\\w+/"}}) {
+		allFile(
+			filter: {
+				ext: { in: [".jpg", ".png"] }
+				sourceInstanceName: { eq: "projects" }
+			}
+		) {
 			edges {
 				node {
 					name

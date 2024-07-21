@@ -22,26 +22,21 @@ const NavLinks = styled.div`
 		font-size: 1.25rem;
 		font-weight: 700;
 		border-bottom: 1px solid;
-
-		& svg {
-			font-size: 0.8em;
-		}
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1280px) {
 		width: 100%;
 		padding: 2rem;
 	}
 
-	@media (max-width: var(--sm-container)) {
+	@media (max-width: 1080px) {
 		width: 100%;
 		height: 80px;
 		justify-content: flex-start;
+	}
 
-		& > a {
-			margin-left: 0;
-			margin-right: 2em;
-		}
+	@media (max-width: 768px) {
+		padding: 1.5rem;
 	}
 `;
 

@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 	height: 160px;
 	margin: 0 auto;
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1280px) {
 		width: 100%;
 		padding: 0 20px;
 	}

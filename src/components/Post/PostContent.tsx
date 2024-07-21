@@ -100,8 +100,9 @@ const MarkdownRenderer = styled.div`
 
 	// Adjust Horizontal Rule style
 	hr {
-		border: 1px solid rgba(var(--accent));
+		// border: 1px solid rgba(var(--accent));
 		margin: 100px 0;
+		opacity: 75%;
 	}
 
 	// Adjust Link Element Style

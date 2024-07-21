@@ -17,7 +17,7 @@ const PostItemWrapper = styled(Link)`
 	margin: 8px 0;
 	cursor: pointer;
 	overflow: hidden;
-	border-radius: 10px;
+	border-radius: 16px;
 	border: 1px solid rgba(var(--accent), 0.1);
 	background: rgba(var(--accent), 0.02);
 
@@ -27,6 +27,10 @@ const PostItemWrapper = styled(Link)`
 
 	& .wrapper {
 		transition: 300ms all;
+	}
+
+	@media (max-width: 1080px) {
+		height: fit-content;
 	}
 
 	@media (max-width: 768px) {
@@ -58,6 +62,11 @@ const ThumbnailWrapper = styled.div`
 	border-right: 1px solid rgba(var(--accent), 0.1);
 	transition: 200ms all ease-out;
 
+	@media (max-width: 1080px) {
+		border-radius: 16px 0 16px 0;
+		border-bottom: 1px solid rgba(var(--accent), 0.1);
+	}
+
 	@media (max-width: 768px) {
 		display: none;
 	}
@@ -84,7 +93,11 @@ const PostItemContent = styled.div`
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	padding: 15px;
+	padding: 16px;
+
+	@media (max-width: 1080px) {
+		padding: 16px 24px;
+	}
 `;
 
 const Title = styled.div`
@@ -93,15 +106,12 @@ const Title = styled.div`
 	margin-bottom: 4px;
 	text-overflow: ellipsis;
 	white-space: normal;
+	word-break: keep-all;
 	overflow-wrap: break-word;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	font-size: 20px;
 	font-weight: 700;
-
-	@media (min-width: 768px) {
-		white-space: nowrap;
-	}
 `;
 
 const Summary = styled.div`
@@ -109,6 +119,7 @@ const Summary = styled.div`
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: normal;
+	word-break: keep-all;
 	overflow-wrap: break-word;
 	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
@@ -147,7 +158,7 @@ const Category = styled.div`
 	align-items: baseline;
 	margin-bottom: 0.7em;
 
-	@media (max-width: 768px) {
+	@media (max-width: 1080px) {
 		flex-direction: column-reverse;
 	}
 `;
@@ -158,11 +169,11 @@ const CategoryItem = styled.div`
 	padding: 2px 4px;
 	border-radius: 3px;
 	background-color: rgb(var(--accent));
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: 500;
 	color: rgb(var(--extreme));
 
-	@media (max-width: 768px) {
+	@media (max-width: 1080px) {
 		margin-left: 0;
 		margin-bottom: 10px;
 	}
@@ -171,7 +182,7 @@ const CategoryItem = styled.div`
 const TagItem = styled.div`
 	margin: 2.5px 5px;
 	border-radius: 3px;
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: 500;
 	color: rgb(var(--tag-color));
 

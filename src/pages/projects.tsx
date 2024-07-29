@@ -91,8 +91,8 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = ({
 			<GlobalStyle />
 			<Wrapper>
 				<div>
-					<Title>Portfolio</Title>
-					<SubTitle>: Summarize Projects</SubTitle>
+					<Title>Projects</Title>
+					<SubTitle>: Summary</SubTitle>
 				</div>
 			</Wrapper>
 			<ProjectList items={edges} images={images} />

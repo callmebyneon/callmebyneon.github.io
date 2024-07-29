@@ -27,7 +27,7 @@ links:
 |         part         |               skills               |
 | :------------------: | :--------------------------------: |
 |      프론트엔드      | HTML, CSS, jQuery Ajax, JavaScript |
-| 백엔드 API 유지 보수 |                 C#                 |
+| 백엔드 API 유지 보수 |            C#, REST API            |
 |    프로젝트 관리     |          Azure Git, Excel          |
 
 ## 주요 성과

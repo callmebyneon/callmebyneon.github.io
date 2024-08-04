@@ -22,11 +22,11 @@ emoji: "💻"
 
 **이번 주 to-do**
 
-<label><input type="checkbox" checked disabled /> 프로젝트 파악</label>  
-<label><input type="checkbox" checked disabled /> 깃허브 생성</label>  
-<label><input type="checkbox" checked disabled /> 사용자 흐름 1차 완성</label>  
-<label><input type="checkbox" disabled /> 기능 정의 (\~)</label>  
-<label><input type="checkbox" disabled /> 프로토타입 보충 (\~)</label>
+- [x] 프로젝트 파악  
+- [x] 깃허브 생성  
+- [x] 사용자 흐름 1차 완성  
+- [ ] 기능 정의 (\~)  
+- [ ] 프로토타입 보충 (\~)
 
 ## What we did
 

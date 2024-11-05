@@ -1,7 +1,7 @@
 ---
 date: "2024-05-31 00:00:00"
 title: "[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 1주차 사전직무교육"
-category: "Camp"
+category: "Program"
 tags:
   ["til", "b-log", "project-camp", "javascript", "typescript", "react", "basic"]
 summary: "This week I learned : 자바스크립트부터 리액트까지의 기초 학습"

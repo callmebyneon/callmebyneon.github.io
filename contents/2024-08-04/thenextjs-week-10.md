@@ -1,7 +1,7 @@
 ---
 date: "2024-08-04 21:00:00"
 title: "[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 10주차 코스 마무리와 결과발표회 후기"
-category: "Camp"
+category: "Program"
 tags:
   [
     "til",

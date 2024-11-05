@@ -1,7 +1,7 @@
 ---
 date: "2024-06-15 20:00:00"
 title: "[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 3주차 사전직무교육"
-category: "Camp"
+category: "Program"
 tags:
   [
     "til",

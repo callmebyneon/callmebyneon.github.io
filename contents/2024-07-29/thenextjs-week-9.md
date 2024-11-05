@@ -1,7 +1,7 @@
 ---
 date: "2024-07-29 15:00:00"
 title: "[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 9주차 점검"
-category: "Camp"
+category: "Program"
 tags:
   [
     "til",

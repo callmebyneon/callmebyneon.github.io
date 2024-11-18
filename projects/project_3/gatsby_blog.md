@@ -35,6 +35,9 @@ links:
 ## 개발 내용
 
 - Gatsby와 GraphQL을 이용하여 github 블로그 개발, gh-pages를 통해 배포 및 오류 해결
+  -	문법 충돌로 인한 빌드 실패 원인 파악 후 재배포
+  - 썸네일 대체 이미지(twemoji svg) 사용 시 발생한 오류 발생 후, cdn 배포 이슈로 인한 원인 파악 후 대체 cdn을 사용하여 재배포 
+
 - React Context를 이용하여 prefers-color-scheme을 고려하여 초기의 다크/라이트 테마 적용 및 토글
 
 ## 트러블슈팅 기록
@@ -51,7 +54,7 @@ links:
 ### twemoji svg 이미지 파싱 오류
 
 - Twemoji 라이브러리를 이용하여 이모지 svg 이미지 파싱 오류
-- \[**Trouble**\] 글 목록 아이템 호버 시 노출되는 twemoji svg 이미지가 보이지 않는 상황 확인
+- \[**Trouble**\] 글 목록 아이템 호버 시 노출되는 썸네일 대체 이미지(twemoji svg)가 보이지 않는 상황 확인
 - \[**Resolve**\] 파싱 메서드 옵션에서 base url을 임시로 변경. 다른 방법을 이용하여 아이콘을 출력하도록 방안 탐구 필요
 
 - (관련 링크)

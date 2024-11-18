@@ -1,7 +1,7 @@
 ---
 date: '2024-07-06 00:30:00'
 title: '[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 6주차 개발 진행&스키마 이해'
-category: 'Camp'
+category: 'Program'
 tags:
   ['til', 'b-log', 'project-camp', 'nextjs', 'react-component', 'schema', 'erd']
 summary: 'This week WE did : 개발 진행 시작 & 데이터 스키마 이해'

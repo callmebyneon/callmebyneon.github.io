@@ -1,7 +1,7 @@
 ---
 date: '2024-06-30 02:00:00'
 title: '[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 5주차 프로젝트 세팅'
-category: 'Camp'
+category: 'Program'
 tags:
   [
     'til',

@@ -1,7 +1,7 @@
 ---
 date: "2024-07-19 19:00:00"
 title: "[유데미x스나이퍼팩토리] 프로젝트 캠프 : Next.js 1기 - 8주차 테스트 배포와 트러블 슈팅"
-category: "Camp"
+category: "Program"
 tags:
   [
     "til",

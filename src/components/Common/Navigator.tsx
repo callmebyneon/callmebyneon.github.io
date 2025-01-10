@@ -48,7 +48,7 @@ const Navigator: FunctionComponent = function () {
 				<Link to="/projects">Project</Link>
 				<a
 					rel="noopener"
-					href="https://github.com/callmebyneon"
+					href="https://github.com/callmebyneon/callmebyneon.github.io"
 					target="_blank"
 				>
 					Github ↗

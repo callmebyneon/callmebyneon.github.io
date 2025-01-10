@@ -10,7 +10,6 @@ emoji: "🧑‍🤝‍🧑"
 links:
   [
     { name: "레포지토리", href: "https://github.com/woongteco/nextcamp-12t" },
-    { name: "데모 (v0.3.1) ⚠️", href: "https://chemeet.vercel.app/" },
     {
       name: "블로그 기록",
       href: "https://callmebyneon.github.io/?category=Camp",

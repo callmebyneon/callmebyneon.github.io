@@ -1,5 +1,5 @@
 <h1 align="center">
-  Dev Log 
+  Dev Study Note
 </h1>
 
 <a href="https://www.gatsbyjs.com">
@@ -28,7 +28,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ### Github ↗
 
-[Dev Log](https://callmebyneon.github.io/)의 현재 레포지토리(/callmebyneon.github.io)로 연결합니다. 아래의 설명처럼 `main` 브랜치는 빌드된 코드이기 때문에 개발 브랜치인 `develop` 브랜치를 기본으로 확인할 수 있습니다.
+[Dev Study Note](https://callmebyneon.github.io/)의 현재 레포지토리(/callmebyneon.github.io)로 연결합니다. 아래의 설명처럼 `main` 브랜치는 빌드된 코드이기 때문에 개발 브랜치인 `develop` 브랜치를 기본으로 확인할 수 있습니다.
 
 ## 💫 배포
 

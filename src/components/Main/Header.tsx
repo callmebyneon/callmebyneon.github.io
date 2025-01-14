@@ -57,7 +57,7 @@ const Header: FunctionComponent = function () {
 		<HeaderBackground>
 			<Wrapper>
 				<div>
-					<Title>Dev Log</Title>
+					<Title>Dev Study Note</Title>
 					<SubTitle>
 						<a href="https://github.com/callmebyneon">@callmebyneon</a>
 					</SubTitle>

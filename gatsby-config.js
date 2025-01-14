@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
-		title: `Dev Log of Neon`,
-		description: `Dev Log and Archiving Note of Neon(@callmebyneon)`,
+		title: `Dev Study Note of Neon`,
+		description: `Dev Study Note and Archiving Note of Neon(@callmebyneon)`,
 		author: `@callmebyneon`,
 		siteUrl: `https://callmebyneon.github.io`,
 	},

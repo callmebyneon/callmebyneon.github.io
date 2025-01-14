@@ -47,7 +47,7 @@ const HTMLBase: FunctionComponent<TemplateProps> = props => {
         <meta name="theme-color" content="#f6f6f6" />
 
         <html lang="ko" />
-        <title>{data.title || 'Dev Log of Neon'}</title>
+        <title>{data.title || 'Dev Study Note of Neon'}</title>
         <link
           rel="shortcut icon"
           href="/images/favicon.ico"

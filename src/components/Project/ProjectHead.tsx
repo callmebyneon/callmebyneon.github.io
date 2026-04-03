@@ -33,6 +33,10 @@ const HeadInfoWrapper = styled.div`
 	}
 `;
 
+const HeadInfoDivider = styled.div`
+	border-top: 1px solid rgba(var(--text-color), 10%);
+`
+
 const Small = styled.div`
 	display: flex;
 	align-items: center;
@@ -124,6 +128,7 @@ const ProjectHead: FunctionComponent<ProjectHeadProps> = function ({
 	const startDate = getProjectDate(start);
 	const endDate = getProjectDate(end);
 	const duration = getDateRange({ start, end });
+	const hasLinks = links.length > 0
 	return (
 		<div>
 			<HeadWrapper>
@@ -138,19 +143,22 @@ const ProjectHead: FunctionComponent<ProjectHeadProps> = function ({
 					<Summary>{summary}</Summary>
 				</HeadInfoWrapper>
 			</HeadWrapper>
-			<LinksWrapper>
-				<Dimmed>Links</Dimmed>
-				{links.map(link => (
-					<ProjectItemLink
-						key={link.href}
-						rel="noopener"
-						target="_blank"
-						href={link.href}
-					>
-						<span>{link.name} ↗</span>
-					</ProjectItemLink>
-				))}
-			</LinksWrapper>
+			{hasLinks ? 
+				<LinksWrapper>
+					<Dimmed>Links</Dimmed>
+					{links.map(link => (
+						<ProjectItemLink
+							key={link.href}
+							rel="noopener"
+							target="_blank"
+							href={link.href}
+						>
+							<span>{link.name} ↗</span>
+						</ProjectItemLink>
+					))}
+				</LinksWrapper>
+				: <HeadInfoDivider />
+			}
 		</div>
 	);
 };

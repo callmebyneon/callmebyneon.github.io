@@ -18,7 +18,7 @@ const ProjectItemInfoCard = styled.div`
 	justify-content: flex-start;
 	height: 15rem;
 	overflow: hidden;
-	border-radius: 1rem 1rem 0 1rem;
+	border-radius: 1rem 1rem 1rem 1rem;
 	border: 1px solid rgba(var(--accent), 0.1);
 	background: rgba(var(--accent), 0.02);
 
@@ -213,6 +213,7 @@ const ProjectItem: FunctionComponent<ProjectListItemProp> = function ({
 	},
 	thumbnail: thumbnailURL,
 }) {
+	const hasLinks = links.length > 0
 	return (
 		<ProjectItemWrapper>
 			<Link to={slug}>
@@ -237,18 +238,20 @@ const ProjectItem: FunctionComponent<ProjectListItemProp> = function ({
 					</ProjectItemInfo>
 				</ProjectItemInfoCard>
 			</Link>
-			<ProjectItemLinks>
-				{links.map(link => (
-					<ProjectItemLink
-						key={link.href}
-						rel="noopener"
-						target="_blank"
-						href={link.href}
-					>
-						<span>{link.name} ↗</span>
-					</ProjectItemLink>
-				))}
-			</ProjectItemLinks>
+			{hasLinks && 
+				<ProjectItemLinks>
+					{links.map(link => (
+						<ProjectItemLink
+							key={link.href}
+							rel="noopener"
+							target="_blank"
+							href={link.href}
+						>
+							<span>{link.name} ↗</span>
+						</ProjectItemLink>
+					))}
+				</ProjectItemLinks>
+			}
 		</ProjectItemWrapper>
 	);
 };

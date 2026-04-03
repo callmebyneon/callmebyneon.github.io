@@ -17,12 +17,16 @@ links:
   ]
 ---
 
+## 프로젝트 설명
+
 기존 유데미 큐레이션([https://udemy.wjtb.co.kr/](https://udemy.wjtb.co.kr/))에서 확장된, 학습자에게 제공할 수 있는 강의에 대한 외부 SaaS형 추가 스터디 서비스 개발. 서비스 기획안 내용을 바탕으로 Desktop-First로, Next.js를 이용하여 NoSQL로 풀스택 프로젝트 진행.
 
-## 팀 프로젝트
-
-인원 : 개발자 3인  
-→ 프론트엔드 개발 혹은 개발 전향을 준비 중이던 개발자 3인, 3주간 사전 직무 교육 완수 후 7주간 프로젝트 진행
+- 배경 참고
+  - 유데미큐레이션에서 연계되어 혹은 자발적으로 스터디 참여가 필요한 사용자를 위한 추가 스터디 서비스를 외부 SaaS형 서비스로 확장
+  - 스터디 서비스를 통해 취업준비생 및 주니어 학습자 사이의 부족한 학습을 스터디를 통해 채울 수 있도록 하기 위함
+  - 유데미큐레이션 학습자 만족도 증대 및 커뮤니티 확장의 역할과, 나아가 스터디 서비스 추가 및 대외 마케팅 채널로 활용될 수 있도록 함을 기대
+- 인원 : 개발자 3인  
+  - 프론트엔드 개발 혹은 개발 전향을 준비 중이던 개발자 3인, 3주간 사전 직무 교육 완수 후 7주간 프로젝트 진행
 
 ## 사용 기술
 
@@ -43,14 +47,20 @@ links:
 - 회원 정보 RU (Read, Update)
 - 댓글 작성시 사용자 알림
 
-## 미구현 기능
-
-- 스터디 찜
-
 ## 진행 내용 및 역할
 
-- [기획안 보완] 팀원들과 사용자 흐름도 작성, 프로토타입 정리
-- [공통 컴포넌트 개발] 아토믹 디자인을 기반으로 공통 컴포넌트 분류 및 전체 공통 컴포넌트 중 94% 이상 개발 (32/34)
+<figure>
+  <img src="./project__study_sitemap.jpg" alt="스터디 참여자와 개설자의 사이트맵 제안 내용" />
+  <figcaption>스터디 참여자와 개설자의 사이트맵 제안 내용</figcaption>
+</figure>
+
+<figure>
+  <img src="./project__service_user_flow.jpg" alt="제안 내용을 바탕으로 1차 개발을 위한 주요 기능에 대한 사용자 흐름도 및 구현 범위 정리" />
+  <figcaption>제안 내용을 바탕으로 1차 개발을 위한 주요 기능에 대한 사용자 흐름도 및 구현 범위 정리</figcaption>
+</figure>
+
+- [기획안 보완] 팀원들과 사용자 흐름도 작성, 구현 범위 및 프로토타입 정리
+- [공통 컴포넌트 개발] 아토믹 디자인을 기반으로 공통 컴포넌트 분류, 전체 공통 컴포넌트 중 94% 이상 개발 (34 중 32)
 - [페이지 마크업&스타일링] 메인 화면, 커뮤니티, 마이페이지 화면 개발 및 컴포넌트 리팩토링
 - [API 구현 및 연동] mongoose, next.js route.tsx와 action 함수를 이용하여 커뮤니티, 마이페이지에서의 사용자 정보 관련 CRUD 기능 개발
 - [프로젝트 관리] 개발 마일스톤 및 To-do 점검, 프로토타입 내용 보강, 컨벤션 문서(Wiki) 작성
@@ -81,7 +91,6 @@ links:
   - Github issue : https://github.com/woongteco/nextcamp-12t/issues/85
   - Post : https://callmebyneon.github.io/2024-07-19/thenextjs-week-8/#trouble-shooting
 
----
 
 <a href="https://github.com/woongteco/nextcamp-12t">
   <figure>
@@ -90,7 +99,3 @@ links:
   </figure>
 </a>
 
-<figure>
-  <img src="./project__service_user_flow.jpg" alt="1차 개발을 위한 주요 기능에 대한 사용자 흐름도" />
-  <figcaption>1차 개발을 위한 주요 기능에 대한 사용자 흐름도</figcaption>
-</figure>

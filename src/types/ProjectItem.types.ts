@@ -23,6 +23,7 @@ export type ProjectListItemType = {
 export type ProjectPageItemType = {
 	node: {
 		html: string;
+		tableOfContents: string;
 		frontmatter: ProjectFrontmatterType;
 	};
 };

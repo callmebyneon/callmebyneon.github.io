@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import { graphql } from "gatsby";
 import Template from "components/Common/Template";
 import BottomNav from "components/Common/BottomNav";
+import PostTOC from "../components/Post/PostTOC";
 import PostContent from "components/Post/PostContent";
 import { ProjectPageItemType } from "types/ProjectItem.types";
 import styled from "@emotion/styled";
@@ -20,7 +21,7 @@ type ProjectTemplateProps = {
 
 const ContentWrapper = styled.div`
 	display: flex;
-	align-items: center;
+	flex-direction: row;
 	justify-content: center;
 	margin-bottom: 80px;
 `;
@@ -53,12 +54,14 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = function ({
 	const {
 		node: {
 			html,
+			tableOfContents,
 			frontmatter: { title, summary, start, end, type, emoji, links },
 		},
 	} = edges[0];
 	return (
 		<Template title={title} description={summary} url={href} image={emoji}>
 			<ContentWrapper>
+				<PostTOC html={tableOfContents} />
 				<Content>
 					<ProjectHead
 						title={title}
@@ -86,6 +89,7 @@ export const queryMarkdownDataBySlug = graphql`
 			edges {
 				node {
 					html
+					tableOfContents(maxDepth: 3)
 					frontmatter {
 						title
 						summary

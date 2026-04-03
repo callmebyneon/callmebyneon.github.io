@@ -45,7 +45,7 @@ const Navigator: FunctionComponent = function () {
 		<NavigatorWrapper>
 			<NavLinks>
 				<Link to="/">Blog</Link>
-				<Link to="/projects">Project</Link>
+				<Link to="/projects">Projects</Link>
 				<a
 					rel="noopener"
 					href="https://github.com/callmebyneon/callmebyneon.github.io"

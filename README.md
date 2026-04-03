@@ -22,7 +22,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 항상 찾아보게되는 기본적인 내용들, 학습 노트 등등을 블로그의 글로 저장해둡니다.
 
-### Project
+### Projects
 
 참여 및 진행 프로젝트 정리합니다. 프론트엔드 개발자로 근무하며 참여한 프로젝트에 대한 간단한 설명과 그 외 개인적으로, 그리고 팀으로 진행한 프로젝트에 대해 정리하여 도전한 것, 학습한 것들을 간단히 정리합니다.
 

@@ -5,7 +5,7 @@ title: "바이브 코딩을 통해 만든 가벼운 니팅 차트 드로잉 PWA,
 type: "personal"
 skills: ["PWA", "Next.js", "React", "Tailwind", "Vercel", "NotebookLM", "Codex"]
 summary: ""
-thumbnail: "project__lkc_thumbnail"
+thumbnail: "project__lkc_screenshot_0.1.1"
 emoji: "🧶"
 links:
   [

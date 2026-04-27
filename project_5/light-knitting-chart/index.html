@@ -1,0 +1,433 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.25.9"/><meta data-react-helmet="true" name="description" content=""/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="바이브 코딩을 통해 만든 가벼운 니팅 차트 드로잉 PWA, Light Knitting Chart(a.k.a. LKC)"/><meta data-react-helmet="true" property="og:description" content=""/><meta data-react-helmet="true" property="og:image" content="🧶"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="바이브 코딩을 통해 만든 가벼운 니팅 차트 드로잉 PWA, Light Knitting Chart(a.k.a. LKC)"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="바이브 코딩을 통해 만든 가벼운 니팅 차트 드로잉 PWA, Light Knitting Chart(a.k.a. LKC)"/><meta data-react-helmet="true" name="twitter:description" content=""/><meta data-react-helmet="true" name="twitter:image" content="🧶"/><meta data-react-helmet="true" name="twitter:site" content="@callmebyneon"/><meta data-react-helmet="true" name="twitter:creator" content="@callmebyneon"/><meta data-react-helmet="true" name="theme-color" content="#f6f6f6"/><style data-href="/styles.4f7f669d0036ee878094.css" data-identity="gatsby-global-css">.grvsc-container{-webkit-overflow-scrolling:touch;font-feature-settings:normal;border-radius:8px;border-radius:var(--grvsc-border-radius,8px);line-height:1.4;overflow:auto;padding-bottom:1rem;padding-bottom:var(--grvsc-padding-bottom,var(--grvsc-padding-v,1rem));padding-top:1rem;padding-top:var(--grvsc-padding-top,var(--grvsc-padding-v,1rem));position:relative}.grvsc-code{display:table}.grvsc-line{box-sizing:border-box;display:table-row;width:100%}.grvsc-line,.grvsc-line>*{position:relative}.grvsc-gutter-pad{display:table-cell;padding-left:.75rem;padding-left:calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem))/2)}.grvsc-gutter{display:table-cell;-webkit-user-select:none;user-select:none}.grvsc-gutter:before{content:attr(data-content)}.grvsc-source{display:table-cell;padding-left:1.5rem;padding-left:var(--grvsc-padding-left,var(--grvsc-padding-h,1.5rem));padding-right:1.5rem;padding-right:var(--grvsc-padding-right,var(--grvsc-padding-h,1.5rem))}.grvsc-source:empty:after{content:" ";-webkit-user-select:none;user-select:none}.grvsc-gutter+.grvsc-source{padding-left:.75rem;padding-left:calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem))/2)}.grvsc-has-line-highlighting>.grvsc-code>.grvsc-line:before{content:" ";position:absolute;width:100%}.grvsc-line-diff-add:before{background-color:var(--grvsc-line-diff-add-background-color,rgba(0,255,60,.2))}.grvsc-line-diff-del:before{background-color:var(--grvsc-line-diff-del-background-color,rgba(255,0,20,.2))}.grvsc-line-number{opacity:.7;padding:0 2px;text-align:right}</style><title data-react-helmet="true">바이브 코딩을 통해 만든 가벼운 니팅 차트 드로잉 PWA, Light Knitting Chart(a.k.a. LKC)</title><link data-react-helmet="true" rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/><link data-react-helmet="true" rel="preconnect" href="https://fonts.googleapis.com"/><link data-react-helmet="true" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/><link data-react-helmet="true" href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;display=swap" rel="stylesheet"/><link data-react-helmet="true" rel="stylesheet" as="style" crossorigin="true" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="canonical" href="http://callmebyneon.github.io/project_5/light-knitting-chart/" data-baseprotocol="http:" data-basehost="callmebyneon.github.io"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main data-theme="dark" class="css-13ku56z ej1thbc0"><style data-emotion="css-global smcmg3">:root{--background-color:246,246,246;--text-color:30,33,38;--tag-color:64,107,159;--anchor-color:66,99,235;--toc-color:170,170,170;--accent:0,0,0;--dimmed:112,112,112;--shade:232,232,232;--extreme:225,225,225;--z-sticky:10;--z-fixed:20;--sm-container:768px;--lg-container:1200px;}:root [data-theme="dark"]{--background-color:30,33,38;--text-color:246,246,246;--tag-color:127,157,194;--anchor-color:139,160,249;--accent:255,255,255;--dimmed:119,119,119;--shade:48,48,48;--extreme:0,0,0;}*{padding:0;margin:0;box-sizing:border-box;font-family:Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue","Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",sans-serif;}main{min-height:100vh;}html,body,#___gatsby,[data-theme="light"],[data-theme="dark"]{height:100%;font-size:16px;background-color:rgb(var(--background-color));color:rgb(var(--text-color));}@media (max-width: 768px){html,body,#___gatsby,[data-theme="light"],[data-theme="dark"]{font-size:14px;}}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}code,pre,code *,pre *{font-family:"Fira Mono",source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:0.875rem;}small{font-size:0.875rem;}img{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}.grvsc-code{width:100%;}</style><style data-emotion="css 1082qq3">.css-1082qq3{display:block;width:100%;}</style><nav class="css-1082qq3 eftteoa1"><style data-emotion="css 1gkrsaq">.css-1gkrsaq{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:2.5rem;width:var(--lg-container);margin:0 auto;height:100px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-ms-flex-pack:end;-webkit-justify-content:flex-end;justify-content:flex-end;}.css-1gkrsaq>a{display:block;font-size:1.25rem;font-weight:700;border-bottom:1px solid;}@media (max-width: 1280px){.css-1gkrsaq{width:100%;padding:2rem;}}@media (max-width: 1080px){.css-1gkrsaq{width:100%;height:80px;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;}}@media (max-width: 768px){.css-1gkrsaq{padding:1.5rem;}}</style><div class="css-1gkrsaq eftteoa0"><a href="/">Blog</a><a href="/projects">Projects</a><a rel="noopener" href="https://github.com/callmebyneon/callmebyneon.github.io" target="_blank">Github ↗</a><style data-emotion="css 1ow2ph2">.css-1ow2ph2{width:26px;height:26px;padding:0;margin:0;overflow:hidden;background-color:transparent;border:transparent;}</style><button class="css-1ow2ph2 es16tos1"><style data-emotion="css 8o4fze">.css-8o4fze{width:26px;height:52px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);-webkit-transition:-webkit-transform ease-out 200ms;transition:transform ease-out 200ms;}[data-theme='dark'] .css-8o4fze{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}</style><div class="css-8o4fze es16tos0"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.0001 4.33332V2.16666M13.0001 21.6667V23.8333M6.94881 6.94872L5.41675 5.41666M19.2054 19.2054L20.7375 20.7374M4.33341 13H2.16675M21.6667 13H23.8334M19.206 6.94872L20.738 5.41666M6.94934 19.2054L5.41728 20.7374M13.0001 18.4167C10.0085 18.4167 7.58341 15.9915 7.58341 13C7.58341 10.0084 10.0085 7.58332 13.0001 7.58332C15.9916 7.58332 18.4167 10.0084 18.4167 13C18.4167 15.9915 15.9916 18.4167 13.0001 18.4167Z" stroke="#1E2126" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.25 19.5C16.25 14.1152 11.8848 9.74998 6.5 9.74998C5.51497 9.74998 4.56406 9.89567 3.66775 10.1673C4.88117 6.16384 8.60026 3.25013 13 3.25013C18.3848 3.25013 22.75 7.61506 22.75 12.9998C22.75 17.3996 19.8358 21.1187 15.8323 22.3321C16.1039 21.4358 16.25 20.485 16.25 19.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></button></div></nav><style data-emotion="css 1ca5thv">.css-1ca5thv{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;margin-bottom:80px;}</style><div class="css-1ca5thv eiyzpvc1"><div class="css-0 e13pf1vo1"><style data-emotion="css rnib73">.css-rnib73{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:260px;max-height:calc(100vh - 80px);margin:60px 80px 30px 0;padding:0;position:-webkit-sticky;position:sticky;left:calc(50vw - (768px / 2) - 260px);top:56px;word-break:keep-all;overflow:hidden auto;}.css-rnib73 li{list-style:none;display:block;width:96%;color:rgb(var(--toc-color));line-height:2;font-size:14px;font-weight:500;}.css-rnib73 li>a{display:block;padding:0.2em 0;white-space:break-space;line-height:1.4;}@media (hover: hover){.css-rnib73 li:hover{color:rgb(var(--accent));border-width:2px;}}.css-rnib73 li>ul>li{margin-left:0.5em;padding-left:1em;border-left:1px solid;}.css-rnib73 li>ul>li>ul>li{margin-left:0.5em;padding-left:1em;border-left:1px solid;}@media (max-width: 1280px){.css-rnib73{display:none;}}</style><div class="css-rnib73 e13pf1vo0"><ul>
+<li>
+<p><a href="#light-knitting-chartaka-lkc">Light Knitting Chart(a.k.a. LKC)</a></p>
+<ul>
+<li>
+<p><a href="#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EC%9A%94">프로젝트 개요</a></p>
+<ul>
+<li><a href="#%EB%AA%A9%EC%A0%81">목적</a></li>
+<li><a href="#%EC%A1%B0%EA%B1%B4-%EC%84%A4%EC%A0%95">조건 설정</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EC%9A%94%EA%B5%AC%EB%90%98%EB%8A%94-%EA%B8%B0%EB%8A%A5-%EC%A0%95%EB%A6%AC">요구되는 기능 정리</a></p>
+<ul>
+<li><a href="#%ED%95%B5%EC%8B%AC-%EA%B8%B0%EB%8A%A5">핵심 기능</a></li>
+<li><a href="#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%AA%A9%ED%91%9C-%EC%84%A4%EC%A0%95">프로젝트 목표 설정</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EA%B3%BC%EC%A0%95-%EA%B8%B0%EB%A1%9D">과정 기록</a></p>
+<ul>
+<li><a href="#%EC%A3%BC%EC%9A%94-%EC%9D%B4%EC%8A%88%EC%99%80-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EC%95%88">주요 이슈와 해결 방안</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%ED%95%B5%EC%8B%AC-%EA%B8%B0%EB%8A%A5-%EA%B0%9C%EB%B0%9C-%EA%B2%B0%EA%B3%BC">핵심 기능 개발 결과</a></p>
+<ul>
+<li><a href="#%EA%B0%9C%EB%B0%9C-%EB%8B%A8%EA%B3%84%EB%B3%84-%EB%A7%88%EC%9D%BC%EC%8A%A4%ED%86%A4-%EC%9A%94%EC%95%BD">개발 단계별 마일스톤 요약</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EB%B2%84%EC%A0%84">버전</a></p>
+</li>
+<li>
+<p><a href="#%EC%9E%90%EB%A3%8C-%EC%A1%B0%EC%82%AC-%EC%B0%B8%EA%B3%A0">자료 조사 참고</a></p>
+<ul>
+<li><a href="#%EB%B2%A4%EC%B9%98%EB%A7%88%ED%82%B9-%EC%82%AC%EB%A1%80">벤치마킹 사례</a></li>
+<li><a href="#%EC%B0%B8%EA%B3%A0-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%B6%9C%EC%B2%98">참고 데이터 출처</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div><style data-emotion="css 4sjs9z">.css-4sjs9z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:5rem;width:var(--sm-container);margin:0;}@media (max-width: 1080px){.css-4sjs9z{width:calc(100vw - 24px * 2);}}@media (max-width: 768px){.css-4sjs9z{gap:1rem;max-width:100%;}}</style><div class="css-4sjs9z eiyzpvc0"><div><style data-emotion="css uhu4xw">.css-uhu4xw{width:100%;margin:2.5rem 0;}</style><div class="css-uhu4xw e1y757b89"><style data-emotion="css 18ftaq9">.css-18ftaq9{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;height:100%;margin:0 auto;padding:1.125rem 0;color:rgb(var(--accent));}@media (max-width: 1200px){.css-18ftaq9{width:var(--sm-container);padding:2.5rem 1.125rem;}}@media (max-width: 1080px){.css-18ftaq9{width:100%;}}</style><div class="css-18ftaq9 e1y757b88"><style data-emotion="css qzrk4">.css-qzrk4{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;gap:1em;margin-bottom:1em;font-size:0.875rem;letter-spacing:0.1em;text-transform:capitalize;}</style><div class="css-qzrk4 e1y757b86"><style data-emotion="css 1h2pcjq">.css-1h2pcjq{color:rgba(var(--text-color), 75%);}</style><div class="css-1h2pcjq e1y757b85">2026.04<!-- --> - <!-- -->2026.04<!-- --></div><style data-emotion="css 1nxhi8f">.css-1nxhi8f{color:rgba(var(--text-color), 50%);}</style><span class="css-1nxhi8f e1y757b84">(총 <!-- -->1주<!-- -->)<!-- --></span>·<!-- --><span class="css-1nxhi8f e1y757b84">personal<!-- --> project<!-- --></span></div><style data-emotion="css 1qhhx6d">.css-1qhhx6d{overflow-wrap:break-word;margin-bottom:0.5em;font-size:2.8125rem;font-weight:700;word-break:keep-all;}@media (max-width: 768px){.css-1qhhx6d{font-size:1.875rem;}}</style><div class="css-1qhhx6d e1y757b83">바이브 코딩을 통해 만든 가벼운 니팅 차트 드로잉 PWA, Light Knitting Chart(a.k.a. LKC)</div><style data-emotion="css 18pwo7p">.css-18pwo7p{overflow-wrap:break-word;margin-bottom:0.5em;font-size:1.25rem;font-weight:400;line-height:1.25em;word-break:keep-all;color:rgba(var(--text-color), 85%);}</style><div class="css-18pwo7p e1y757b82"></div></div></div><style data-emotion="css 1tdh1bf">.css-1tdh1bf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:1rem;padding:2rem;border-radius:0 1rem 0 1rem;border:1px solid rgba(var(--text-color), 10%);background:rgba(var(--accent), 0.02);-webkit-transition:background 200ms;transition:background 200ms;}@media (max-width: 1200px){.css-1tdh1bf{margin:2.5rem 1.125rem 0;}}@media (hover: hover){.css-1tdh1bf:hover{background:rgba(var(--accent), 0);}}</style><div class="css-1tdh1bf e1y757b81"><span class="css-1nxhi8f e1y757b84">Links</span><style data-emotion="css 1qcqn5d">.css-1qcqn5d{position:relative;}.css-1qcqn5d::after{content:"";width:0%;height:1em;position:absolute;left:0;top:0.25em;background-color:rgba(var(--tag-color), 0.2);-webkit-transition:width 200ms ease-in-out;transition:width 200ms ease-in-out;}.css-1qcqn5d:hover::after{width:100%;}</style><a rel="noopener" target="_blank" href="https://lkc-draw.vercel.app/" class="css-1qcqn5d e1y757b80"><span>LKC<!-- --> ↗<!-- --></span></a></div></div><style data-emotion="css 1sz5d51">.css-1sz5d51{width:100%;margin:0;}</style><div class="css-1sz5d51 ez62elx1"><style data-emotion="css 11wiark">.css-11wiark{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;margin:0;padding:0;word-break:keep-all;white-space:break-space;line-height:1.8;font-size:1rem;font-weight:400;}.css-11wiark p{padding:0.8em 0;}.css-11wiark h1,.css-11wiark h2,.css-11wiark h3{font-weight:700;margin-bottom:1em;}.css-11wiark *+h1,.css-11wiark *+h2,.css-11wiark *+h3{padding-top:2.5em;}.css-11wiark hr+h1,.css-11wiark hr+h2,.css-11wiark hr+h3{padding-top:0;}.css-11wiark h1+:is(ol, ul),.css-11wiark h2+:is(ol, ul),.css-11wiark h3+:is(ol, ul){padding:0;}.css-11wiark h1{font-size:1.875rem;}.css-11wiark h2{font-size:1.5rem;}.css-11wiark h3{font-size:1.25rem;}.css-11wiark blockquote{margin:30px 0;padding:5px 15px;background:rgba(var(--accent), 0.03);border-left:2px solid rgba(var(--accent));font-weight:700;}.css-11wiark ol,.css-11wiark ul{margin-left:20px;padding:20px 0;}.css-11wiark li{width:100%;}.css-11wiark li>ul,.css-11wiark li>p+*{padding:8px 0;}.css-11wiark li>pre[data-language]{margin:8px 0;}.css-11wiark hr{margin:100px 0;opacity:75%;}.css-11wiark a{display:inline;width:100%;color:rgb(var(--anchor-color));-webkit-text-decoration:underline;text-decoration:underline;overflow-wrap:anywhere;word-break:break-word;}.css-11wiark a.anchor.after{display:inline;}.css-11wiark pre[data-language]{margin:30px 0;border-radius:12px;overflow:auto;}.css-11wiark pre[data-language]::-webkit-scrollbar-thumb{background:rgba(var(--extreme), 0.5);border-radius:3px;}.css-11wiark pre[data-language] .line-numbers-rows{padding:1em 0;padding-left:8px;}.css-11wiark :not(pre)>code{padding:1px 6px;border-radius:4px;background:rgb(var(--text-color));color:rgb(var(--background-color));}.css-11wiark code,.css-11wiark pre{tab-size:2;}.css-11wiark kbd{font-weight:300;font-size:0.875rem;padding:1px 6px 2px;border-radius:4px;border:1px solid rgba(var(--text-color), 60%);border-bottom-width:2px;}.css-11wiark img{max-width:100%;border-radius:8px;}.css-11wiark figure figcaption{margin-bottom:1rem;text-align:center;font-size:0.875rem;opacity:0.8;}.css-11wiark table{border-collapse:collapse;}.css-11wiark thead{background-color:rgb(var(--shade));}.css-11wiark tr{border-bottom:1px solid rgb(var(--shade));}.css-11wiark th,.css-11wiark td{padding:2px 8px;word-break:keep-all;}.css-11wiark th:not(:last-child),.css-11wiark td:not(:last-child){border-right:1px solid rgb(var(--shade));}@media (max-width: 768px){.css-11wiark{width:100%;padding:80px 20px;line-height:1.6;}.css-11wiark h1{font-size:23px;}.css-11wiark h2{font-size:20px;}.css-11wiark h3{font-size:17px;}.css-11wiark img{width:100%;}.css-11wiark hr{margin:3.5714rem 0;}}</style><div class="css-11wiark ez62elx0"><h1 id="light-knitting-chartaka-lkc" style="position:relative;">Light Knitting Chart(a.k.a. LKC)<a href="#light-knitting-chartaka-lkc" aria-label="light knitting chartaka lkc permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h2 id="프로젝트-개요" style="position:relative;">프로젝트 개요<a href="#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EC%9A%94" aria-label="프로젝트 개요 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<h3 id="목적" style="position:relative;">목적<a href="#%EB%AA%A9%EC%A0%81" aria-label="목적 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>Claude Code나 Codex를 활용한 바이브 코딩에 대해 사용해보면서 공부하기 위함과, 취미 생활인 뜨개를 하다가 대바늘 차트를 마음껏 그릴만한 도구가 마땅하지 않아서 프로젝트를 시작.</p>
+<h3 id="조건-설정" style="position:relative;">조건 설정<a href="#%EC%A1%B0%EA%B1%B4-%EC%84%A4%EC%A0%95" aria-label="조건 설정 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>이전부터 드로잉 툴을 스스로 만들어보고 싶기도 했고, 기존의 니팅 차트를 그리는 앱들은 기능은 다양하고 좋지만 조금만 써도 유료 결제해야하는게 부담이었고, 이미지를 배색 차트(도트 이미지)로 만들어주는 컨버터도 딱히 만족스럽진 않아서, 다음과 같은 조건을 걸었다.</p>
+<ol>
+<li>심화 기능이 많지 않더라도 가볍고 무료로 사용할 수 있는 드로잉 툴</li>
+<li>최대한 가볍게 사용할 수 있도록 무료로 운영, 보기에 좋아보이는(=비싸보이는 혹은 무거워보이는) 다양한 기능들 대신 기본적으로 대바늘(knitting)차트를 찍을 수 있는 기본 기능에 충실하기로 함</li>
+<li>-> 그러기 위해 운영 비용도 최소한으로, 접속 시에도 무겁지 않은 드로잉 툴이 필요</li>
+<li>-> 로컬 환경에서도 충분히 사용할 수 있는 툴 + 데이터를 유지하는 방법으로는 이미지로 저장하고 이미지를 불러와서 레이어 분리를 해두고 보면서 차트를 찍을 수 있도록 해서 별도의 DB 없이 사용 (로그인 필요없음, 조금 번거롭더라도 최대한으로 가벼운 툴을 만들고 싶음)</li>
+<li>당연히 개인적인 욕구로부터 시작했기 때문에 모두와 함께 쓸 수 있는 앱보다 혼자라도 가볍게 사용해볼만한 드로잉 툴</li>
+</ol>
+<h2 id="요구되는-기능-정리" style="position:relative;">요구되는 기능 정리<a href="#%EC%9A%94%EA%B5%AC%EB%90%98%EB%8A%94-%EA%B8%B0%EB%8A%A5-%EC%A0%95%EB%A6%AC" aria-label="요구되는 기능 정리 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>아래 초기 기능 목록에 따라 사용자 흐름을 만들었을 때, (1)어색하거나, (2)두루뭉술하게 어떤 기능인지 정하지 않았거나, (3)지금 당장 필요하지 않은 기능들을 NotebookLM으로 함께 정리.</p>
+<h3 id="핵심-기능" style="position:relative;">핵심 기능<a href="#%ED%95%B5%EC%8B%AC-%EA%B8%B0%EB%8A%A5" aria-label="핵심 기능 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>캔버스
+<ul>
+<li>코/단 입력 기반 캔버스 생성/조절</li>
+</ul>
+</li>
+<li>툴바
+<ul>
+<li>파일 : 이미지 저장/불러오기</li>
+<li>그리기 작업 : 기호 또는 배경색 그리기/지우기</li>
+<li>조정 : 히스토리 이동(undo, redo), 캔버스 줌 인/아웃</li>
+</ul>
+</li>
+<li>패널
+<ul>
+<li>도구 설정 : 툴바에서 그리기 작업 도구 선택 시 각 도구에 맞는 설정 창 표시</li>
+<li>레이어 : 레이어를 분리하여 관리, 이미지 불러오기 시 이미지 레이어로 따로 불러와 불투명도와 사이즈 등 드로잉 레이어와 별개로 조절 가능</li>
+</ul>
+</li>
+</ul>
+<h3 id="프로젝트-목표-설정" style="position:relative;">프로젝트 목표 설정<a href="#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%AA%A9%ED%91%9C-%EC%84%A4%EC%A0%95" aria-label="프로젝트 목표 설정 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ol>
+<li>로그인 없이 즉시 편집 화면에 진입</li>
+<li>코/단 단위로 캔버스 생성</li>
+<li>태블릿 중심 사용성 제공</li>
+<li>그리드 기반 편집과 레이어 편집 지원</li>
+<li>뜨개 기호 및 컬러 차트를 도트 형태로 작성</li>
+<li>참조 이미지와 드로잉 레이어를 함께 관리</li>
+<li>작업 내용을 자동 보존하고, 원하는 시점에 이미지로 저장</li>
+<li>멀티셀 심볼, 선택/이동/복제까지 가능한 도메인 특화 편집기화</li>
+</ol>
+<figure>
+<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; ">
+      <a class="gatsby-resp-image-link" href="/static/41c85c283d4d83ce14a329a95058b2ed/be473/project__lkc_screenshot_0.1.1.jpg" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 69.27083333333334%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCAwT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABY3YJopAX/8QAGxAAAgMAAwAAAAAAAAAAAAAAAQIAAwQREiP/2gAIAQEAAQUCpVBQOjTeAuiu/hDoCTV62//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABwQAAEFAQEBAAAAAAAAAAAAAAABAhESITEyUf/aAAgBAQAGPwJjqt8/DjTEjBGxxCaFuYf/xAAbEAADAQADAQAAAAAAAAAAAAAAAREhMWGBwf/aAAgBAQABPyFprRo2q3hGKScWFnuK5E31HfSFD//aAAwDAQACAAMAAAAQjx//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAWEQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8QhX//xAAbEAEBAAIDAQAAAAAAAAAAAAABEQBBITFRcf/aAAgBAQABPxDkIKsXo3MCCGVEJhC3UY3oyn5odGcdTGIDSITv5hEAfY9z/9k='); background-size: cover; display: block;"></span>
+  <picture>
+          <source srcset="/static/41c85c283d4d83ce14a329a95058b2ed/a59e9/project__lkc_screenshot_0.1.1.webp 192w,
+/static/41c85c283d4d83ce14a329a95058b2ed/0ca9f/project__lkc_screenshot_0.1.1.webp 384w,
+/static/41c85c283d4d83ce14a329a95058b2ed/dc9b9/project__lkc_screenshot_0.1.1.webp 768w,
+/static/41c85c283d4d83ce14a329a95058b2ed/e2c2f/project__lkc_screenshot_0.1.1.webp 1152w,
+/static/41c85c283d4d83ce14a329a95058b2ed/f3efb/project__lkc_screenshot_0.1.1.webp 1536w,
+/static/41c85c283d4d83ce14a329a95058b2ed/e6edc/project__lkc_screenshot_0.1.1.webp 2360w" sizes="(max-width: 768px) 100vw, 768px" type="image/webp">
+          <source srcset="/static/41c85c283d4d83ce14a329a95058b2ed/150b2/project__lkc_screenshot_0.1.1.jpg 192w,
+/static/41c85c283d4d83ce14a329a95058b2ed/6985d/project__lkc_screenshot_0.1.1.jpg 384w,
+/static/41c85c283d4d83ce14a329a95058b2ed/19de6/project__lkc_screenshot_0.1.1.jpg 768w,
+/static/41c85c283d4d83ce14a329a95058b2ed/4472f/project__lkc_screenshot_0.1.1.jpg 1152w,
+/static/41c85c283d4d83ce14a329a95058b2ed/d58d1/project__lkc_screenshot_0.1.1.jpg 1536w,
+/static/41c85c283d4d83ce14a329a95058b2ed/be473/project__lkc_screenshot_0.1.1.jpg 2360w" sizes="(max-width: 768px) 100vw, 768px" type="image/jpeg">
+          <img class="gatsby-resp-image-image" src="/static/41c85c283d4d83ce14a329a95058b2ed/19de6/project__lkc_screenshot_0.1.1.jpg" alt="LKC의 v0.1.1 화면" title="LKC의 v0.1.1 화면" loading="lazy" decoding="async" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;">
+        </picture>
+  </a>
+    </span>
+<figcaption>LKC의 v0.1.1 화면</figcaption>
+</figure>
+<h2 id="과정-기록" style="position:relative;">과정 기록<a href="#%EA%B3%BC%EC%A0%95-%EA%B8%B0%EB%A1%9D" aria-label="과정 기록 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<h3 id="주요-이슈와-해결-방안" style="position:relative;">주요 이슈와 해결 방안<a href="#%EC%A3%BC%EC%9A%94-%EC%9D%B4%EC%8A%88%EC%99%80-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EC%95%88" aria-label="주요 이슈와 해결 방안 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ol>
+<li>Window 개발 환경에서 WSL 사용 시, 개발 서버 실행으로 와이파이 네트워크를 통해 다른 기기에서 접속 불가능한 경우 발생</li>
+</ol>
+<ul>
+<li>[<strong>Steps</strong>] <code>http://&#x3C;내-PC-LAN-IP>:3000</code>로 접속하여 먼저 확인 후, 네트워킹 모드를 Mirrored로 설정하고 다시 개발 서버를 실행, 그래도 안된다면  <code>wsl hostname -I</code> 확인 후 <code>portproxy</code>와 방화벽 규칙을 추가하는 단계로 시도 필요. (아래 자료 참고)</li>
+<li>[<strong>Resolve</strong>] WSL-2 기준, <code>npm run dev</code>를 실행했을 때 보여주는 WSL 주소가 아닌 <code>http://&#x3C;내-PC-LAN-IP>:3000</code>로 접속해서 해결</li>
+<li>관련 참고 내용:
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/windows/wsl/networking" target="_blank" rel="nofollow">Accessing network applications with WSL | &#x3C;icrosoft Learn</a></li>
+<li><a href="https://stackoverflow.com/questions/64513964/wsl-2-which-ports-are-automatically-forwarded" target="_blank" rel="nofollow">WSL-2: Which ports are automatically forwarded | stackoverflow</a></li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>기호 데이터 정제 &#x26; 기호 브러쉬로 캔버스에 기호 그리기 개선</li>
+</ol>
+<ul>
+<li>[<strong>Trouble</strong>]
+<ul>
+<li>필수 기능들을 구현하면서 예시로 하드코딩한 기호는 모두 하나의 셀(1x1 칸)에서만 보이는 모두 동일한 크기의 기호였지만, 기호 브러쉬로 기호를 그릴 때는 수집한 데이터를 바탕으로 미리보기 기호를 svg로 보여주고 캔버스에 그린 기호를 표시해야할 필요 -> 그릴 수 있는 기호 레지스트리 구조와 기호 배치부터 수정하여 기능 고도화</li>
+</ul>
+</li>
+<li>[<strong>Resolve</strong>]
+<ul>
+<li>개발 진행 방향이 맞는지 검증하기 위해 중간에 지난 개발 내용에 따른 마일스톤과 설계 내용 재작성
+<ul>
+<li>기본 기호 이미지 목록 간소화 (169 -> 84)</li>
+<li>간소화된 이미지 목록을 이용하여 node.js 기반에서 potrace 라이브러리를 이용하여 백터화 후 path data를 포함하여 레지스트리 JSON으로 저장하여 기본 데이터 정제 테스트</li>
+<li>플랜 모드 사용으로 수정 단계별 수정 플랜 확인 후 코드 수정 반복</li>
+<li>추가로 필요한 기호 이미지, JSON 데이터 추가 (+11 = 95)</li>
+</ul>
+</li>
+<li>추가적으로 고려해야 할 경계 케이스에서 어떻게 기능을 구현할 것인지 정책 설정 후 반영하여 코드 수정: 대표적으로,
+<ul>
+<li>캔버스 범위를 벗어난 기호 그리기/지우기 관련</li>
+<li>기호가 겹쳐질 때</li>
+<li>이동할 때</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="핵심-기능-개발-결과" style="position:relative;">핵심 기능 개발 결과<a href="#%ED%95%B5%EC%8B%AC-%EA%B8%B0%EB%8A%A5-%EA%B0%9C%EB%B0%9C-%EA%B2%B0%EA%B3%BC" aria-label="핵심 기능 개발 결과 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<h3 id="개발-단계별-마일스톤-요약" style="position:relative;">개발 단계별 마일스톤 요약<a href="#%EA%B0%9C%EB%B0%9C-%EB%8B%A8%EA%B3%84%EB%B3%84-%EB%A7%88%EC%9D%BC%EC%8A%A4%ED%86%A4-%EC%9A%94%EC%95%BD" aria-label="개발 단계별 마일스톤 요약 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<table>
+<thead>
+<tr>
+<th>기획 최상위 마일스톤</th>
+<th>세부 단계와 구현 목표</th>
+<th>정책 수정/구체화</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 로그인 없이 차트 편집기 뼈대 구축</td>
+<td>1-1. 단일 페이지(최상위 page.tsx)에서 편집기 진입</td>
+<td></td>
+</tr>
+<tr>
+<td>2. 캔버스 생성, 표시, 저장까지 되는 기본 편집기 완성</td>
+<td>2-1. 기본 캔버스 표시 - 캔버스 렌더링</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2-2. 픽셀 편집기화 - 픽셀 그리드를 코/단 기준 셀과 각 셀에 대한 상태값 관리</td>
+<td></td>
+</tr>
+<tr>
+<td>3. 태블릿 중심 인터랙션과 패널 UI 구조 확립</td>
+<td>3-1. 태블릿 기본 사용성 - 터치+마우스 인터랙션 대응</td>
+<td>파일명 정책 일관화</td>
+</tr>
+<tr>
+<td></td>
+<td>3-2. 태블릿 중심 - portrait/landscape 화면 방향 기반 반응형 구현</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>3-3. 사이즈 설정 패널 - 캔버스 리사이즈 시 단순 재생성이 아니라 기존 작업 맥락 유지</td>
+<td>리사이즈를 도메인 동작으로 취급</td>
+</tr>
+<tr>
+<td>4. 레이어 기반 편집기 구조 도입</td>
+<td>4-1. 레이어 시스템 도입 - 요구사항에 따라 독립된 편집 단위 취급</td>
+<td>캔버스 단일 레벨에서 스택 편집기로 확장</td>
+</tr>
+<tr>
+<td></td>
+<td>4-2. 패널 안정화 - 사용성 안정화를 위한 시야 밖 배치 방지, 터치 안정성 고도화</td>
+<td></td>
+</tr>
+<tr>
+<td>5. 툴바, 도구 상태, 히스토리, 저장 정책 정리</td>
+<td>5-1. 툴바와 도구 상태 관리 - 별도의 스토어에서 독립적으로 관리</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>5-2. 이미지로 저장 정책 정리</td>
+<td>자동 복원과 파일 저장의 책임 분리, effect 과잉 실행 방지</td>
+</tr>
+<tr>
+<td>6. 뜨개 기호 시스템과 심볼 브러시 구조 확장</td>
+<td>6-1. 심볼 브러쉬 레지스트리 저장</td>
+<td><em>마일스톤 재점검 후 도메인 모델과 동작 규칙 관련 문서 수준 정리 추가</em></td>
+</tr>
+<tr>
+<td>7. 선택/이동/병합 기능 구현</td>
+<td>7-1. 선택, 이동 툴 고도화 + 반전 기능 추가</td>
+<td>캔버스 컨텍스트 메뉴를 통한 반전 기능 통일</td>
+</tr>
+<tr>
+<td></td>
+<td>7-2. 레이어 기반 차트 편집 기능 고도화</td>
+<td>바탕색 캔버스 추가, 선택 레이어 기준 편집 기능 작동</td>
+</tr>
+<tr>
+<td>8. 사용성 개선 및 배포/접속/운영 안정성 정리</td>
+<td>8-1.</td>
+<td>코/단 최대값, 등 정책 수정</td>
+</tr>
+</tbody>
+</table>
+<h2 id="버전" style="position:relative;">버전<a href="#%EB%B2%84%EC%A0%84" aria-label="버전 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>v0.1.x:</p>
+<ul>
+<li><code>pathData</code> 기반 preview/canvas 공통 렌더링</li>
+<li>뜨개 기호 레지스트리 스키마 확정</li>
+<li>선택, 이동 툴 고도화</li>
+<li>이미지 레이어 정렬 및 참조 이미지 편집 개선</li>
+</ul>
+<p>v0.2.x(계획):</p>
+<ul>
+<li>안정적인 뜨개 기호 자산 관리</li>
+<li>완성도 높은 레이어 기반 차트 편집</li>
+<li>태블릿 중심+ 사용성 지속적으로 개선</li>
+</ul>
+<h2 id="자료-조사-참고" style="position:relative;">자료 조사 참고<a href="#%EC%9E%90%EB%A3%8C-%EC%A1%B0%EC%82%AC-%EC%B0%B8%EA%B3%A0" aria-label="자료 조사 참고 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<h3 id="벤치마킹-사례" style="position:relative;">벤치마킹 사례<a href="#%EB%B2%A4%EC%B9%98%EB%A7%88%ED%82%B9-%EC%82%AC%EB%A1%80" aria-label="벤치마킹 사례 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<figure>
+<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; ">
+      <a class="gatsby-resp-image-link" href="/static/aa916b6d7d52188ea7ccc220f850f9dd/fe1e7/project__benchmark_pinpino_pixel.jpg" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 60.9375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEDAgX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHtPaJFw//EABcQAAMBAAAAAAAAAAAAAAAAAAACEiD/2gAIAQEAAQUChSFIx//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABcQAAMBAAAAAAAAAAAAAAAAAAABMSD/2gAIAQEABj8ChCLH/8QAGRABAAIDAAAAAAAAAAAAAAAAAAEREGHh/9oACAEBAAE/IdXFr2StD//aAAwDAQACAAMAAAAQkM//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAADAAEFAAAAAAAAAAAAAAAAAREhMWFxkdH/2gAIAQEAAT8Qi4kcU2XbM7jlcV/BoyqaEf/Z'); background-size: cover; display: block;"></span>
+  <picture>
+          <source srcset="/static/aa916b6d7d52188ea7ccc220f850f9dd/a59e9/project__benchmark_pinpino_pixel.webp 192w,
+/static/aa916b6d7d52188ea7ccc220f850f9dd/0ca9f/project__benchmark_pinpino_pixel.webp 384w,
+/static/aa916b6d7d52188ea7ccc220f850f9dd/dc9b9/project__benchmark_pinpino_pixel.webp 768w,
+/static/aa916b6d7d52188ea7ccc220f850f9dd/e2c2f/project__benchmark_pinpino_pixel.webp 1152w,
+/static/aa916b6d7d52188ea7ccc220f850f9dd/d2134/project__benchmark_pinpino_pixel.webp 1493w" sizes="(max-width: 768px) 100vw, 768px" type="image/webp">
+          <source srcset="/static/aa916b6d7d52188ea7ccc220f850f9dd/150b2/project__benchmark_pinpino_pixel.jpg 192w,
+/static/aa916b6d7d52188ea7ccc220f850f9dd/6985d/project__benchmark_pinpino_pixel.jpg 384w,
+/static/aa916b6d7d52188ea7ccc220f850f9dd/19de6/project__benchmark_pinpino_pixel.jpg 768w,
+/static/aa916b6d7d52188ea7ccc220f850f9dd/4472f/project__benchmark_pinpino_pixel.jpg 1152w,
+/static/aa916b6d7d52188ea7ccc220f850f9dd/fe1e7/project__benchmark_pinpino_pixel.jpg 1493w" sizes="(max-width: 768px) 100vw, 768px" type="image/jpeg">
+          <img class="gatsby-resp-image-image" src="/static/aa916b6d7d52188ea7ccc220f850f9dd/19de6/project__benchmark_pinpino_pixel.jpg" alt="가장 많이 참고하게 된 pinpino의 픽셀 차트 그리기 툴 화면 구성 (컬러 배색만 그려볼 수 있다)" title="가장 많이 참고하게 된 pinpino의 픽셀 차트 그리기 툴 화면 구성 (컬러 배색만 그려볼 수 있다)" loading="lazy" decoding="async" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;">
+        </picture>
+  </a>
+    </span>
+<figcaption>가장 많이 참고하게 된 pinpino의 픽셀 차트 그리기 툴 화면 구성 (컬러 배색만 그려볼 수 있다)</figcaption>
+</figure>
+<ul>
+<li><a href="https://pinpino.com/landing.php" target="_blank" rel="nofollow">pinpino(코바늘 도안 그리기 툴)</a> (=> PC 최적화, 구조는 <code>https://pinpino.com/pixel/</code>(위 이미지)에 가까울듯)</li>
+<li>도트를 찍어 컬러 배색을 해볼 수 있는 서비스들 (=> 뼈대)</li>
+<li>드로잉 툴(프로크리에이트, 포토샵, 니팅 차트 앱 => 툴 구조)</li>
+<li><a href="https://studio.knitich.com/" target="_blank" rel="nofollow">니티치 스튜디오(뜨개 기록 앱)</a> (=> 프로젝트 관리+이미지 기반 배색 차트 생성+a)</li>
+</ul>
+<h3 id="참고-데이터-출처" style="position:relative;">참고 데이터 출처<a href="#%EC%B0%B8%EA%B3%A0-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%B6%9C%EC%B2%98" aria-label="참고 데이터 출처 permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li><a href="https://www.doanity.com/products/cm3kae5bq0007qdaaafj2r0ks" target="_blank" rel="nofollow">대바늘 차트도안 만들기 EXCEL 파일 by moony_knit | 도아니티</a></li>
+<li>SEVY 뜨개 백과사전
+<ul>
+<li><a href="https://sevy.co.kr/storybook/dict_detail.html?view=detail&#x26;board_no=5&#x26;content_no=92" target="_blank" rel="nofollow">왼코 늘리기</a></li>
+<li><a href="https://sevy.co.kr/storybook/dict_detail.html?view=detail&#x26;board_no=5&#x26;content_no=91" target="_blank" rel="nofollow">오른코 늘리기</a></li>
+</ul>
+</li>
+<li><a href="https://www.youtube.com/watch?v=N96PruFknZk" target="_blank" rel="nofollow">기초영상 대바늘 chapter25/실을 끌어올려 패턴을 만들어주는 기법_ 끌어올리기</a></li>
+</ul>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+</style></div></div></div></div><style data-emotion="css 1ge4qt5">.css-1ge4qt5{position:fixed;bottom:2rem;right:1.4rem;font-size:1.25rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;z-index:var(--z-fixed);}</style><div class="css-1ge4qt5 e17zytwi0"><style data-emotion="css ohjuha">.css-ohjuha{all:unset;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;font-size:inherit;width:3rem;height:3rem;border:2px solid;border-radius:50%;box-sizing:border-box;background:rgba(var(--background-color), 0.8);-webkit-backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);-webkit-transition:200ms all;transition:200ms all;}@media (hover: hover){.css-ohjuha:hover{-webkit-transform:translateY(-10%);-moz-transform:translateY(-10%);-ms-transform:translateY(-10%);transform:translateY(-10%);}}</style><button title="go to top of this page" class="css-ohjuha e1l0tomx0">↑</button></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><footer class="css-9w9jmx ejjbn3h0">Thank You for Visiting My Blog, Have a Good Day 😸<!-- --><br/>© 2022 Developer 나연, Powered By Gatsby.<!-- --></footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/project_5/light-knitting-chart/";window.___webpackCompilationHash="6f6e3dc934ff8f0971c3";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-e98d8ffa789f95fb320a.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-203728d5c00a97f234c2.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-b00066b5025c26999630.js"],"component---src-pages-projects-tsx":["/component---src-pages-projects-tsx-7f891a7957ae3a1ba221.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-a739499befc8c69aa0b6.js"],"component---src-templates-project-template-tsx":["/component---src-templates-project-template-tsx-33dca7565c97dbef8a24.js"]};/*]]>*/</script><script src="/app-e98d8ffa789f95fb320a.js" async=""></script><script src="/framework-bdff0437782eefad9248.js" async=""></script><script src="/webpack-runtime-64d80b971f4c23c52cce.js" async=""></script></body></html>

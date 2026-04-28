@@ -5,7 +5,7 @@ title: "바이브 코딩을 통해 만든 가벼운 니팅 차트 드로잉 PWA,
 type: "personal"
 skills: ["PWA", "Next.js", "React", "Tailwind", "Vercel", "NotebookLM", "Codex"]
 summary: ""
-thumbnail: "project__lkc_screenshot_0.1.1"
+thumbnail: "project__lkc_thumbnail"
 emoji: "🧶"
 links:
   [
@@ -57,6 +57,7 @@ Claude Code나 Codex를 활용한 바이브 코딩에 대해 사용해보면서 
 1. 참조 이미지와 드로잉 레이어를 함께 관리
 1. 작업 내용을 자동 보존하고, 원하는 시점에 이미지로 저장
 1. 멀티셀 심볼, 선택/이동/복제까지 가능한 도메인 특화 편집기화
+
 
 <figure>
 <img alt="LKC의 v0.1.1 화면" src="./project__lkc_screenshot_0.1.1.jpg" />

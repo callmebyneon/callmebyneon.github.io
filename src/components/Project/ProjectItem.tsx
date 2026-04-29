@@ -234,7 +234,7 @@ const ProjectItem: FunctionComponent<ProjectListItemProp> = function ({
 							<Title>{title}</Title>
 							<Summary>{summary}</Summary>
 						</InfoMain>
-						<Skills>프론트엔드 기술 스택 : {skills.join(", ")}</Skills>
+						<Skills>기술 스택 : {skills.join(", ")}</Skills>
 					</ProjectItemInfo>
 				</ProjectItemInfoCard>
 			</Link>

@@ -1,10 +1,10 @@
 ---
 start: "2026-04-21"
 end: "2026-04-28"
-title: "바이브 코딩을 통해 만든 가벼운 니팅 차트 드로잉 PWA, Light Knitting Chart(a.k.a. LKC)"
+title: "Light Knitting Chart(a.k.a. LKC)"
 type: "personal"
-skills: ["PWA", "Next.js", "React", "Tailwind", "Vercel", "NotebookLM", "Codex"]
-summary: ""
+skills: ["PWA", "Next.js", "React", "Tailwind", "Vercel"]
+summary: "바이브 코딩을 통해 만든 가벼운 니팅 차트 드로잉 PWA with Codex & NotebookLM"
 thumbnail: "project__lkc_thumbnail"
 emoji: "🧶"
 links:
